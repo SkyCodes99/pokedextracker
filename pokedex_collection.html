@@ -1,0 +1,1262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pokédex Alt Art Collection</title>
+<style>
+/* ── RESET & VARS ─────────────────────────────────────────── */
+:root{
+  --bg:#080810;--s1:#0f0f18;--s2:#161622;--s3:#1e1e2c;--s4:#252536;
+  --b1:#2c2c40;--b2:#3a3a52;--b3:#4a4a65;
+  --tx:#eeeef5;--tx2:#8888a8;--tx3:#50506a;
+  --green:#22c55e;--gbg:rgba(34,197,94,.12);--gbd:rgba(34,197,94,.28);
+  --purple:#a78bfa;--pbg:rgba(167,139,250,.12);--pbd:rgba(167,139,250,.32);
+  --blue:#60a5fa;--bbg:rgba(96,165,250,.12);--bbd:rgba(96,165,250,.28);
+  --amber:#fbbf24;--abg:rgba(251,191,36,.12);--abd:rgba(251,191,36,.28);
+  --red:#f87171;--rbg:rgba(248,113,113,.1);--rbd:rgba(248,113,113,.28);
+  --cyan:#22d3ee;--cbg:rgba(34,211,238,.1);
+  --rad:8px;--rad-lg:12px;--rad-xl:16px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--tx);font-family:'Segoe UI',system-ui,-apple-system,sans-serif;height:100vh;overflow:hidden;display:flex;flex-direction:column}
+button{cursor:pointer;font-family:inherit}
+
+/* ── TYPOGRAPHY ───────────────────────────────────────────── */
+.label{font-size:11px;font-weight:600;color:var(--tx3);text-transform:uppercase;letter-spacing:.5px}
+
+/* ── SCROLLBAR ────────────────────────────────────────────── */
+::-webkit-scrollbar{width:5px;height:5px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:var(--b2);border-radius:3px}
+
+/* ── BUTTONS ──────────────────────────────────────────────── */
+.btn{display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border-radius:var(--rad);border:1px solid var(--b1);background:var(--s2);color:var(--tx);font-size:13px;font-weight:500;transition:all .15s;white-space:nowrap}
+.btn:hover{background:var(--s3);border-color:var(--b2)}
+.btn-xs{padding:4px 9px;font-size:11px;border-radius:6px}
+.btn-sm{padding:6px 11px;font-size:12px}
+.btn-primary{background:var(--purple);border-color:var(--pbd);color:#fff}
+.btn-primary:hover{background:#9061f9}
+.btn-green{background:var(--gbg);border-color:var(--gbd);color:var(--green)}
+.btn-green:hover{background:rgba(34,197,94,.2)}
+.btn-red{background:var(--rbg);border-color:var(--rbd);color:var(--red)}
+.btn-red:hover{background:rgba(248,113,113,.18)}
+.btn-amber{background:var(--abg);border-color:var(--abd);color:var(--amber)}
+.btn-ghost{background:transparent;border-color:transparent;color:var(--tx2)}
+.btn-ghost:hover{background:var(--s3);color:var(--tx)}
+.btn:disabled{opacity:.35;pointer-events:none}
+.icon-btn{width:32px;height:32px;padding:0;border-radius:var(--rad);border:1px solid var(--b1);background:var(--s2);color:var(--tx2);display:inline-flex;align-items:center;justify-content:center;font-size:16px;transition:all .15s}
+.icon-btn:hover{background:var(--s3);color:var(--tx);border-color:var(--b2)}
+
+/* ── FORM ELEMENTS ────────────────────────────────────────── */
+.fg{display:flex;flex-direction:column;gap:5px}
+.fg .label{margin-bottom:0}
+input[type=text],input[type=password],input[type=email],select,textarea{
+  padding:9px 12px;border-radius:var(--rad);border:1px solid var(--b1);
+  background:var(--s2);color:var(--tx);font-size:13px;outline:none;width:100%;
+  font-family:inherit;transition:border-color .15s}
+input:focus,select:focus,textarea:focus{border-color:var(--purple)}
+textarea{resize:vertical;min-height:64px}
+select option{background:var(--s3)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}
+
+/* ── TOP BAR ──────────────────────────────────────────────── */
+#topbar{
+  height:54px;background:var(--s1);border-bottom:1px solid var(--b1);
+  display:flex;align-items:center;padding:0 18px;gap:12px;flex-shrink:0;
+  position:relative;z-index:40}
+#topbar .logo{font-size:15px;font-weight:800;letter-spacing:-.4px;white-space:nowrap}
+#topbar .logo em{font-style:normal;color:var(--purple)}
+.nav-pills{display:flex;gap:2px;background:var(--s3);border-radius:var(--rad);padding:3px}
+.nav-pill{padding:5px 14px;border-radius:6px;font-size:13px;font-weight:500;border:none;background:transparent;color:var(--tx2);transition:all .15s}
+.nav-pill:hover{color:var(--tx)}
+.nav-pill.active{background:var(--s1);color:var(--tx);box-shadow:0 1px 4px rgba(0,0,0,.3)}
+.nav-pill.adm{color:var(--amber)}
+.nav-pill.adm.active{color:var(--amber)}
+#topbar .spacer{flex:1}
+.user-chip{display:flex;align-items:center;gap:8px;padding:5px 10px 5px 5px;border-radius:30px;border:1px solid var(--b1);background:var(--s2);font-size:12px;color:var(--tx2);transition:all .15s}
+.user-chip:hover{border-color:var(--b2);color:var(--tx)}
+.avatar{width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;background:var(--pbg);color:var(--purple);border:1px solid var(--pbd)}
+
+/* ── PAGES ────────────────────────────────────────────────── */
+.page{display:none;flex:1;overflow:hidden;flex-direction:column}
+.page.active{display:flex}
+
+/* ── COLLECTION PAGE ──────────────────────────────────────── */
+.coll-layout{display:flex;flex:1;overflow:hidden}
+
+/* Stats row */
+.stats-row{
+  background:linear-gradient(135deg,var(--s1) 0%,var(--s2) 100%);
+  border-bottom:1px solid var(--b1);padding:10px 20px;
+  display:flex;gap:0;flex-shrink:0;overflow-x:auto}
+.stat-pill{display:flex;flex-direction:column;align-items:center;padding:6px 20px;border-right:1px solid var(--b1);gap:1px}
+.stat-pill:last-child{border-right:none}
+.stat-pill .val{font-size:20px;font-weight:800;line-height:1}
+.stat-pill .lbl{font-size:9px;color:var(--tx3);text-transform:uppercase;letter-spacing:.6px;margin-top:2px}
+.prog-wrap{padding:0 20px 8px;background:var(--s1);border-bottom:1px solid var(--b1);flex-shrink:0}
+.prog-track{height:3px;background:var(--b1);border-radius:2px;overflow:hidden;margin-top:6px}
+.prog-fill{height:100%;background:linear-gradient(90deg,var(--green),var(--blue),var(--purple));border-radius:2px;transition:width .5s cubic-bezier(.4,0,.2,1)}
+
+/* ── SEARCH BAR ───────────────────────────────────────────── */
+.search-area{
+  background:var(--s1);border-bottom:1px solid var(--b1);
+  padding:12px 20px;display:flex;gap:10px;align-items:center;flex-shrink:0;flex-wrap:wrap}
+.search-bar{
+  position:relative;flex:1;min-width:200px;max-width:360px}
+.search-bar input{
+  padding:10px 16px 10px 42px;border-radius:30px;
+  border:1px solid var(--b2);background:var(--s3);
+  font-size:14px;color:var(--tx);
+  transition:all .2s;width:100%}
+.search-bar input::placeholder{color:var(--tx3)}
+.search-bar input:focus{
+  border-color:var(--purple);background:var(--s2);
+  box-shadow:0 0 0 3px var(--pbg)}
+.search-bar .search-icon{
+  position:absolute;left:14px;top:50%;transform:translateY(-50%);
+  color:var(--tx3);pointer-events:none;transition:color .2s;font-size:16px}
+.search-bar input:focus~.search-icon{color:var(--purple)}
+.search-bar .clear-btn{
+  position:absolute;right:12px;top:50%;transform:translateY(-50%);
+  background:var(--b2);border:none;color:var(--tx3);width:18px;height:18px;
+  border-radius:50%;font-size:11px;display:none;align-items:center;justify-content:center}
+.search-bar.has-val .clear-btn{display:flex}
+.filter-chip{
+  padding:7px 12px;border-radius:20px;border:1px solid var(--b1);
+  background:var(--s2);color:var(--tx2);font-size:12px;font-weight:500;
+  transition:all .15s;appearance:none;cursor:pointer;outline:none}
+.filter-chip:focus,.filter-chip:hover{border-color:var(--b2);color:var(--tx);background:var(--s3)}
+.rc{margin-left:auto;font-size:12px;color:var(--tx3);white-space:nowrap}
+
+/* ── GRID AREA ─────────────────────────────────────────────── */
+.grid-area{flex:1;overflow-y:auto;padding:16px 20px 8px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(165px,1fr));gap:10px}
+
+/* ── POKEMON CARD ─────────────────────────────────────────── */
+.pk-card{
+  background:var(--s1);border:1px solid var(--b1);border-radius:var(--rad-lg);
+  overflow:hidden;cursor:pointer;transition:transform .13s,border-color .13s,box-shadow .13s;
+  position:relative}
+.pk-card:hover{transform:translateY(-3px);border-color:var(--b2);box-shadow:0 8px 24px rgba(0,0,0,.5)}
+.pk-card.owned{border-color:rgba(34,197,94,.3)}
+.pk-card.owned:hover{border-color:var(--green)}
+.pk-sprite{
+  width:100%;aspect-ratio:1;background:radial-gradient(circle at 50% 60%,var(--s3) 0%,var(--s2) 100%);
+  display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.pk-sprite img{width:72%;height:72%;object-fit:contain;image-rendering:pixelated}
+.pk-sprite .fallback{font-size:32px;color:var(--tx3)}
+.owned-glow{
+  position:absolute;bottom:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,transparent,var(--green),transparent);
+  opacity:0;transition:opacity .2s}
+.pk-card.owned .owned-glow{opacity:1}
+.pk-body{padding:9px 11px 11px}
+.pk-dex{font-size:10px;color:var(--tx3);margin-bottom:1px}
+.pk-name{font-size:13px;font-weight:700;margin-bottom:6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pk-tags-row{display:flex;gap:3px;flex-wrap:wrap;align-items:center}
+.tag{
+  display:inline-flex;align-items:center;gap:3px;
+  font-size:10px;padding:2px 7px;border-radius:20px;font-weight:500;
+  max-width:120px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.t-owned{background:var(--gbg);color:var(--green);border:1px solid var(--gbd)}
+.t-unowned{background:var(--s3);color:var(--tx3);border:1px solid var(--b1)}
+.t-rarity{background:var(--bbg);color:var(--blue);border:1px solid var(--bbd)}
+.t-count{background:var(--s3);color:var(--tx2);border:1px solid var(--b1)}
+.t-custom{border:1px solid;padding:2px 7px}
+
+/* ── PAGINATION ───────────────────────────────────────────── */
+.pag{display:flex;justify-content:center;align-items:center;gap:4px;padding:12px 20px;flex-shrink:0;flex-wrap:wrap}
+.pg{padding:5px 10px;border-radius:7px;border:1px solid var(--b1);background:var(--s1);color:var(--tx2);font-size:13px;transition:all .12s}
+.pg:hover{background:var(--s2);color:var(--tx)}
+.pg.active{background:var(--purple);border-color:var(--purple);color:#fff}
+.pg.dim{opacity:.3;pointer-events:none}
+
+/* ── OVERLAY / MODAL ──────────────────────────────────────── */
+.overlay{
+  position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:300;
+  display:none;align-items:flex-start;justify-content:center;
+  padding:28px 16px;overflow-y:auto;backdrop-filter:blur(4px)}
+.overlay.open{display:flex}
+.modal{
+  background:var(--s1);border:1px solid var(--b2);border-radius:var(--rad-xl);
+  width:100%;margin:auto;overflow:hidden;animation:slideUp .2s ease}
+@keyframes slideUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+.modal-sm{max-width:380px}
+.modal-md{max-width:580px}
+.modal-lg{max-width:720px}
+.mh{padding:16px 20px;border-bottom:1px solid var(--b1);display:flex;align-items:flex-start;justify-content:space-between;gap:10px}
+.mh-info .mh-title{font-size:18px;font-weight:800;letter-spacing:-.3px}
+.mh-info .mh-sub{font-size:12px;color:var(--tx3);margin-top:3px}
+.mc{width:30px;height:30px;border-radius:8px;border:1px solid var(--b1);background:var(--s2);color:var(--tx2);font-size:16px;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .12s}
+.mc:hover{color:var(--tx);border-color:var(--b2)}
+.mb{padding:18px 20px}
+.mb-scroll{padding:18px 20px;max-height:72vh;overflow-y:auto}
+.divider{border:none;border-top:1px solid var(--b1);margin:14px 0}
+
+/* ── DETAIL MODAL ─────────────────────────────────────────── */
+.det-top{display:grid;grid-template-columns:120px 1fr;gap:16px;margin-bottom:16px}
+.det-sprite{
+  background:radial-gradient(circle at 50% 60%,var(--s3),var(--s2));
+  border-radius:var(--rad-lg);aspect-ratio:1;
+  display:flex;align-items:center;justify-content:center;overflow:hidden}
+.det-sprite img{width:82%;height:82%;object-fit:contain;image-rendering:pixelated}
+.det-info{display:flex;flex-direction:column;gap:10px}
+.stog{display:flex;gap:6px}
+.stog button{padding:6px 12px;border-radius:20px;border:1px solid var(--b1);background:var(--s2);color:var(--tx2);font-size:12px;font-weight:600;transition:all .15s}
+.stog .ao{background:var(--gbg);border-color:var(--gbd);color:var(--green)}
+.stog .au{background:var(--s3);border-color:var(--b2);color:var(--tx)}
+.sel-card-box{background:var(--gbg);border:1px solid var(--gbd);border-radius:var(--rad);padding:8px 12px}
+.scb-type{font-size:14px;font-weight:700;color:var(--green)}
+.scb-set{font-size:11px;color:var(--tx3);margin-top:2px}
+.tag-input-row{display:flex;gap:6px;align-items:center;margin-top:6px;flex-wrap:wrap}
+
+/* ── CARD OPTIONS GRID ────────────────────────────────────── */
+.opts-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:8px}
+.opt{
+  background:var(--s2);border:1.5px solid var(--b1);
+  border-radius:var(--rad-lg);overflow:hidden;cursor:pointer;
+  transition:border-color .15s,box-shadow .15s;position:relative}
+.opt:hover{border-color:var(--b2)}
+.opt.sel{border-color:var(--green);box-shadow:0 0 0 1px var(--green)}
+.opt-img{aspect-ratio:2/3;background:var(--s3);display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative}
+.opt-img img{width:100%;height:100%;object-fit:cover}
+.opt-placeholder{display:flex;flex-direction:column;align-items:center;gap:3px;font-size:11px;color:var(--tx3);text-align:center;padding:8px}
+.opt-cam{
+  position:absolute;bottom:5px;right:5px;
+  width:24px;height:24px;border-radius:6px;
+  background:rgba(8,8,16,.85);border:1px solid var(--b2);
+  color:var(--tx2);font-size:13px;display:flex;align-items:center;justify-content:center;
+  transition:all .12s}
+.opt-cam:hover{background:var(--pbg);border-color:var(--purple);color:var(--purple)}
+.opt-check{
+  position:absolute;top:5px;left:5px;width:18px;height:18px;
+  border-radius:50%;background:var(--green);
+  display:none;align-items:center;justify-content:center;
+  font-size:10px;color:#fff;font-weight:700}
+.opt.sel .opt-check{display:flex}
+.opt-body{padding:6px 8px}
+.opt-type{font-size:11px;font-weight:700;color:var(--tx);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.opt-set{font-size:10px;color:var(--tx3);margin-top:1px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+/* ── AUTH PAGE ────────────────────────────────────────────── */
+.auth-page{flex:1;display:flex;align-items:center;justify-content:center;padding:20px;background:radial-gradient(ellipse at 50% 0%,rgba(167,139,250,.06) 0%,transparent 60%)}
+.auth-box{background:var(--s1);border:1px solid var(--b1);border-radius:var(--rad-xl);padding:36px;width:100%;max-width:360px}
+.auth-logo{text-align:center;font-size:32px;margin-bottom:4px}
+.auth-title{text-align:center;font-size:20px;font-weight:800;margin-bottom:4px}
+.auth-sub{text-align:center;font-size:13px;color:var(--tx3);margin-bottom:24px}
+.auth-switch{text-align:center;margin-top:14px;font-size:13px;color:var(--tx3)}
+.auth-switch button{background:none;border:none;color:var(--purple);font-size:13px;text-decoration:underline}
+.auth-err{font-size:12px;color:var(--red);margin-top:6px;min-height:16px;text-align:center}
+
+/* ── ADMIN PAGE ───────────────────────────────────────────── */
+.admin-page{flex:1;overflow-y:auto;padding:20px}
+.admin-lock{display:flex;align-items:center;justify-content:center;min-height:60vh}
+.lock-box{background:var(--s1);border:1px solid var(--b1);border-radius:var(--rad-xl);padding:36px;max-width:340px;width:100%;text-align:center}
+.lock-icon{font-size:44px;margin-bottom:14px}
+.lock-err{font-size:12px;color:var(--red);min-height:16px;margin-top:6px}
+/* ── ADMIN LAYOUT ── */
+.admin-layout{display:grid;grid-template-columns:300px 1fr;gap:16px;align-items:start}
+@media(max-width:800px){.admin-layout{grid-template-columns:1fr}}
+.admin-card{background:var(--s1);border:1px solid var(--b1);border-radius:var(--rad-xl);overflow:hidden;display:flex;flex-direction:column}
+.admin-card-header{padding:13px 16px;border-bottom:1px solid var(--b1);font-size:12px;font-weight:700;color:var(--tx2);text-transform:uppercase;letter-spacing:.5px;display:flex;align-items:center;gap:8px;flex-shrink:0}
+.admin-card-body{padding:16px;overflow-y:auto}
+.admin-main{display:flex;flex-direction:column;gap:16px}
+.apply-bar{padding:11px 16px;border-top:1px solid var(--b1);display:flex;align-items:center;justify-content:space-between;gap:10px;background:var(--s2);flex-shrink:0}
+.apply-msg{font-size:12px;flex:1}
+.apply-msg.ok{color:var(--green)}
+.apply-msg.err{color:var(--red)}
+
+/* Pokémon selector list */
+.poke-sel-list{border:1px solid var(--b1);border-radius:var(--rad);overflow-y:auto;max-height:340px;background:var(--s2)}
+.poke-sel-item{display:flex;align-items:center;gap:8px;padding:8px 12px;cursor:pointer;border-bottom:1px solid var(--b1);transition:background .1s;font-size:13px}
+.poke-sel-item:last-child{border-bottom:none}
+.poke-sel-item:hover{background:var(--s3)}
+.poke-sel-item.active{background:var(--pbg);border-left:3px solid var(--purple)}
+.psi-dex{font-size:10px;color:var(--tx3);min-width:44px}
+.psi-name{font-weight:600;flex:1}
+.psi-tag .tag{pointer-events:none}
+
+/* ── CARD SLOTS ── */
+.card-slots-list{display:flex;flex-direction:column;gap:10px;margin:8px 0}
+.card-slot-row{
+  background:var(--s2);border:1px solid var(--b1);border-radius:var(--rad-lg);
+  padding:12px;position:relative}
+.slot-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
+.slot-num-badge{
+  background:var(--s3);border:1px solid var(--b1);
+  border-radius:10px;padding:2px 9px;font-size:10px;color:var(--tx3);font-weight:700;letter-spacing:.3px}
+.slot-remove-btn{background:none;border:none;color:var(--tx3);font-size:13px;padding:2px 6px;border-radius:4px;transition:all .12s}
+.slot-remove-btn:hover{color:var(--red);background:var(--rbg)}
+.slot-fields{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px}
+/* image area */
+.slot-img-area{
+  border:1.5px dashed var(--b2);border-radius:var(--rad);
+  overflow:hidden;cursor:pointer;transition:border-color .15s;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  min-height:80px;position:relative;background:var(--s3)}
+.slot-img-area:hover{border-color:var(--purple)}
+.slot-img-area.has-img{border-style:solid;border-color:var(--gbd)}
+.slot-img-area img{width:100%;max-height:140px;object-fit:contain;display:none}
+.slot-img-area.has-img img{display:block}
+.slot-img-placeholder{display:flex;flex-direction:column;align-items:center;gap:4px;padding:12px;color:var(--tx3);font-size:12px;text-align:center}
+.slot-img-area.has-img .slot-img-placeholder{display:none}
+.slot-img-overlay{
+  position:absolute;inset:0;background:rgba(0,0,0,.55);
+  display:none;align-items:center;justify-content:center;gap:8px}
+.slot-img-area.has-img:hover .slot-img-overlay{display:flex}
+.slot-img-overlay button{padding:5px 10px;border-radius:6px;font-size:11px;font-weight:600;border:none;cursor:pointer}
+.sio-change{background:var(--purple);color:#fff}
+.sio-remove{background:var(--rbg);color:var(--red);border:1px solid var(--rbd) !important}
+
+.add-slot-btn{
+  display:flex;align-items:center;justify-content:center;gap:8px;padding:11px 14px;
+  border-radius:var(--rad-lg);border:1.5px dashed var(--b2);background:transparent;
+  color:var(--tx3);font-size:13px;font-weight:500;transition:all .15s;width:100%}
+.add-slot-btn:hover{border-color:var(--purple);color:var(--purple);background:var(--pbg)}
+</style>
+</head>
+<body>
+
+<!-- ╔═════════════════════════════════════════════════════╗
+     ║ TOP BAR                                             ║
+     ╚═════════════════════════════════════════════════════╝ -->
+<div id="topbar">
+  <div class="logo">Pokédex <em>Alt Art</em></div>
+  <div class="nav-pills" id="nav-pills" style="display:none">
+    <button class="nav-pill active" data-page="collection" onclick="showPage('collection')">📦 Collection</button>
+    <button class="nav-pill adm" data-page="admin" onclick="showPage('admin')">⚙ Admin</button>
+  </div>
+  <div class="spacer"></div>
+  <div id="topbar-right" style="display:flex;gap:8px;align-items:center"></div>
+</div>
+
+<!-- ╔═════════════════════════════════════════════════════╗
+     ║ AUTH PAGE                                           ║
+     ╚═════════════════════════════════════════════════════╝ -->
+<div class="page active" id="page-auth">
+  <div class="auth-page">
+    <div class="auth-box">
+      <div class="auth-logo">🃏</div>
+      <div class="auth-title">Alt Art Pokédex</div>
+      <div class="auth-sub" id="auth-sub">Sign in to track your collection</div>
+      <div id="auth-form-login">
+        <div class="fg" style="margin-bottom:10px"><label class="label">Username</label><input type="text" id="login-user" placeholder="Your username" autocomplete="username"></div>
+        <div class="fg" style="margin-bottom:14px"><label class="label">Password</label><input type="password" id="login-pass" placeholder="Your password" onkeydown="if(event.key==='Enter')doLogin()"></div>
+        <button class="btn btn-primary" style="width:100%;justify-content:center" onclick="doLogin()">Sign In</button>
+        <div class="auth-err" id="login-err"></div>
+        <div class="auth-switch">Don't have an account? <button onclick="switchAuth('register')">Create one</button></div>
+      </div>
+      <div id="auth-form-register" style="display:none">
+        <div class="fg" style="margin-bottom:10px"><label class="label">Username</label><input type="text" id="reg-user" placeholder="Choose a username"></div>
+        <div class="fg" style="margin-bottom:10px"><label class="label">Password</label><input type="password" id="reg-pass" placeholder="Choose a password" onkeydown="if(event.key==='Enter')doRegister()"></div>
+        <div class="fg" style="margin-bottom:14px"><label class="label">Confirm password</label><input type="password" id="reg-pass2" placeholder="Confirm password" onkeydown="if(event.key==='Enter')doRegister()"></div>
+        <button class="btn btn-primary" style="width:100%;justify-content:center" onclick="doRegister()">Create Account</button>
+        <div class="auth-err" id="reg-err"></div>
+        <div class="auth-switch">Already have an account? <button onclick="switchAuth('login')">Sign in</button></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ╔═════════════════════════════════════════════════════╗
+     ║ COLLECTION PAGE                                     ║
+     ╚═════════════════════════════════════════════════════╝ -->
+<div class="page" id="page-collection">
+  <div class="stats-row" id="stats-row"></div>
+  <div class="prog-wrap"><div class="prog-track"><div class="prog-fill" id="prog-fill" style="width:0%"></div></div></div>
+  <div class="search-area">
+    <div class="search-bar" id="search-bar">
+      <span class="search-icon">🔍</span>
+      <input type="text" id="search" placeholder="Search Pokémon by name or number…" oninput="onSearch(this)">
+      <button class="clear-btn" onclick="clearSearch()">✕</button>
+    </div>
+    <select class="filter-chip" id="f-status" onchange="filterAndRender()">
+      <option value="">All status</option>
+      <option value="Owned">Owned</option>
+      <option value="Unowned">Unowned</option>
+    </select>
+    <select class="filter-chip" id="f-art" onchange="filterAndRender()">
+      <option value="">All types</option>
+      <option value="Yes">Has alt art</option>
+      <option value="No">No alt art</option>
+    </select>
+    <select class="filter-chip" id="f-set" onchange="filterAndRender()">
+      <option value="">All sets</option>
+    </select>
+    <select class="filter-chip" id="f-rar" onchange="filterAndRender()">
+      <option value="">All rarities</option>
+    </select>
+    <button class="btn btn-sm" style="border-radius:20px" onclick="openTagManager()">🏷 Tags</button>
+    <span class="rc" id="rc"></span>
+  </div>
+  <div class="grid-area">
+    <div class="grid" id="grid"></div>
+  </div>
+  <div class="pag" id="pag"></div>
+</div>
+
+<!-- ╔═════════════════════════════════════════════════════╗
+     ║ ADMIN PAGE                                          ║
+     ╚═════════════════════════════════════════════════════╝ -->
+<div class="page" id="page-admin">
+  <div class="admin-page">
+    <!-- LOCK SCREEN -->
+    <div class="admin-lock" id="admin-lock">
+      <div class="lock-box">
+        <div class="lock-icon">🔐</div>
+        <div style="font-size:18px;font-weight:800;margin-bottom:6px">Admin Console</div>
+        <div style="font-size:13px;color:var(--tx3);margin-bottom:20px">Password required to manage core data</div>
+        <div class="fg" style="margin-bottom:8px">
+          <label class="label">Admin Password</label>
+          <input type="password" id="adm-pw" placeholder="Enter password…" onkeydown="if(event.key==='Enter')tryAdminLogin()">
+        </div>
+        <div class="lock-err" id="adm-err"></div>
+        <button class="btn btn-primary" style="width:100%;justify-content:center;margin-top:10px" onclick="tryAdminLogin()">Unlock Admin</button>
+      </div>
+    </div>
+
+    <!-- CONSOLE -->
+    <div id="admin-console" style="display:none">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;flex-wrap:wrap;gap:8px">
+        <div style="font-size:18px;font-weight:800">⚙ Admin Console</div>
+        <div style="display:flex;gap:8px">
+          <button class="btn btn-amber btn-sm" onclick="exportCoreData()">⬇ Export JSON</button>
+          <button class="btn btn-sm" onclick="lockAdmin()">🔒 Lock</button>
+        </div>
+      </div>
+      <div style="font-size:12px;color:var(--tx3);margin-bottom:16px;padding:9px 13px;background:var(--abg);border:1px solid var(--abd);border-radius:var(--rad)">
+        ⚠ Changes here update core data. Use <strong style="color:var(--amber)">Export JSON</strong> to save a new <code>pokedex_data.json</code> for all users.
+      </div>
+
+      <div class="admin-layout">
+
+        <!-- LEFT: selector + add new -->
+        <div style="display:flex;flex-direction:column;gap:12px">
+
+          <!-- Search & select -->
+          <div class="admin-card">
+            <div class="admin-card-header">📋 Select Pokémon to Edit</div>
+            <div class="admin-card-body" style="padding:12px">
+              <div style="position:relative;margin-bottom:8px">
+                <span style="position:absolute;left:10px;top:50%;transform:translateY(-50%);color:var(--tx3);pointer-events:none;font-size:14px">🔍</span>
+                <input type="text" id="e-search" placeholder="Name or #…" style="padding-left:32px" oninput="renderEditList()">
+              </div>
+              <div class="poke-sel-list" id="e-list"></div>
+            </div>
+          </div>
+
+          <!-- Add new -->
+          <div class="admin-card">
+            <div class="admin-card-header">➕ Add New Pokémon</div>
+            <div class="admin-card-body">
+              <div class="grid2" style="margin-bottom:10px">
+                <div class="fg"><label class="label">Name</label><input type="text" id="a-name" placeholder="e.g. Pikachu"></div>
+                <div class="fg"><label class="label">Pokédex #</label><input type="text" id="a-dex" placeholder="e.g. #0025"></div>
+              </div>
+              <div class="fg" style="margin-bottom:10px">
+                <label class="label">Has alt art?</label>
+                <select id="a-hasart"><option value="Yes">Yes</option><option value="No">No</option></select>
+              </div>
+              <div class="divider" style="margin:10px 0"></div>
+              <div class="label" style="margin-bottom:8px">Card options</div>
+              <div class="card-slots-list" id="a-slots"></div>
+              <button class="add-slot-btn" id="a-add-slot" onclick="addSlot('add')" style="display:none">＋ Add card option</button>
+            </div>
+            <div class="apply-bar">
+              <span class="apply-msg" id="a-msg"></span>
+              <button class="btn btn-primary btn-sm" onclick="applyAdd()">✓ Apply — Add</button>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- RIGHT: edit panel (full width, shown when a pokemon is selected) -->
+        <div class="admin-main">
+          <div class="admin-card" id="e-panel" style="display:none">
+            <div class="admin-card-header" id="e-panel-title">✏ Edit Pokémon</div>
+            <div class="admin-card-body">
+
+              <!-- Basic info -->
+              <div style="font-size:11px;font-weight:700;color:var(--tx3);text-transform:uppercase;letter-spacing:.5px;margin-bottom:10px">Basic Info</div>
+              <div class="grid2" style="margin-bottom:10px">
+                <div class="fg"><label class="label">Name</label><input type="text" id="e-name"></div>
+                <div class="fg"><label class="label">Pokédex #</label><input type="text" id="e-dex"></div>
+              </div>
+              <div class="fg" style="margin-bottom:4px">
+                <label class="label">Has alt art cards?</label>
+                <select id="e-hasart"><option value="Yes">Yes</option><option value="No">No</option></select>
+              </div>
+
+              <div class="divider"></div>
+
+              <!-- Card slots -->
+              <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px">
+                <div style="font-size:11px;font-weight:700;color:var(--tx3);text-transform:uppercase;letter-spacing:.5px">Card Options <span id="e-slot-count" style="color:var(--purple);font-size:10px"></span></div>
+                <div style="font-size:11px;color:var(--tx3)">Up to 20 · only active slots shown</div>
+              </div>
+              <div class="card-slots-list" id="e-slots"></div>
+              <button class="add-slot-btn" id="e-add-slot" onclick="addSlot('edit')" style="display:none">＋ Add card option slot</button>
+
+            </div>
+            <div class="apply-bar" id="e-bar">
+              <span class="apply-msg" id="e-msg"></span>
+              <div style="display:flex;gap:7px">
+                <button class="btn btn-red btn-sm" onclick="applyRemove()">🗑 Remove Pokémon</button>
+                <button class="btn btn-green btn-sm" onclick="applyEdit()">✓ Apply Changes</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- placeholder when nothing selected -->
+          <div id="e-placeholder" style="display:flex;align-items:center;justify-content:center;min-height:200px;background:var(--s1);border:1px dashed var(--b1);border-radius:var(--rad-xl);color:var(--tx3);font-size:14px;text-align:center;padding:32px">
+            ← Select a Pokémon from the list to edit its info and card slots
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ╔═════════════════════════════════════════════════════╗
+     ║ DETAIL OVERLAY                                      ║
+     ╚═════════════════════════════════════════════════════╝ -->
+<div class="overlay" id="det-ov" onclick="if(event.target===this)closeOv('det-ov')">
+  <div class="modal modal-lg" id="det-modal"></div>
+</div>
+
+<!-- ╔═════════════════════════════════════════════════════╗
+     ║ TAG MANAGER OVERLAY                                 ║
+     ╚═════════════════════════════════════════════════════╝ -->
+<div class="overlay" id="tag-ov" onclick="if(event.target===this)closeOv('tag-ov')">
+  <div class="modal modal-md" id="tag-modal">
+    <div class="mh">
+      <div class="mh-info"><div class="mh-title">🏷 My Tags</div><div class="mh-sub">Create custom tags to organise your collection</div></div>
+      <button class="mc" onclick="closeOv('tag-ov')">✕</button>
+    </div>
+    <div class="mb">
+      <div style="display:flex;gap:8px;margin-bottom:14px">
+        <input type="text" id="new-tag-name" placeholder="Tag name…" style="flex:1" onkeydown="if(event.key==='Enter')createTag()">
+        <input type="color" id="new-tag-color" value="#a78bfa" style="width:40px;height:38px;padding:2px;border-radius:var(--rad);border:1px solid var(--b1);background:var(--s2);cursor:pointer">
+        <button class="btn btn-primary btn-sm" onclick="createTag()">+ Create</button>
+      </div>
+      <div id="tag-list-display"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ╔═════════════════════════════════════════════════════╗
+     ║ EXPORT OVERLAY                                      ║
+     ╚═════════════════════════════════════════════════════╝ -->
+<div class="overlay" id="exp-ov" onclick="if(event.target===this)closeOv('exp-ov')">
+  <div class="modal modal-sm" id="exp-modal">
+    <div class="mh"><div class="mh-info"><div class="mh-title">Export</div></div><button class="mc" onclick="closeOv('exp-ov')">✕</button></div>
+    <div class="mb">
+      <button class="btn" style="width:100%;justify-content:center;margin-bottom:8px" onclick="exportSite()">⬇ Export full site (HTML)</button>
+      <button class="btn" style="width:100%;justify-content:center" onclick="exportCoreData()">⬇ Export core data (JSON)</button>
+      <div style="font-size:12px;color:var(--tx3);margin-top:10px">The HTML export bundles the app and current core data. Replace <code>pokedex_data.json</code> next to the HTML to update core data for all users.</div>
+    </div>
+  </div>
+</div>
+
+<script>
+// ═══════════════════════════════════════════════════════
+// CORE DATA (loaded from embedded JSON or fetch)
+// ═══════════════════════════════════════════════════════
+let coreData = [{"name": "Bulbasaur", "dexNum": "#0001", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "151", "img": null}, {"type": "Illustration", "set": "Stellar Crown", "img": null}, {"type": "Illustration", "set": "Mega Evolution", "img": null}, {"type": "Illustration", "set": "Mega Promo", "img": null}]}, {"name": "Ivysaur", "dexNum": "#0002", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "151", "img": null}, {"type": "Illustration", "set": "Mega Evolution", "img": null}]}, {"name": "Venusaur", "dexNum": "#0003", "hasArt": "Yes", "cards": [{"type": "Alt Art", "set": "XY Promo", "img": null}, {"type": "Special Illustration Rare", "set": "151", "img": null}, {"type": "Special Illustration Rare", "set": "Mega Evolution", "img": null}]}, {"name": "Charmander", "dexNum": "#0004", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "151", "img": null}, {"type": "Illustration", "set": "SV Promo", "img": null}, {"type": "Illustration", "set": "Mega Promo", "img": null}]}, {"name": "Charmeleon", "dexNum": "#0005", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "151", "img": null}]}, {"name": "Charizard", "dexNum": "#0006", "hasArt": "Yes", "cards": [{"type": "Special Illustration Rare", "set": "151", "img": null}, {"type": "Special Illustration Rare", "set": "Obsidian Flames", "img": null}, {"type": "Special Illustration Rare", "set": "Phantasmal Flames", "img": null}]}, {"name": "Squirtle", "dexNum": "#0007", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "151", "img": null}, {"type": "Illustration", "set": "Stellar Crown", "img": null}]}, {"name": "Wartortle", "dexNum": "#0008", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "151", "img": null}]}, {"name": "Blastoise", "dexNum": "#0009", "hasArt": "Yes", "cards": [{"type": "Special Illustration Rare", "set": "151", "img": null}]}, {"name": "Caterpie", "dexNum": "#0010", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "151", "img": null}]}, {"name": "Metapod", "dexNum": "#0011", "hasArt": "No", "cards": []}, {"name": "Butterfree", "dexNum": "#0012", "hasArt": "No", "cards": []}, {"name": "Weedle", "dexNum": "#0013", "hasArt": "No", "cards": []}, {"name": "Kakuna", "dexNum": "#0014", "hasArt": "No", "cards": []}, {"name": "Beedrill", "dexNum": "#0015", "hasArt": "Yes", "cards": [{"type": "Alt Art", "set": "Astral Radiance", "img": null}]}, {"name": "Pidgey", "dexNum": "#0016", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Obsidian Flames", "img": null}]}, {"name": "Pidgeotto", "dexNum": "#0017", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Obsidian Flames", "img": null}]}, {"name": "Pidgeot", "dexNum": "#0018", "hasArt": "Yes", "cards": [{"type": "Special Illustration Rare", "set": "Obsidian Flames", "img": null}]}, {"name": "Rattata", "dexNum": "#0019", "hasArt": "No", "cards": []}, {"name": "Raticate", "dexNum": "#0020", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Perfect Order", "img": null}]}, {"name": "Spearow", "dexNum": "#0021", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Mega Evolution", "img": null}]}, {"name": "Fearow", "dexNum": "#0022", "hasArt": "Yes", "cards": [{"type": "Ancient Trait", "set": "XY Promo", "img": null}]}, {"name": "Ekans", "dexNum": "#0023", "hasArt": "No", "cards": []}, {"name": "Arbok", "dexNum": "#0024", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Temporal Forces", "img": null}]}, {"name": "Pikachu", "dexNum": "#0025", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "151", "img": null}, {"type": "Gallery", "set": "Cosmic Eclipse", "img": null}, {"type": "Special Illustration Rare", "set": "Surging Sparks", "img": null}, {"type": "Illustration", "set": "SV Promo", "img": null}, {"type": "Special Illustration Rare", "set": "Ascended Heroes", "img": null}]}, {"name": "Raichu", "dexNum": "#0026", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Paldea Evolved", "img": null}]}, {"name": "Sandshrew", "dexNum": "#0027", "hasArt": "No", "cards": []}, {"name": "Sandslash", "dexNum": "#0028", "hasArt": "No", "cards": []}, {"name": "Nidoran♀", "dexNum": "#0029", "hasArt": "No", "cards": []}, {"name": "Nidorina", "dexNum": "#0030", "hasArt": "No", "cards": []}, {"name": "Nidoqueen", "dexNum": "#0031", "hasArt": "Yes", "cards": [{"type": "Ancient Trait", "set": "Primal Clash", "img": null}]}, {"name": "Nidoran♂", "dexNum": "#0032", "hasArt": "No", "cards": []}, {"name": "Nidorino", "dexNum": "#0033", "hasArt": "No", "cards": []}, {"name": "Nidoking", "dexNum": "#0034", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "151", "img": null}]}, {"name": "Clefairy", "dexNum": "#0035", "hasArt": "Yes", "cards": [{"type": "Special Illustration Rare", "set": "Journey Together", "img": null}, {"type": "Special Illustration Rare", "set": "Ascended Heroes", "img": null}, {"type": "Illustration", "set": "Perfect Order", "img": null}]}, {"name": "Clefable", "dexNum": "#0036", "hasArt": "Yes", "cards": [{"type": "Special Illustration Rare", "set": "Perfect Order", "img": null}]}, {"name": "Vulpix", "dexNum": "#0037", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Mega Evolution", "img": null}]}, {"name": "Ninetales", "dexNum": "#0038", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Obsidian Flames", "img": null}]}, {"name": "Jigglypuff", "dexNum": "#0039", "hasArt": "Yes", "cards": []}, {"name": "Wigglytuff", "dexNum": "#0040", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Phantasmal Flames", "img": null}]}, {"name": "Zubat", "dexNum": "#0041", "hasArt": "No", "cards": []}, {"name": "Golbat", "dexNum": "#0042", "hasArt": "No", "cards": []}, {"name": "Oddish", "dexNum": "#0043", "hasArt": "No", "cards": []}, {"name": "Gloom", "dexNum": "#0044", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Obsidian Flames", "img": null}]}, {"name": "Vileplume", "dexNum": "#0045", "hasArt": "Yes", "cards": [{"type": "Art", "set": "Cosmic Eclipse", "img": null}]}, {"name": "Paras", "dexNum": "#0046", "hasArt": "Yes", "cards": [{"type": "Gallery", "set": "Crown Zenith", "img": null}]}, {"name": "Parasect", "dexNum": "#0047", "hasArt": "Yes", "cards": [{"type": "Gallery", "set": "Lost Origin", "img": null}]}, {"name": "Venonat", "dexNum": "#0048", "hasArt": "No", "cards": []}, {"name": "Venomoth", "dexNum": "#0049", "hasArt": "No", "cards": []}, {"name": "Diglett", "dexNum": "#0050", "hasArt": "No", "cards": []}, {"name": "Dugtrio", "dexNum": "#0051", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Surging Sparks", "img": null}, {"type": "Illustration", "set": "Ascended Heroes", "img": null}]}, {"name": "Meowth", "dexNum": "#0052", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Destined Rivals", "img": null}, {"type": "Illustration", "set": "Phantasmal Flames", "img": null}, {"type": "Illustration", "set": "Perfect Order", "img": null}]}, {"name": "Persian", "dexNum": "#0053", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Shrouded Fable", "img": null}]}, {"name": "Psyduck", "dexNum": "#0054", "hasArt": "Yes", "cards": [{"type": "Alt Art", "set": "Unified Minds", "img": null}, {"type": "Illustration", "set": "151", "img": null}, {"type": "Illustration", "set": "Destined Rivals", "img": null}, {"type": "Illustration", "set": "Ascended Heroes", "img": null}]}, {"name": "Golduck", "dexNum": "#0055", "hasArt": "No", "cards": []}, {"name": "Mankey", "dexNum": "#0056", "hasArt": "No", "cards": []}, {"name": "Primeape", "dexNum": "#0057", "hasArt": "No", "cards": []}, {"name": "Growlithe", "dexNum": "#0058", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Twilight Masquerade", "img": null}]}, {"name": "Arcanine", "dexNum": "#0059", "hasArt": "Yes", "cards": [{"type": "Gallery", "set": "Lost Origin", "img": null}]}, {"name": "Poliwag", "dexNum": "#0060", "hasArt": "No", "cards": []}, {"name": "Poliwhirl", "dexNum": "#0061", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "151", "img": null}]}, {"name": "Poliwrath", "dexNum": "#0062", "hasArt": "No", "cards": []}, {"name": "Abra", "dexNum": "#0063", "hasArt": "No", "cards": []}, {"name": "Kadabra", "dexNum": "#0064", "hasArt": "No", "cards": []}, {"name": "Alakazam", "dexNum": "#0065", "hasArt": "Yes", "cards": [{"type": "Special Illustration Rare", "set": "151", "img": null}, {"type": "Misc.", "set": "Fates Collide", "img": null}, {"type": "Illustration", "set": "Mega Promo", "img": null}]}, {"name": "Machop", "dexNum": "#0066", "hasArt": "No", "cards": []}, {"name": "Machoke", "dexNum": "#0067", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "151", "img": null}]}, {"name": "Machamp", "dexNum": "#0068", "hasArt": "Yes", "cards": [{"type": "Alt Art", "set": "Astral Radiance", "img": null}, {"type": "Alt Art", "set": "Unbroken Bonds", "img": null}]}, {"name": "Bellsprout", "dexNum": "#0069", "hasArt": "No", "cards": []}, {"name": "Weepinbell", "dexNum": "#0070", "hasArt": "No", "cards": []}, {"name": "Victreebel", "dexNum": "#0071", "hasArt": "No", "cards": []}, {"name": "Tentacool", "dexNum": "#0072", "hasArt": "Yes", "cards": [{"type": "Ancient Trait", "set": "Primal Clash", "img": null}]}, {"name": "Tentacruel", "dexNum": "#0073", "hasArt": "No", "cards": []}, {"name": "Geodude", "dexNum": "#0074", "hasArt": "No", "cards": []}, {"name": "Graveler", "dexNum": "#0075", "hasArt": "No", "cards": []}, {"name": "Golem", "dexNum": "#0076", "hasArt": "No", "cards": []}, {"name": "Ponyta", "dexNum": "#0077", "hasArt": "No", "cards": []}, {"name": "Rapidash", "dexNum": "#0078", "hasArt": "Yes", "cards": [{"type": "Alt Art", "set": "Chilling Reign", "img": null}, {"type": "Illustration", "set": "Destined Rivals", "img": null}]}, {"name": "Slowpoke", "dexNum": "#0079", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Scarlet & Violet", "img": null}, {"type": "Alt Art", "set": "Unified Minds", "img": null}]}, {"name": "Slowbro", "dexNum": "#0080", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Pitch Black", "img": null}]}, {"name": "Magnemite", "dexNum": "#0081", "hasArt": "Yes", "cards": [{"type": "Gallery", "set": "Cosmic Eclipse", "img": null}]}, {"name": "Magneton", "dexNum": "#0082", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "SV Promo", "img": null}]}, {"name": "Farfetch'd", "dexNum": "#0083", "hasArt": "No", "cards": []}, {"name": "Doduo", "dexNum": "#0084", "hasArt": "No", "cards": []}, {"name": "Dodrio", "dexNum": "#0085", "hasArt": "No", "cards": []}, {"name": "Seel", "dexNum": "#0086", "hasArt": "No", "cards": []}, {"name": "Dewgong", "dexNum": "#0087", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Phantasmal Flames", "img": null}]}, {"name": "Grimer", "dexNum": "#0088", "hasArt": "No", "cards": []}, {"name": "Muk", "dexNum": "#0089", "hasArt": "Yes", "cards": [{"type": "Alt Art", "set": "Unbroken Bonds", "img": null}]}, {"name": "Shellder", "dexNum": "#0090", "hasArt": "No", "cards": []}, {"name": "Cloyster", "dexNum": "#0091", "hasArt": "No", "cards": []}, {"name": "Gastly", "dexNum": "#0092", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Temporal Forces", "img": null}]}, {"name": "Haunter", "dexNum": "#0093", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Mega Promo", "img": null}]}, {"name": "Gengar", "dexNum": "#0094", "hasArt": "Yes", "cards": [{"type": "Alt Art", "set": "Fusion Strike", "img": null}, {"type": "Gallery", "set": "Lost Origin", "img": null}, {"type": "Special Illustration Rare", "set": "Ascended Heroes", "img": null}, {"type": "Alt Art", "set": "Team Up", "img": null}]}, {"name": "Onix", "dexNum": "#0095", "hasArt": "No", "cards": []}, {"name": "Drowzee", "dexNum": "#0096", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "SV Base", "img": null}]}, {"name": "Hypno", "dexNum": "#0097", "hasArt": "No", "cards": []}, {"name": "Krabby", "dexNum": "#0098", "hasArt": "No", "cards": []}, {"name": "Kingler", "dexNum": "#0099", "hasArt": "No", "cards": []}, {"name": "Voltorb", "dexNum": "#0100", "hasArt": "Yes", "cards": [{"type": "Gallery", "set": "Crown Zenith", "img": null}]}, {"name": "Electrode", "dexNum": "#0101", "hasArt": "No", "cards": []}, {"name": "Exeggcute", "dexNum": "#0102", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Surging Sparks", "img": null}]}, {"name": "Exeggutor", "dexNum": "#0103", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Surging Sparks", "img": null}, {"type": "Illustration", "set": "Mega Evolution", "img": null}]}, {"name": "Cubone", "dexNum": "#0104", "hasArt": "No", "cards": []}, {"name": "Marowak", "dexNum": "#0105", "hasArt": "No", "cards": []}, {"name": "Hitmonlee", "dexNum": "#0106", "hasArt": "No", "cards": []}, {"name": "Hitmonchan", "dexNum": "#0107", "hasArt": "No", "cards": []}, {"name": "Lickitung", "dexNum": "#0108", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Temporal Forces", "img": null}]}, {"name": "Koffing", "dexNum": "#0109", "hasArt": "Yes", "cards": []}, {"name": "Weezing", "dexNum": "#0110", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Destined Rivals", "img": null}]}, {"name": "Rhyhorn", "dexNum": "#0111", "hasArt": "No", "cards": []}, {"name": "Rhydon", "dexNum": "#0112", "hasArt": "No", "cards": []}, {"name": "Chansey", "dexNum": "#0113", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Twilight Masquerade", "img": null}]}, {"name": "Tangela", "dexNum": "#0114", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "151", "img": null}, {"type": "Illustration", "set": "Ascended Heroes", "img": null}]}, {"name": "Kangaskhan", "dexNum": "#0115", "hasArt": "Yes", "cards": [{"type": "Special Illustration Rare", "set": "Mega Evolution", "img": null}, {"type": "Illustration", "set": "Destined Rivals", "img": null}]}, {"name": "Horsea", "dexNum": "#0116", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Shrouded Fable", "img": null}]}, {"name": "Seadra", "dexNum": "#0117", "hasArt": "No", "cards": []}, {"name": "Goldeen", "dexNum": "#0118", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Pitch Black", "img": null}]}, {"name": "Seaking", "dexNum": "#0119", "hasArt": "No", "cards": []}, {"name": "Staryu", "dexNum": "#0120", "hasArt": "No", "cards": []}, {"name": "Starmie", "dexNum": "#0121", "hasArt": "Yes", "cards": [{"type": "Gallery", "set": "Astral Radiance", "img": null}, {"type": "Illustration", "set": "Perfect Order", "img": null}]}, {"name": "Mr. Mime", "dexNum": "#0122", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "151", "img": null}]}, {"name": "Scyther", "dexNum": "#0123", "hasArt": "No", "cards": []}, {"name": "Jynx", "dexNum": "#0124", "hasArt": "Yes", "cards": [{"type": "Gallery", "set": "Silver Tempest", "img": null}]}, {"name": "Electabuzz", "dexNum": "#0125", "hasArt": "No", "cards": []}, {"name": "Magmar", "dexNum": "#0126", "hasArt": "No", "cards": []}, {"name": "Pinsir", "dexNum": "#0127", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Twilight Masquerade", "img": null}]}, {"name": "Tauros", "dexNum": "#0128", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Paldea Evolved", "img": null}, {"type": "Illustration", "set": "Chaos Rising", "img": null}]}, {"name": "Magikarp", "dexNum": "#0129", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Paldea Evolved", "img": null}]}, {"name": "Gyarados", "dexNum": "#0130", "hasArt": "Yes", "cards": [{"type": "Misc.", "set": "BREAKpoint", "img": null}, {"type": "Misc.", "set": "Ancient Origins", "img": null}, {"type": "Ancient Trait", "set": "XY Promo", "img": null}]}, {"name": "Lapras", "dexNum": "#0131", "hasArt": "Yes", "cards": [{"type": "Gallery", "set": "Crown Zenith", "img": null}, {"type": "Illustration", "set": "Destined Rivals", "img": null}]}, {"name": "Ditto", "dexNum": "#0132", "hasArt": "Yes", "cards": [{"type": "Gallery", "set": "Crown Zenith", "img": null}]}, {"name": "Eevee", "dexNum": "#0133", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Twilight Masquerade", "img": null}, {"type": "Gallery", "set": "Brilliant Stars", "img": null}, {"type": "Illustration", "set": "SV Promo", "img": null}]}, {"name": "Vaporeon", "dexNum": "#0134", "hasArt": "Yes", "cards": [{"type": "Alt Art", "set": "SWSH Promo", "img": null}]}, {"name": "Jolteon", "dexNum": "#0135", "hasArt": "Yes", "cards": [{"type": "Alt Art", "set": "SWSH Promo", "img": null}]}, {"name": "Flareon", "dexNum": "#0136", "hasArt": "Yes", "cards": [{"type": "Alt Art", "set": "SWSH Promo", "img": null}, {"type": "Gallery", "set": "Generations", "img": null}]}, {"name": "Porygon", "dexNum": "#0137", "hasArt": "No", "cards": []}, {"name": "Omanyte", "dexNum": "#0138", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "151", "img": null}]}, {"name": "Omastar", "dexNum": "#0139", "hasArt": "No", "cards": []}, {"name": "Kabuto", "dexNum": "#0140", "hasArt": "No", "cards": []}, {"name": "Kabutops", "dexNum": "#0141", "hasArt": "No", "cards": []}, {"name": "Aerodactyl", "dexNum": "#0142", "hasArt": "Yes", "cards": [{"type": "Alt Art", "set": "Lost Origin", "img": null}]}, {"name": "Snorlax", "dexNum": "#0143", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "SV Promo", "img": null}, {"type": "Gallery", "set": "Lost Origin", "img": null}]}, {"name": "Articuno", "dexNum": "#0144", "hasArt": "Yes", "cards": [{"type": "Alt Art", "set": "Chilling Reign", "img": null}, {"type": "Ancient Trait", "set": "Roaring Skies", "img": null}, {"type": "Gallery", "set": "SWSH Promo", "img": null}, {"type": "Illustration", "set": "Journey Together", "img": null}]}, {"name": "Zapdos", "dexNum": "#0145", "hasArt": "Yes", "cards": [{"type": "Special Illustration Rare", "set": "151", "img": null}, {"type": "Alt Art", "set": "Chilling Reign", "img": null}, {"type": "Art", "set": "SWSH Promo", "img": null}, {"type": "Alt Gallery Art", "set": "Astral Radiance", "img": null}]}, {"name": "Moltres", "dexNum": "#0146", "hasArt": "Yes", "cards": [{"type": "Alt Art", "set": "Chilling Reign", "img": null}, {"type": "Art", "set": "SWSH Promo", "img": null}, {"type": "Alt Gallery Art", "set": "Astral Radiance", "img": null}]}, {"name": "Dratini", "dexNum": "#0147", "hasArt": "No", "cards": []}, {"name": "Dragonair", "dexNum": "#0148", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "151", "img": null}]}, {"name": "Dragonite", "dexNum": "#0149", "hasArt": "Yes", "cards": [{"type": "Alt Art", "set": "Evolving Skies", "img": null}, {"type": "Ancient Trait", "set": "Roaring Skies", "img": null}, {"type": "Special Illustration Rare", "set": "Ascended Heroes", "img": null}]}, {"name": "Mewtwo", "dexNum": "#0150", "hasArt": "Yes", "cards": [{"type": "Special Illustration Rare", "set": "Crown Zenith", "img": null}, {"type": "Alt Art", "set": "Pokemon GO", "img": null}, {"type": "Art", "set": "SM Promo", "img": null}, {"type": "Illustration", "set": "SV Promo", "img": null}, {"type": "Misc.", "set": "Shining Legends", "img": null}, {"type": "Special Illustration Rare", "set": "Ascended Heroes", "img": null}]}, {"name": "Mew", "dexNum": "#0151", "hasArt": "Yes", "cards": [{"type": "Special Illustration Rare", "set": "SV Promo", "img": null}, {"type": "Gallery", "set": "Crown Zenith", "img": null}, {"type": "Alt Art", "set": "Fusion Strike", "img": null}, {"type": "Art", "set": "XY Promo", "img": null}, {"type": "Special Illustration Rare", "set": "Paldean Fates", "img": null}, {"type": "Misc.", "set": "Legendary Treasures", "img": null}]}, {"name": "Chikorita", "dexNum": "#0152", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Mega Promo", "img": null}]}, {"name": "Bayleef", "dexNum": "#0153", "hasArt": "No", "cards": []}, {"name": "Meganium", "dexNum": "#0154", "hasArt": "Yes", "cards": [{"type": "Special Illustration Rare", "set": "Ascended Heroes", "img": null}]}, {"name": "Cyndaquil", "dexNum": "#0155", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Mega Promo", "img": null}]}, {"name": "Quilava", "dexNum": "#0156", "hasArt": "No", "cards": []}, {"name": "Typhlosion", "dexNum": "#0157", "hasArt": "No", "cards": [{"type": "Illustration", "set": "Destined Rivals", "img": null}]}, {"name": "Totodile", "dexNum": "#0158", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Mega Promo", "img": null}]}, {"name": "Croconaw", "dexNum": "#0159", "hasArt": "No", "cards": []}, {"name": "Feraligatr", "dexNum": "#0160", "hasArt": "Yes", "cards": [{"type": "Special Illustration Rare", "set": "Ascended Heroes", "img": null}]}, {"name": "Sentret", "dexNum": "#0161", "hasArt": "No", "cards": []}, {"name": "Furret", "dexNum": "#0162", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Journey Together", "img": null}]}, {"name": "Hoothoot", "dexNum": "#0163", "hasArt": "Yes", "cards": [{"type": "Gallery", "set": "Astral Radiance", "img": null}]}, {"name": "Noctowl", "dexNum": "#0164", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "SV Promo", "img": null}]}, {"name": "Ledyba", "dexNum": "#0165", "hasArt": "No", "cards": []}, {"name": "Ledian", "dexNum": "#0166", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Stellar Crown", "img": null}]}, {"name": "Spinarak", "dexNum": "#0167", "hasArt": "No", "cards": []}, {"name": "Ariados", "dexNum": "#0168", "hasArt": "Yes", "cards": [{"type": "Gallery", "set": "Brilliant Stars", "img": null}]}, {"name": "Crobat", "dexNum": "#0169", "hasArt": "Yes", "cards": [{"type": "Alt Gallery Art", "set": "Lost Origin", "img": null}, {"type": "Illustration", "set": "Chaos Rising", "img": null}]}, {"name": "Chinchou", "dexNum": "#0170", "hasArt": "No", "cards": []}, {"name": "Lanturn", "dexNum": "#0171", "hasArt": "No", "cards": []}, {"name": "Pichu", "dexNum": "#0172", "hasArt": "No", "cards": []}, {"name": "Cleffa", "dexNum": "#0173", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Obsidian Flames", "img": null}]}, {"name": "Igglybuff", "dexNum": "#0174", "hasArt": "No", "cards": []}, {"name": "Togepi", "dexNum": "#0175", "hasArt": "No", "cards": []}, {"name": "Togetic", "dexNum": "#0176", "hasArt": "No", "cards": []}, {"name": "Natu", "dexNum": "#0177", "hasArt": "Yes", "cards": [{"type": "Ancient Trait", "set": "Roaring Skies", "img": null}]}, {"name": "Xatu", "dexNum": "#0178", "hasArt": "No", "cards": []}, {"name": "Mareep", "dexNum": "#0179", "hasArt": "Yes", "cards": [{"type": "Gallery", "set": "Crown Zenith", "img": null}]}, {"name": "Flaaffy", "dexNum": "#0180", "hasArt": "Yes", "cards": [{"type": "Gallery", "set": "Silver Tempest", "img": null}]}, {"name": "Ampharos", "dexNum": "#0181", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Chaos Rising", "img": null}]}, {"name": "Bellossom", "dexNum": "#0182", "hasArt": "No", "cards": []}, {"name": "Marill", "dexNum": "#0183", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Paldea Evolved", "img": null}, {"type": "Illustration", "set": "Ascended Heroes", "img": null}]}, {"name": "Azumarill", "dexNum": "#0184", "hasArt": "Yes", "cards": [{"type": "Ancient Trait", "set": "Primal Clash", "img": null}]}, {"name": "Sudowoodo", "dexNum": "#0185", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Paldea Evolved", "img": null}]}, {"name": "Politoed", "dexNum": "#0186", "hasArt": "No", "cards": []}, {"name": "Hoppip", "dexNum": "#0187", "hasArt": "No", "cards": []}, {"name": "Skiploom", "dexNum": "#0188", "hasArt": "No", "cards": []}, {"name": "Jumpluff", "dexNum": "#0189", "hasArt": "No", "cards": []}, {"name": "Aipom", "dexNum": "#0190", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Paradox Rift", "img": null}]}, {"name": "Sunkern", "dexNum": "#0191", "hasArt": "No", "cards": []}, {"name": "Sunflora", "dexNum": "#0192", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Twilight Masquerade", "img": null}]}, {"name": "Yanma", "dexNum": "#0193", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Destined Rivals", "img": null}]}, {"name": "Wooper", "dexNum": "#0194", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Paldea Evolved", "img": null}, {"type": "Illustration", "set": "Phantasmal Flames", "img": null}]}, {"name": "Quagsire", "dexNum": "#0195", "hasArt": "No", "cards": []}, {"name": "Espeon", "dexNum": "#0196", "hasArt": "Yes", "cards": [{"type": "Alt Art", "set": "Fusion Strike", "img": null}, {"type": "Misc.", "set": "", "img": null}]}, {"name": "Umbreon", "dexNum": "#0197", "hasArt": "Yes", "cards": [{"type": "Alt Art", "set": "Evolving Skies", "img": null}, {"type": "Alt Gallery Art", "set": "Brilliant Stars", "img": null}]}, {"name": "Murkrow", "dexNum": "#0198", "hasArt": "Yes", "cards": []}, {"name": "Slowking", "dexNum": "#0199", "hasArt": "Yes", "cards": [{"type": "Alt Art", "set": "Chilling Reign", "img": null}]}, {"name": "Misdreavus", "dexNum": "#0200", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Ascended Heroes", "img": null}]}, {"name": "Unown", "dexNum": "#0201", "hasArt": "Yes", "cards": [{"type": "Alt Art", "set": "Silver Tempest", "img": null}]}, {"name": "Wobbuffet", "dexNum": "#0202", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Destined Rivals", "img": null}]}, {"name": "Girafarig", "dexNum": "#0203", "hasArt": "No", "cards": []}, {"name": "Pineco", "dexNum": "#0204", "hasArt": "No", "cards": []}, {"name": "Forretress", "dexNum": "#0205", "hasArt": "No", "cards": []}, {"name": "Dunsparce", "dexNum": "#0206", "hasArt": "Yes", "cards": [{"type": "Gallery", "set": "Crown Zenith", "img": null}]}, {"name": "Gligar", "dexNum": "#0207", "hasArt": "No", "cards": []}, {"name": "Steelix", "dexNum": "#0208", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Paradox Rift", "img": null}, {"type": "Gallery", "set": "Cosmic Eclipse", "img": null}, {"type": "Illustration", "set": "Mega Evolution", "img": null}]}, {"name": "Snubbull", "dexNum": "#0209", "hasArt": "No", "cards": []}, {"name": "Granbull", "dexNum": "#0210", "hasArt": "No", "cards": []}, {"name": "Qwilfish", "dexNum": "#0211", "hasArt": "No", "cards": []}, {"name": "Scizor", "dexNum": "#0212", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Obsidian Flames", "img": null}]}, {"name": "Shuckle", "dexNum": "#0213", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Mega Evolution", "img": null}]}, {"name": "Heracross", "dexNum": "#0214", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Paldea Evolved", "img": null}]}, {"name": "Sneasel", "dexNum": "#0215", "hasArt": "No", "cards": []}, {"name": "Teddiursa", "dexNum": "#0216", "hasArt": "No", "cards": []}, {"name": "Ursaring", "dexNum": "#0217", "hasArt": "No", "cards": []}, {"name": "Slugma", "dexNum": "#0218", "hasArt": "No", "cards": []}, {"name": "Magcargo", "dexNum": "#0219", "hasArt": "Yes", "cards": [{"type": "Ancient Trait", "set": "Primal Clash", "img": null}, {"type": "Illustration", "set": "Ascended Heroes", "img": null}]}, {"name": "Swinub", "dexNum": "#0220", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Journey Together", "img": null}]}, {"name": "Piloswine", "dexNum": "#0221", "hasArt": "No", "cards": []}, {"name": "Corsola", "dexNum": "#0222", "hasArt": "No", "cards": []}, {"name": "Remoraid", "dexNum": "#0223", "hasArt": "No", "cards": []}, {"name": "Octillery", "dexNum": "#0224", "hasArt": "Yes", "cards": [{"type": "Gallery", "set": "Brilliant Stars", "img": null}]}, {"name": "Delibird", "dexNum": "#0225", "hasArt": "Yes", "cards": []}, {"name": "Mantine", "dexNum": "#0226", "hasArt": "No", "cards": []}, {"name": "Skarmory", "dexNum": "#0227", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Surging Sparks", "img": null}]}, {"name": "Houndour", "dexNum": "#0228", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Obsidian Flames", "img": null}]}, {"name": "Houndoom", "dexNum": "#0229", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Shrouded Fable", "img": null}, {"type": "Gallery", "set": "Brilliant Stars", "img": null}]}, {"name": "Kingdra", "dexNum": "#0230", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "SV Promo", "img": null}, {"type": "Ancient Trait", "set": "Primal Clash", "img": null}, {"type": "Ancient Trait", "set": "XY Promo", "img": null}, {"type": "Gallery", "set": "Astral Radiance", "img": null}]}, {"name": "Phanpy", "dexNum": "#0231", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Surging Sparks", "img": null}]}, {"name": "Donphan", "dexNum": "#0232", "hasArt": "No", "cards": []}, {"name": "Porygon2", "dexNum": "#0233", "hasArt": "No", "cards": []}, {"name": "Stantler", "dexNum": "#0234", "hasArt": "No", "cards": []}, {"name": "Smeargle", "dexNum": "#0235", "hasArt": "Yes", "cards": [{"type": "Gallery", "set": "Silver Tempest", "img": null}]}, {"name": "Tyrogue", "dexNum": "#0236", "hasArt": "No", "cards": []}, {"name": "Hitmontop", "dexNum": "#0237", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Ascended Heroes", "img": null}]}, {"name": "Smoochum", "dexNum": "#0238", "hasArt": "No", "cards": []}, {"name": "Elekid", "dexNum": "#0239", "hasArt": "No", "cards": []}, {"name": "Magby", "dexNum": "#0240", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Paradox Rift", "img": null}]}, {"name": "Miltank", "dexNum": "#0241", "hasArt": "Yes", "cards": [{"type": "Gallery", "set": "Crown Zenith", "img": null}]}, {"name": "Blissey", "dexNum": "#0242", "hasArt": "Yes", "cards": [{"type": "Alt Art", "set": "Chilling Reign", "img": null}]}, {"name": "Raikou", "dexNum": "#0243", "hasArt": "Yes", "cards": [{"type": "Alt Gallery Art", "set": "Crown Zenith", "img": null}]}, {"name": "Entei", "dexNum": "#0244", "hasArt": "Yes", "cards": [{"type": "Alt Gallery Art", "set": "Crown Zenith", "img": null}, {"type": "Ancient Trait", "set": "Ancient Origins", "img": null}]}, {"name": "Suicune", "dexNum": "#0245", "hasArt": "Yes", "cards": [{"type": "Alt Gallery Art", "set": "Crown Zenith", "img": null}]}, {"name": "Larvitar", "dexNum": "#0246", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Obsidian Flames", "img": null}]}, {"name": "Pupitar", "dexNum": "#0247", "hasArt": "No", "cards": []}, {"name": "Tyranitar", "dexNum": "#0248", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Paldea Evolved", "img": null}, {"type": "Alt Art", "set": "Battle Styles", "img": null}]}, {"name": "Lugia", "dexNum": "#0249", "hasArt": "Yes", "cards": [{"type": "Alt Art", "set": "Silver Tempest", "img": null}]}, {"name": "Ho-Oh", "dexNum": "#0250", "hasArt": "Yes", "cards": [{"type": "Special Illustration Rare", "set": "Destined Rivals", "img": null}]}, {"name": "Celebi", "dexNum": "#0251", "hasArt": "Yes", "cards": [{"type": "Alt Art", "set": "Fusion Strike", "img": null}, {"type": "Ancient Trait", "set": "XY Promo", "img": null}, {"type": "Art", "set": "XY Promo", "img": null}]}, {"name": "Treecko", "dexNum": "#0252", "hasArt": "No", "cards": []}, {"name": "Grovyle", "dexNum": "#0253", "hasArt": "No", "cards": []}, {"name": "Sceptile", "dexNum": "#0254", "hasArt": "Yes", "cards": [{"type": "Ancient Trait", "set": "Primal Clash", "img": null}]}, {"name": "Torchic", "dexNum": "#0255", "hasArt": "Yes", "cards": [{"type": "Ancient Trait", "set": "Primal Clash", "img": null}]}, {"name": "Combusken", "dexNum": "#0256", "hasArt": "No", "cards": []}, {"name": "Blaziken", "dexNum": "#0257", "hasArt": "Yes", "cards": [{"type": "Alt Art", "set": "Chilling Reign", "img": null}, {"type": "Gallery", "set": "Silver Tempest", "img": null}, {"type": "Illustration", "set": "Destined Rivals", "img": null}]}, {"name": "Mudkip", "dexNum": "#0258", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Mega Promo", "img": null}]}, {"name": "Marshtomp", "dexNum": "#0259", "hasArt": "No", "cards": []}, {"name": "Swampert", "dexNum": "#0260", "hasArt": "Yes", "cards": [{"type": "Ancient Trait", "set": "Primal Clash", "img": null}]}, {"name": "Poochyena", "dexNum": "#0261", "hasArt": "Yes", "cards": [{"type": "Gallery", "set": "Crown Zenith", "img": null}]}, {"name": "Mightyena", "dexNum": "#0262", "hasArt": "Yes", "cards": [{"type": "Gallery", "set": "Astral Radiance", "img": null}, {"type": "Illustration", "set": "Ascended Heroes", "img": null}]}, {"name": "Zigzagoon", "dexNum": "#0263", "hasArt": "No", "cards": []}, {"name": "Linoone", "dexNum": "#0263", "hasArt": "No", "cards": []}, {"name": "Wurmple", "dexNum": "#0265", "hasArt": "No", "cards": []}, {"name": "Silcoon", "dexNum": "#0266", "hasArt": "No", "cards": []}, {"name": "Beautifly", "dexNum": "#0267", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Ascended Heroes", "img": null}]}, {"name": "Cascoon", "dexNum": "#0268", "hasArt": "No", "cards": []}, {"name": "Dustox", "dexNum": "#0269", "hasArt": "Yes", "cards": [{"type": "Ancient Trait", "set": "Roaring Skies", "img": null}, {"type": "Illustration", "set": "Ascended Heroes", "img": null}]}, {"name": "Lotad", "dexNum": "#0270", "hasArt": "No", "cards": []}, {"name": "Lombre", "dexNum": "#0271", "hasArt": "No", "cards": []}, {"name": "Ludicolo", "dexNum": "#0272", "hasArt": "Yes", "cards": [{"type": "Ancient Trait", "set": "Primal Clash", "img": null}, {"type": "Illustration", "set": "Phantasmal Flames", "img": null}]}, {"name": "Seedot", "dexNum": "#0273", "hasArt": "No", "cards": []}, {"name": "Nuzleaf", "dexNum": "#0274", "hasArt": "No", "cards": []}, {"name": "Shiftry", "dexNum": "#0275", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Temporal Forces", "img": null}]}, {"name": "Taillow", "dexNum": "#0276", "hasArt": "No", "cards": []}, {"name": "Swellow", "dexNum": "#0277", "hasArt": "Yes", "cards": [{"type": "Ancient Trait", "set": "Roaring Skies", "img": null}]}, {"name": "Wingull", "dexNum": "#0278", "hasArt": "No", "cards": []}, {"name": "Pelipper", "dexNum": "#0279", "hasArt": "No", "cards": []}, {"name": "Ralts", "dexNum": "#0280", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Scarlet & Violet", "img": null}]}, {"name": "Kirlia", "dexNum": "#0281", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Scarlet & Violet", "img": null}]}, {"name": "Gardevoir", "dexNum": "#0282", "hasArt": "Yes", "cards": [{"type": "Special Illustration Rare", "set": "Scarlet & Violet", "img": null}, {"type": "Gallery", "set": "Generations", "img": null}, {"type": "Gallery", "set": "Astral Radiance", "img": null}]}, {"name": "Surskit", "dexNum": "#0283", "hasArt": "No", "cards": []}, {"name": "Masquerain", "dexNum": "#0284", "hasArt": "No", "cards": []}, {"name": "Shroomish", "dexNum": "#0285", "hasArt": "No", "cards": []}, {"name": "Breloom", "dexNum": "#0286", "hasArt": "No", "cards": []}, {"name": "Slakoth", "dexNum": "#0287", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Surging Sparks", "img": null}]}, {"name": "Vigoroth", "dexNum": "#0288", "hasArt": "No", "cards": []}, {"name": "Slaking", "dexNum": "#0289", "hasArt": "No", "cards": []}, {"name": "Nincada", "dexNum": "#0290", "hasArt": "No", "cards": []}, {"name": "Ninjask", "dexNum": "#0291", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Mega Evolution", "img": null}]}, {"name": "Shedinja", "dexNum": "#0292", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Mega Evolution", "img": null}]}, {"name": "Whismur", "dexNum": "#0293", "hasArt": "No", "cards": []}, {"name": "Loudred", "dexNum": "#0294", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Paradox Rift", "img": null}]}, {"name": "Exploud", "dexNum": "#0295", "hasArt": "No", "cards": []}, {"name": "Makuhita", "dexNum": "#0296", "hasArt": "No", "cards": []}, {"name": "Hariyama", "dexNum": "#0297", "hasArt": "No", "cards": []}, {"name": "Azurill", "dexNum": "#0298", "hasArt": "No", "cards": []}, {"name": "Nosepass", "dexNum": "#0299", "hasArt": "No", "cards": []}, {"name": "Skitty", "dexNum": "#0300", "hasArt": "No", "cards": []}, {"name": "Delcatty", "dexNum": "#0301", "hasArt": "No", "cards": []}, {"name": "Sableye", "dexNum": "#0302", "hasArt": "Yes", "cards": [{"type": "Ancient Trait", "set": "XY Promo", "img": null}]}, {"name": "Mawile", "dexNum": "#0303", "hasArt": "Yes", "cards": [{"type": "Alt Gallery Art", "set": "Silver Tempest", "img": null}, {"type": "Illustration", "set": "Ascended Heroes", "img": null}]}, {"name": "Aron", "dexNum": "#0304", "hasArt": "No", "cards": []}, {"name": "Lairon", "dexNum": "#0305", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Twilight Masquerade", "img": null}]}, {"name": "Aggron", "dexNum": "#0306", "hasArt": "No", "cards": []}, {"name": "Meditite", "dexNum": "#0307", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Stellar Crown", "img": null}]}, {"name": "Medicham", "dexNum": "#0308", "hasArt": "Yes", "cards": [{"type": "Alt Art", "set": "Evolving Skies", "img": null}, {"type": "Ancient Trait", "set": "Primal Clash", "img": null}, {"type": "Illustration", "set": "Ascended Heroes", "img": null}]}, {"name": "Electrike", "dexNum": "#0309", "hasArt": "Yes", "cards": [{"type": "Ancient Trait", "set": "Primal Clash", "img": null}, {"type": "Illustration", "set": "Destined Rivals", "img": null}]}, {"name": "Manectric", "dexNum": "#0310", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Pitch Black", "img": null}]}, {"name": "Plusle", "dexNum": "#0311", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Paradox Rift", "img": null}]}, {"name": "Minun", "dexNum": "#0312", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Paradox Rift", "img": null}]}, {"name": "Volbeat", "dexNum": "#0313", "hasArt": "No", "cards": []}, {"name": "Illumise", "dexNum": "#0314", "hasArt": "No", "cards": []}, {"name": "Roselia", "dexNum": "#0315", "hasArt": "No", "cards": []}, {"name": "Gulpin", "dexNum": "#0316", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Stellar Crown", "img": null}]}, {"name": "Swalot", "dexNum": "#0317", "hasArt": "No", "cards": []}, {"name": "Carvanha", "dexNum": "#0318", "hasArt": "No", "cards": []}, {"name": "Sharpedo", "dexNum": "#0319", "hasArt": "Yes", "cards": [{"type": "Special Illustration Rare", "set": "Phantasmal Flames", "img": null}]}, {"name": "Wailmer", "dexNum": "#0320", "hasArt": "No", "cards": []}, {"name": "Wailord", "dexNum": "#0321", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Journey Together", "img": null}]}, {"name": "Numel", "dexNum": "#0322", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Ascended Heroes", "img": null}]}, {"name": "Camerupt", "dexNum": "#0323", "hasArt": "No", "cards": []}, {"name": "Torkoal", "dexNum": "#0324", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Twilight Masquerade", "img": null}, {"type": "Gallery", "set": "Cosmic Eclipse", "img": null}]}, {"name": "Spoink", "dexNum": "#0325", "hasArt": "No", "cards": []}, {"name": "Grumpig", "dexNum": "#0326", "hasArt": "No", "cards": []}, {"name": "Spinda", "dexNum": "#0327", "hasArt": "No", "cards": []}, {"name": "Trapinch", "dexNum": "#0328", "hasArt": "No", "cards": []}, {"name": "Vibrava", "dexNum": "#0329", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Surging Sparks", "img": null}]}, {"name": "Flygon", "dexNum": "#0330", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Phantasmal Flames", "img": null}]}, {"name": "Cacnea", "dexNum": "#0331", "hasArt": "No", "cards": []}, {"name": "Cacturne", "dexNum": "#0332", "hasArt": "No", "cards": []}, {"name": "Swablu", "dexNum": "#0333", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Paradox Rift", "img": null}]}, {"name": "Altaria", "dexNum": "#0334", "hasArt": "Yes", "cards": [{"type": "Special Illustration Rare", "set": "Paradox Rift", "img": null}, {"type": "Ancient Trait", "set": "Roaring Skies", "img": null}, {"type": "Ancient Trait", "set": "XY Promo", "img": null}, {"type": "Gallery", "set": "Crown Zenith", "img": null}]}, {"name": "Zangoose", "dexNum": "#0335", "hasArt": "No", "cards": []}, {"name": "Seviper", "dexNum": "#0336", "hasArt": "No", "cards": []}, {"name": "Lunatone", "dexNum": "#0337", "hasArt": "Yes", "cards": [{"type": "Gallery", "set": "Crown Zenith", "img": null}]}, {"name": "Solrock", "dexNum": "#0338", "hasArt": "Yes", "cards": [{"type": "Gallery", "set": "Crown Zenith", "img": null}]}, {"name": "Barboach", "dexNum": "#0339", "hasArt": "No", "cards": []}, {"name": "Whiscash", "dexNum": "#0340", "hasArt": "Yes", "cards": [{"type": "Ancient Trait", "set": "Primal Clash", "img": null}]}, {"name": "Corphish", "dexNum": "#0341", "hasArt": "No", "cards": []}, {"name": "Crawdaunt", "dexNum": "#0342", "hasArt": "No", "cards": []}, {"name": "Baltoy", "dexNum": "#0343", "hasArt": "Yes", "cards": [{"type": "Ancient Trait", "set": "Ancient Origins", "img": null}]}, {"name": "Claydol", "dexNum": "#0344", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Chaos Rising", "img": null}]}, {"name": "Lileep", "dexNum": "#0345", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Stellar Crown", "img": null}]}, {"name": "Cradily", "dexNum": "#0346", "hasArt": "No", "cards": []}, {"name": "Anorith", "dexNum": "#0347", "hasArt": "No", "cards": []}, {"name": "Armaldo", "dexNum": "#0348", "hasArt": "No", "cards": []}, {"name": "Feebas", "dexNum": "#0349", "hasArt": "Yes", "cards": []}, {"name": "Milotic", "dexNum": "#0350", "hasArt": "Yes", "cards": [{"type": "Gallery", "set": "Silver Tempest", "img": null}, {"type": "Special Illustration Rare", "set": "Surging Sparks", "img": null}]}, {"name": "Castform", "dexNum": "#0351", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Surging Sparks", "img": null}]}, {"name": "Kecleon", "dexNum": "#0352", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Surging Sparks", "img": null}]}, {"name": "Shuppet", "dexNum": "#0353", "hasArt": "No", "cards": []}, {"name": "Banette", "dexNum": "#0354", "hasArt": "Yes", "cards": [{"type": "Gallery", "set": "Lost Origin", "img": null}, {"type": "Ancient Trait", "set": "Roaring Skies", "img": null}, {"type": "Illustration", "set": "Ascended Heroes", "img": null}]}, {"name": "Duskull", "dexNum": "#0355", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Shrouded Fable", "img": null}]}, {"name": "Dusclops", "dexNum": "#0356", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Shrouded Fable", "img": null}]}, {"name": "Tropius", "dexNum": "#0357", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Paldea Evolved", "img": null}]}, {"name": "Chimecho", "dexNum": "#0358", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Twilight Masquerade", "img": null}]}, {"name": "Absol", "dexNum": "#0359", "hasArt": "Yes", "cards": [{"type": "Gallery", "set": "Crown Zenith", "img": null}]}, {"name": "Wynaut", "dexNum": "#0360", "hasArt": "No", "cards": []}, {"name": "Snorunt", "dexNum": "#0361", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Paradox Rift", "img": null}, {"type": "Illustration", "set": "Ascended Heroes", "img": null}]}, {"name": "Glalie", "dexNum": "#0362", "hasArt": "No", "cards": []}, {"name": "Spheal", "dexNum": "#0363", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Surging Sparks", "img": null}]}, {"name": "Sealeo", "dexNum": "#0364", "hasArt": "No", "cards": []}, {"name": "Walrein", "dexNum": "#0365", "hasArt": "No", "cards": []}, {"name": "Clamperl", "dexNum": "#0366", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Destined Rivals", "img": null}]}, {"name": "Huntail", "dexNum": "#0367", "hasArt": "No", "cards": []}, {"name": "Gorebyss", "dexNum": "#0368", "hasArt": "Yes", "cards": [{"type": "Ancient Trait", "set": "Primal Clash", "img": null}]}, {"name": "Relicanth", "dexNum": "#0369", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Temporal Forces", "img": null}]}, {"name": "Luvdisc", "dexNum": "#0370", "hasArt": "No", "cards": []}, {"name": "Bagon", "dexNum": "#0371", "hasArt": "No", "cards": []}, {"name": "Shelgon", "dexNum": "#0372", "hasArt": "No", "cards": []}, {"name": "Salamence", "dexNum": "#0373", "hasArt": "Yes", "cards": [{"type": "Ancient Trait", "set": "XY Promo", "img": null}, {"type": "Special Illustration Rare", "set": "Journey Together", "img": null}]}, {"name": "Beldum", "dexNum": "#0374", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "SV Promo", "img": null}]}, {"name": "Metang", "dexNum": "#0375", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Chaos Rising", "img": null}]}, {"name": "Metagross", "dexNum": "#0376", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Temporal Forces", "img": null}, {"type": "Ancient Trait", "set": "Ancient Origins", "img": null}, {"type": "Special Illustration Rare", "set": "Ascended Heroes", "img": null}]}, {"name": "Regirock", "dexNum": "#0377", "hasArt": "Yes", "cards": [{"type": "Ancient Trait", "set": "XY Promo", "img": null}]}, {"name": "Regice", "dexNum": "#0378", "hasArt": "No", "cards": []}, {"name": "Registeel", "dexNum": "#0379", "hasArt": "No", "cards": []}, {"name": "Latias", "dexNum": "#0380", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Surging Sparks", "img": null}]}, {"name": "Latios", "dexNum": "#0381", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Surging Sparks", "img": null}]}, {"name": "Kyogre", "dexNum": "#0382", "hasArt": "No", "cards": []}, {"name": "Groudon", "dexNum": "#0383", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Paradox Rift", "img": null}]}, {"name": "Rayquaza", "dexNum": "#0384", "hasArt": "Yes", "cards": [{"type": "Alt Art", "set": "Evolving Skies", "img": null}]}, {"name": "Jirachi", "dexNum": "#0385", "hasArt": "Yes", "cards": [{"type": "Misc.", "set": "XY Promo", "img": null}]}, {"name": "Deoxys", "dexNum": "#0386", "hasArt": "Yes", "cards": [{"type": "Alt Gallery Art", "set": "Crown Zenith", "img": null}]}, {"name": "Turtwig", "dexNum": "#0387", "hasArt": "Yes", "cards": [{"type": "Gallery", "set": "Crown Zenith", "img": null}, {"type": "Illustration", "set": "Mega Promo", "img": null}]}, {"name": "Grotle", "dexNum": "#0388", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Temporal Forces", "img": null}]}, {"name": "Torterra", "dexNum": "#0389", "hasArt": "No", "cards": []}, {"name": "Chimchar", "dexNum": "#0390", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Mega Promo", "img": null}]}, {"name": "Monferno", "dexNum": "#0391", "hasArt": "No", "cards": []}, {"name": "Infernape", "dexNum": "#0392", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Twilight Masquerade", "img": null}]}, {"name": "Piplup", "dexNum": "#0393", "hasArt": "Yes", "cards": [{"type": "Art", "set": "Cosmic Eclipse", "img": null}, {"type": "Illustration", "set": "Phantasmal Flames", "img": null}, {"type": "Illustration", "set": "Mega Promo", "img": null}]}, {"name": "Prinplup", "dexNum": "#0394", "hasArt": "No", "cards": []}, {"name": "Empoleon", "dexNum": "#0395", "hasArt": "Yes", "cards": [{"type": "Alt Art", "set": "Battle Styles", "img": null}]}, {"name": "Starly", "dexNum": "#0396", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Scarlet & Violet", "img": null}]}, {"name": "Staravia", "dexNum": "#0397", "hasArt": "No", "cards": []}, {"name": "Staraptor", "dexNum": "#0398", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Ascended Heroes", "img": null}]}, {"name": "Bidoof", "dexNum": "#0399", "hasArt": "Yes", "cards": [{"type": "Gallery", "set": "Crown Zenith", "img": null}]}, {"name": "Bibarel", "dexNum": "#0400", "hasArt": "Yes", "cards": [{"type": "Gallery", "set": "Crown Zenith", "img": null}]}, {"name": "Kricketot", "dexNum": "#0401", "hasArt": "No", "cards": []}, {"name": "Kricketune", "dexNum": "#0402", "hasArt": "Yes", "cards": [{"type": "Gallery", "set": "Silver Tempest", "img": null}]}, {"name": "Shinx", "dexNum": "#0403", "hasArt": "No", "cards": []}, {"name": "Luxio", "dexNum": "#0404", "hasArt": "No", "cards": []}, {"name": "Luxray", "dexNum": "#0405", "hasArt": "No", "cards": []}, {"name": "Budew", "dexNum": "#0406", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Ascended Heroes", "img": null}]}, {"name": "Roserade", "dexNum": "#0407", "hasArt": "Yes", "cards": [{"type": "Gallery", "set": "Lost Origin", "img": null}, {"type": "Illustration", "set": "Destined Rivals", "img": null}]}, {"name": "Cranidos", "dexNum": "#0408", "hasArt": "No", "cards": []}, {"name": "Rampardos", "dexNum": "#0409", "hasArt": "No", "cards": []}, {"name": "Shieldon", "dexNum": "#0410", "hasArt": "No", "cards": []}, {"name": "Bastiodon", "dexNum": "#0411", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Pitch Black", "img": null}]}, {"name": "Burmy", "dexNum": "#0412", "hasArt": "No", "cards": []}, {"name": "Wormadam", "dexNum": "#0413", "hasArt": "No", "cards": []}, {"name": "Mothim", "dexNum": "#0414", "hasArt": "No", "cards": []}, {"name": "Combee", "dexNum": "#0415", "hasArt": "No", "cards": []}, {"name": "Vespiquen", "dexNum": "#0416", "hasArt": "Yes", "cards": [{"type": "Ancient Trait", "set": "Ancient Origins", "img": null}]}, {"name": "Pachirisu", "dexNum": "#0417", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Scarlet & Violet", "img": null}]}, {"name": "Buizel", "dexNum": "#0418", "hasArt": "No", "cards": []}, {"name": "Floatzel", "dexNum": "#0419", "hasArt": "No", "cards": []}, {"name": "Cherubi", "dexNum": "#0420", "hasArt": "No", "cards": []}, {"name": "Cherrim", "dexNum": "#0421", "hasArt": "No", "cards": []}, {"name": "Shellos", "dexNum": "#0422", "hasArt": "No", "cards": []}, {"name": "Gastrodon", "dexNum": "#0423", "hasArt": "No", "cards": []}, {"name": "Ambipom", "dexNum": "#0424", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Phantasmal Flames", "img": null}]}, {"name": "Drifloon", "dexNum": "#0425", "hasArt": "No", "cards": []}, {"name": "Drifblim", "dexNum": "#0426", "hasArt": "No", "cards": []}, {"name": "Buneary", "dexNum": "#0427", "hasArt": "No", "cards": []}, {"name": "Lopunny", "dexNum": "#0428", "hasArt": "Yes", "cards": [{"type": "Special Illustration Rare", "set": "Phantasmal Flames", "img": null}]}, {"name": "Mismagius", "dexNum": "#0429", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Paldea Evolved", "img": null}]}, {"name": "Honchkrow", "dexNum": "#0430", "hasArt": "Yes", "cards": [{"type": "Alt Art", "set": "Brilliant Stars", "img": null}]}, {"name": "Glameow", "dexNum": "#0431", "hasArt": "No", "cards": []}, {"name": "Purugly", "dexNum": "#0432", "hasArt": "No", "cards": []}, {"name": "Chingling", "dexNum": "#0433", "hasArt": "No", "cards": []}, {"name": "Stunky", "dexNum": "#0434", "hasArt": "No", "cards": []}, {"name": "Skuntank", "dexNum": "#0435", "hasArt": "Yes", "cards": [{"type": "Alt Art", "set": "Silver Tempest", "img": null}]}, {"name": "Bronzor", "dexNum": "#0436", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Temporal Forces", "img": null}]}, {"name": "Bronzong", "dexNum": "#0437", "hasArt": "Yes", "cards": [{"type": "Gallery", "set": "Astral Radiance", "img": null}]}, {"name": "Bonsly", "dexNum": "#0438", "hasArt": "No", "cards": []}, {"name": "Mime Jr.", "dexNum": "#0439", "hasArt": "No", "cards": []}, {"name": "Happiny", "dexNum": "#0440", "hasArt": "No", "cards": []}, {"name": "Chatot", "dexNum": "#0441", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Temporal Forces", "img": null}]}, {"name": "Spiritomb", "dexNum": "#0442", "hasArt": "Yes", "cards": [{"type": "Gallery", "set": "Lost Origin", "img": null}, {"type": "Illustration", "set": "Mega Evolution", "img": null}, {"type": "Illustration", "set": "Ascended Heroes", "img": null}]}, {"name": "Gible", "dexNum": "#0443", "hasArt": "No", "cards": []}, {"name": "Gabite", "dexNum": "#0444", "hasArt": "No", "cards": []}, {"name": "Garchomp", "dexNum": "#0445", "hasArt": "Yes", "cards": [{"type": "Special Illustration Rare", "set": "Paradox Rift", "img": null}]}, {"name": "Munchlax", "dexNum": "#0446", "hasArt": "No", "cards": []}, {"name": "Riolu", "dexNum": "#0447", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Scarlet & Violet", "img": null}, {"type": "Illustration", "set": "Mega Promo", "img": null}]}, {"name": "Lucario", "dexNum": "#0448", "hasArt": "Yes", "cards": [{"type": "Alt Art", "set": "SWSH Promo", "img": null}, {"type": "Special Illustration Rare", "set": "Mega Evolution", "img": null}]}, {"name": "Hippopotas", "dexNum": "#0449", "hasArt": "No", "cards": []}, {"name": "Hippowdon", "dexNum": "#0450", "hasArt": "No", "cards": []}, {"name": "Skorupi", "dexNum": "#0451", "hasArt": "No", "cards": []}, {"name": "Drapion", "dexNum": "#0452", "hasArt": "Yes", "cards": [{"type": "Alt Gallery Art", "set": "Crown Zenith", "img": null}, {"type": "Illustration", "set": "Perfect Order", "img": null}]}, {"name": "Croagunk", "dexNum": "#0453", "hasArt": "No", "cards": []}, {"name": "Toxicroak", "dexNum": "#0454", "hasArt": "No", "cards": []}, {"name": "Carnivine", "dexNum": "#0455", "hasArt": "No", "cards": []}, {"name": "Finneon", "dexNum": "#0456", "hasArt": "No", "cards": []}, {"name": "Lumineon", "dexNum": "#0457", "hasArt": "Yes", "cards": [{"type": "Alt Art", "set": "Brilliant Stars", "img": null}]}, {"name": "Mantyke", "dexNum": "#0458", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Paradox Rift", "img": null}]}, {"name": "Snover", "dexNum": "#0459", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Mega Evolution", "img": null}]}, {"name": "Abomasnow", "dexNum": "#0460", "hasArt": "Yes", "cards": [{"type": "Gallery", "set": "Astral Radiance", "img": null}]}, {"name": "Weavile", "dexNum": "#0461", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Ascended Heroes", "img": null}]}, {"name": "Magnezone", "dexNum": "#0462", "hasArt": "Yes", "cards": [{"type": "Gallery", "set": "Crown Zenith", "img": null}]}, {"name": "Lickilicky", "dexNum": "#0463", "hasArt": "No", "cards": []}, {"name": "Rhyperior", "dexNum": "#0464", "hasArt": "Yes", "cards": [{"type": "Ancient Trait", "set": "Primal Clash", "img": null}]}, {"name": "Tangrowth", "dexNum": "#0465", "hasArt": "No", "cards": []}, {"name": "Electivire", "dexNum": "#0466", "hasArt": "Yes", "cards": [{"type": "Gallery", "set": "Crown Zenith", "img": null}]}, {"name": "Magmortar", "dexNum": "#0467", "hasArt": "Yes", "cards": [{"type": "Gallery", "set": "Crown Zenith", "img": null}]}, {"name": "Togekiss", "dexNum": "#0468", "hasArt": "Yes", "cards": [{"type": "Ancient Trait", "set": "Roaring Skies", "img": null}, {"type": "Illustration", "set": "Ascended Heroes", "img": null}]}, {"name": "Yanmega", "dexNum": "#0469", "hasArt": "No", "cards": []}, {"name": "Leafeon", "dexNum": "#0470", "hasArt": "Yes", "cards": [{"type": "Alt Art", "set": "Evolving Skies", "img": null}, {"type": "Special Illustration Rare", "set": "Prismatic Evolutions", "img": null}]}, {"name": "Glaceon", "dexNum": "#0471", "hasArt": "Yes", "cards": [{"type": "Alt Art", "set": "Evolving Skies", "img": null}]}, {"name": "Gliscor", "dexNum": "#0472", "hasArt": "No", "cards": []}, {"name": "Mamoswine", "dexNum": "#0473", "hasArt": "No", "cards": []}, {"name": "Porygon-Z", "dexNum": "#0474", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Paradox Rift", "img": null}]}, {"name": "Gallade", "dexNum": "#0475", "hasArt": "Yes", "cards": [{"type": "Gallery", "set": "Lost Origin", "img": null}]}, {"name": "Probopass", "dexNum": "#0476", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Twilight Masquerade", "img": null}, {"type": "Illustration", "set": "Perfect Order", "img": null}]}, {"name": "Dusknoir", "dexNum": "#0477", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Shrouded Fable", "img": null}]}, {"name": "Froslass", "dexNum": "#0478", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Twilight Masquerade", "img": null}, {"type": "Special Illustration Rare", "set": "Ascended Heroes", "img": null}]}, {"name": "Rotom", "dexNum": "#0479", "hasArt": "Yes", "cards": [{"type": "Alt Art", "set": "Lost Origin", "img": null}, {"type": "Illustration", "set": "Ascended Heroes", "img": null}]}, {"name": "Uxie", "dexNum": "#0480", "hasArt": "No", "cards": []}, {"name": "Mesprit", "dexNum": "#0481", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Surging Sparks", "img": null}]}, {"name": "Azelf", "dexNum": "#0482", "hasArt": "No", "cards": []}, {"name": "Dialga", "dexNum": "#0483", "hasArt": "Yes", "cards": [{"type": "Alt Art", "set": "Astral Radiance", "img": null}]}, {"name": "Palkia", "dexNum": "#0484", "hasArt": "Yes", "cards": [{"type": "Alt Art", "set": "Astral Radiance", "img": null}]}, {"name": "Heatran", "dexNum": "#0485", "hasArt": "No", "cards": []}, {"name": "Regigigas", "dexNum": "#0486", "hasArt": "Yes", "cards": [{"type": "Alt Gallery Art", "set": "Crown Zenith", "img": null}]}, {"name": "Giratina", "dexNum": "#0487", "hasArt": "Yes", "cards": [{"type": "Alt Art", "set": "Lost Origin", "img": null}, {"type": "Alt Gallery Art", "set": "Crown Zenith", "img": null}]}, {"name": "Cresselia", "dexNum": "#0488", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Shrouded Fable", "img": null}]}, {"name": "Phione", "dexNum": "#0489", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Twilight Masquerade", "img": null}]}, {"name": "Manaphy", "dexNum": "#0490", "hasArt": "Yes", "cards": [{"type": "Gallery", "set": "Crown Zenith", "img": null}]}, {"name": "Darkrai", "dexNum": "#0491", "hasArt": "Yes", "cards": [{"type": "Alt Gallery Art", "set": "Crown Zenith", "img": null}, {"type": "Special Illustration Rare", "set": "Pitch Black", "img": null}]}, {"name": "Shaymin", "dexNum": "#0492", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Destined Rivals", "img": null}, {"type": "Misc.", "set": "Legendary Treasures", "img": null}]}, {"name": "Arceus", "dexNum": "#0493", "hasArt": "Yes", "cards": [{"type": "Alt Art", "set": "Brilliant Stars", "img": null}]}, {"name": "Victini", "dexNum": "#0494", "hasArt": "Yes", "cards": [{"type": "Misc.", "set": "XY Promo", "img": null}]}, {"name": "Snivy", "dexNum": "#0495", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Mega Promo", "img": null}]}, {"name": "Servine", "dexNum": "#0496", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Black Bolt", "img": null}]}, {"name": "Serperior", "dexNum": "#0497", "hasArt": "Yes", "cards": [{"type": "Alt Gallery Art", "set": "Silver Tempest", "img": null}]}, {"name": "Tepig", "dexNum": "#0498", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "White Flare", "img": null}, {"type": "Illustration", "set": "Mega Promo", "img": null}]}, {"name": "Pignite", "dexNum": "#0499", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "White Flare", "img": null}]}, {"name": "Emboar", "dexNum": "#0500", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "White Flare", "img": null}, {"type": "Special Illustration Rare", "set": "Ascended Heroes", "img": null}]}, {"name": "Oshawott", "dexNum": "#0501", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Mega Promo", "img": null}]}, {"name": "Dewott", "dexNum": "#0502", "hasArt": "Yes", "cards": []}, {"name": "Samurott", "dexNum": "#0503", "hasArt": "Yes", "cards": [{"type": "Alt Gallery Art", "set": "Crown Zenith", "img": null}]}, {"name": "Patrat", "dexNum": "#0504", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "White Flare", "img": null}]}, {"name": "Watchog", "dexNum": "#0505", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Chaos Rising", "img": null}]}, {"name": "Lillipup", "dexNum": "#0506", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "White Flare", "img": null}]}, {"name": "Herdier", "dexNum": "#0507", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "White Flare", "img": null}]}, {"name": "Stoutland", "dexNum": "#0508", "hasArt": "Yes", "cards": [{"type": "Character Rare", "set": "", "img": null}]}, {"name": "Purrloin", "dexNum": "#0509", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "White Flare", "img": null}]}, {"name": "Liepard", "dexNum": "#0510", "hasArt": "Yes", "cards": []}, {"name": "Pansage", "dexNum": "#0511", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Black Bolt", "img": null}]}, {"name": "Simisage", "dexNum": "#0512", "hasArt": "Yes", "cards": []}, {"name": "Pansear", "dexNum": "#0513", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "White Flare", "img": null}]}, {"name": "Simisear", "dexNum": "#0514", "hasArt": "Yes", "cards": [{"type": "Alt Gallery Art", "set": "Crown Zenith", "img": null}]}, {"name": "Panpour", "dexNum": "#0515", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Black Bolt", "img": null}]}, {"name": "Simipour", "dexNum": "#0516", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Black Bolt", "img": null}]}, {"name": "Munna", "dexNum": "#0517", "hasArt": "Yes", "cards": []}, {"name": "Musharna", "dexNum": "#0518", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Black Bolt", "img": null}]}, {"name": "Pidove", "dexNum": "#0519", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Black Bolt", "img": null}]}, {"name": "Tranquill", "dexNum": "#0520", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Black Bolt", "img": null}]}, {"name": "Unfezant", "dexNum": "#0521", "hasArt": "Yes", "cards": [{"type": "Ancient Trait", "set": "Roaring Skies", "img": null}, {"type": "Illustration", "set": "Black Bolt", "img": null}]}, {"name": "Blitzle", "dexNum": "#0522", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Paradox Rift", "img": null}]}, {"name": "Zebstrika", "dexNum": "#0523", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "White Flare", "img": null}]}, {"name": "Roggenrola", "dexNum": "#0524", "hasArt": "Yes", "cards": []}, {"name": "Boldore", "dexNum": "#0525", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "White Flare", "img": null}]}, {"name": "Gigalith", "dexNum": "#0526", "hasArt": "Yes", "cards": []}, {"name": "Woobat", "dexNum": "#0527", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "White Flare", "img": null}]}, {"name": "Swoobat", "dexNum": "#0528", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "White Flare", "img": null}]}, {"name": "Drilbur", "dexNum": "#0529", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Black Bolt", "img": null}]}, {"name": "Excadrill", "dexNum": "#0530", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Temporal Forces", "img": null}, {"type": "Art", "set": "Cosmic Eclipse", "img": null}]}, {"name": "Audino", "dexNum": "#0531", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Black Bolt", "img": null}]}, {"name": "Timburr", "dexNum": "#0532", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Twilight Masquerade", "img": null}]}, {"name": "Gurdurr", "dexNum": "#0533", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Black Bolt", "img": null}]}, {"name": "Conkeldurr", "dexNum": "#0534", "hasArt": "Yes", "cards": [{"type": "Alt Art", "set": "Pokemon GO", "img": null}]}, {"name": "Tympole", "dexNum": "#0535", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Black Bolt", "img": null}]}, {"name": "Palpitoad", "dexNum": "#0536", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Black Bolt", "img": null}]}, {"name": "Seismitoad", "dexNum": "#0537", "hasArt": "Yes", "cards": []}, {"name": "Throh", "dexNum": "#0538", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Black Bolt", "img": null}]}, {"name": "Sawk", "dexNum": "#0539", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "White Flare", "img": null}]}, {"name": "Sewaddle", "dexNum": "#0540", "hasArt": "Yes", "cards": []}, {"name": "Swadloon", "dexNum": "#0541", "hasArt": "Yes", "cards": []}, {"name": "Leavanny", "dexNum": "#0542", "hasArt": "Yes", "cards": []}, {"name": "Venipede", "dexNum": "#0543", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Black Bolt", "img": null}]}, {"name": "Whirlipede", "dexNum": "#0544", "hasArt": "Yes", "cards": []}, {"name": "Scolipede", "dexNum": "#0545", "hasArt": "Yes", "cards": []}, {"name": "Cottonee", "dexNum": "#0546", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "White Flare", "img": null}]}, {"name": "Whimsicott", "dexNum": "#0547", "hasArt": "Yes", "cards": []}, {"name": "Petilil", "dexNum": "#0548", "hasArt": "Yes", "cards": []}, {"name": "Lilligant", "dexNum": "#0549", "hasArt": "Yes", "cards": [{"type": "Alt Art", "set": "Astral Radiance", "img": null}]}, {"name": "Basculin", "dexNum": "#0550", "hasArt": "Yes", "cards": []}, {"name": "Sandile", "dexNum": "#0551", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Scarlet & Violet", "img": null}]}, {"name": "Krokorok", "dexNum": "#0552", "hasArt": "Yes", "cards": []}, {"name": "Krookodile", "dexNum": "#0553", "hasArt": "Yes", "cards": []}, {"name": "Darumaka", "dexNum": "#0554", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Black Bolt", "img": null}]}, {"name": "Darmanitan", "dexNum": "#0555", "hasArt": "Yes", "cards": []}, {"name": "Maractus", "dexNum": "#0556", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Journey Together", "img": null}]}, {"name": "Dwebble", "dexNum": "#0557", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Destined Rivals", "img": null}]}, {"name": "Crustle", "dexNum": "#0558", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Paradox Rift", "img": null}, {"type": "Illustration", "set": "Destined Rivals", "img": null}, {"type": "Illustration", "set": "Black Bolt", "img": null}]}, {"name": "Scraggy", "dexNum": "#0559", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "White Flare", "img": null}]}, {"name": "Scrafty", "dexNum": "#0560", "hasArt": "Yes", "cards": [{"type": "Special Illustration Rare", "set": "Ascended Heroes", "img": null}]}, {"name": "Sigilyph", "dexNum": "#0561", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "White Flare", "img": null}]}, {"name": "Yamask", "dexNum": "#0562", "hasArt": "Yes", "cards": []}, {"name": "Cofagrigus", "dexNum": "#0563", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "White Flare", "img": null}]}, {"name": "Tirtouga", "dexNum": "#0564", "hasArt": "Yes", "cards": []}, {"name": "Carracosta", "dexNum": "#0565", "hasArt": "Yes", "cards": []}, {"name": "Archen", "dexNum": "#0566", "hasArt": "Yes", "cards": []}, {"name": "Archeops", "dexNum": "#0567", "hasArt": "Yes", "cards": []}, {"name": "Trubbish", "dexNum": "#0568", "hasArt": "Yes", "cards": []}, {"name": "Garbodor", "dexNum": "#0569", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Paradox Rift", "img": null}]}, {"name": "Zorua", "dexNum": "#0570", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Shrouded Fable", "img": null}]}, {"name": "Zoroark", "dexNum": "#0571", "hasArt": "Yes", "cards": [{"type": "Alt Gallery Art", "set": "Crown Zenith", "img": null}, {"type": "Special Illustration Rare", "set": "Ascended Heroes", "img": null}]}, {"name": "Minccino", "dexNum": "#0572", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Temporal Forces", "img": null}, {"type": "Illustration", "set": "Black Bolt", "img": null}]}, {"name": "Cinccino", "dexNum": "#0573", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Temporal Forces", "img": null}, {"type": "Special Illustration Rare", "set": "Chaos Rising", "img": null}]}, {"name": "Gothita", "dexNum": "#0574", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "White Flare", "img": null}]}, {"name": "Gothorita", "dexNum": "#0575", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Paldea Evolved", "img": null}]}, {"name": "Gothitelle", "dexNum": "#0576", "hasArt": "Yes", "cards": []}, {"name": "Solosis", "dexNum": "#0577", "hasArt": "Yes", "cards": []}, {"name": "Duosion", "dexNum": "#0578", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Black Bolt", "img": null}]}, {"name": "Reuniclus", "dexNum": "#0579", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Temporal Forces", "img": null}]}, {"name": "Ducklett", "dexNum": "#0580", "hasArt": "Yes", "cards": []}, {"name": "Swanna", "dexNum": "#0581", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "White Flare", "img": null}]}, {"name": "Vanillite", "dexNum": "#0582", "hasArt": "Yes", "cards": []}, {"name": "Vanillish", "dexNum": "#0583", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Paradox Rift", "img": null}]}, {"name": "Vanilluxe", "dexNum": "#0584", "hasArt": "Yes", "cards": []}, {"name": "Deerling", "dexNum": "#0585", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Temporal Forces", "img": null}]}, {"name": "Sawsbuck", "dexNum": "#0586", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Temporal Forces", "img": null}]}, {"name": "Emolga", "dexNum": "#0587", "hasArt": "Yes", "cards": [{"type": "Misc.", "set": "Legendary Treasures", "img": null}]}, {"name": "Karrablast", "dexNum": "#0588", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Black Bolt", "img": null}]}, {"name": "Escavalier", "dexNum": "#0589", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Black Bolt", "img": null}]}, {"name": "Foongus", "dexNum": "#0590", "hasArt": "Yes", "cards": []}, {"name": "Amoonguss", "dexNum": "#0591", "hasArt": "Yes", "cards": []}, {"name": "Frillish", "dexNum": "#0592", "hasArt": "Yes", "cards": []}, {"name": "Jellicent", "dexNum": "#0593", "hasArt": "Yes", "cards": []}, {"name": "Alomomola", "dexNum": "#0594", "hasArt": "Yes", "cards": []}, {"name": "Joltik", "dexNum": "#0595", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Paradox Rift", "img": null}, {"type": "Illustration", "set": "Stellar Crown", "img": null}]}, {"name": "Galvantula", "dexNum": "#0596", "hasArt": "Yes", "cards": [{"type": "Special Illustration Rare", "set": "Stellar Crown", "img": null}]}, {"name": "Ferroseed", "dexNum": "#0597", "hasArt": "Yes", "cards": []}, {"name": "Ferrothorn", "dexNum": "#0598", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Paradox Rift", "img": null}, {"type": "Illustration", "set": "White Flare", "img": null}]}, {"name": "Klink", "dexNum": "#0599", "hasArt": "Yes", "cards": []}, {"name": "Klang", "dexNum": "#0600", "hasArt": "Yes", "cards": []}, {"name": "Klinklang", "dexNum": "#0601", "hasArt": "Yes", "cards": []}, {"name": "Tynamo", "dexNum": "#0602", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Black Bolt", "img": null}]}, {"name": "Eelektrik", "dexNum": "#0603", "hasArt": "Yes", "cards": [{"type": "Ancient Trait", "set": "Primal Clash", "img": null}]}, {"name": "Eelektross", "dexNum": "#0604", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Black Bolt", "img": null}, {"type": "Special Illustration Rare", "set": "Ascended Heroes", "img": null}]}, {"name": "Elgyem", "dexNum": "#0605", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Black Bolt", "img": null}]}, {"name": "Beheeyem", "dexNum": "#0606", "hasArt": "Yes", "cards": []}, {"name": "Litwick", "dexNum": "#0607", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "White Flare", "img": null}]}, {"name": "Lampent", "dexNum": "#0608", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "White Flare", "img": null}]}, {"name": "Chandelure", "dexNum": "#0609", "hasArt": "Yes", "cards": [{"type": "Gallery", "set": "Lost Origin", "img": null}, {"type": "Special Illustration Rare", "set": "Pitch Black", "img": null}]}, {"name": "Axew", "dexNum": "#0610", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Black Bolt", "img": null}]}, {"name": "Fraxure", "dexNum": "#0611", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Shrouded Fable", "img": null}]}, {"name": "Haxorus", "dexNum": "#0612", "hasArt": "Yes", "cards": []}, {"name": "Cubchoo", "dexNum": "#0613", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Black Bolt", "img": null}]}, {"name": "Beartic", "dexNum": "#0614", "hasArt": "Yes", "cards": []}, {"name": "Cryogonal", "dexNum": "#0615", "hasArt": "Yes", "cards": []}, {"name": "Shelmet", "dexNum": "#0616", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "White Flare", "img": null}]}, {"name": "Accelgor", "dexNum": "#0617", "hasArt": "Yes", "cards": []}, {"name": "Stunfisk", "dexNum": "#0618", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Surging Sparks", "img": null}]}, {"name": "Mienfoo", "dexNum": "#0619", "hasArt": "Yes", "cards": []}, {"name": "Mienshao", "dexNum": "#0620", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Paradox Rift", "img": null}]}, {"name": "Druddigon", "dexNum": "#0621", "hasArt": "Yes", "cards": [{"type": "Gallery", "set": "Silver Tempest", "img": null}, {"type": "Illustration", "set": "White Flare", "img": null}]}, {"name": "Golett", "dexNum": "#0622", "hasArt": "Yes", "cards": []}, {"name": "Golurk", "dexNum": "#0623", "hasArt": "Yes", "cards": [{"type": "Alt Art", "set": "Evolving Skies", "img": null}]}, {"name": "Pawniard", "dexNum": "#0624", "hasArt": "Yes", "cards": []}, {"name": "Bisharp", "dexNum": "#0625", "hasArt": "Yes", "cards": []}, {"name": "Bouffalant", "dexNum": "#0626", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "White Flare", "img": null}]}, {"name": "Rufflet", "dexNum": "#0627", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Black Bolt", "img": null}]}, {"name": "Braviary", "dexNum": "#0628", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Surging Sparks", "img": null}]}, {"name": "Vullaby", "dexNum": "#0629", "hasArt": "Yes", "cards": []}, {"name": "Mandibuzz", "dexNum": "#0630", "hasArt": "Yes", "cards": []}, {"name": "Heatmor", "dexNum": "#0631", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "White Flare", "img": null}]}, {"name": "Durant", "dexNum": "#0632", "hasArt": "Yes", "cards": [{"type": "Special Illustration Rare", "set": "Surging Sparks", "img": null}]}, {"name": "Deino", "dexNum": "#0633", "hasArt": "Yes", "cards": []}, {"name": "Zweilous", "dexNum": "#0634", "hasArt": "Yes", "cards": []}, {"name": "Hydreigon", "dexNum": "#0635", "hasArt": "Yes", "cards": [{"type": "Special Illustration Rare", "set": "Surging Sparks", "img": null}]}, {"name": "Larvesta", "dexNum": "#0636", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Surging Sparks", "img": null}]}, {"name": "Volcarona", "dexNum": "#0637", "hasArt": "Yes", "cards": [{"type": "Ancient Trait", "set": "Ancient Origins", "img": null}]}, {"name": "Cobalion", "dexNum": "#0638", "hasArt": "Yes", "cards": []}, {"name": "Terrakion", "dexNum": "#0639", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "White Flare", "img": null}]}, {"name": "Virizion", "dexNum": "#0640", "hasArt": "Yes", "cards": []}, {"name": "Tornadus", "dexNum": "#0641", "hasArt": "Yes", "cards": [{"type": "Alt Art", "set": "Chilling Reign", "img": null}]}, {"name": "Thundurus", "dexNum": "#0642", "hasArt": "Yes", "cards": []}, {"name": "Reshiram", "dexNum": "#0643", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Journey Together", "img": null}, {"type": "Misc.", "set": "Legendary Treasures", "img": null}, {"type": "Misc.", "set": "XY Promo", "img": null}, {"type": "Special Illustration Rare", "set": "White Flare", "img": null}]}, {"name": "Zekrom", "dexNum": "#0644", "hasArt": "Yes", "cards": [{"type": "Gallery", "set": "Brilliant Stars", "img": null}, {"type": "Misc.", "set": "XY Promo", "img": null}, {"type": "Special Illustration Rare", "set": "Black Bolt", "img": null}, {"type": "Illustration", "set": "Mega Promo", "img": null}]}, {"name": "Landorus", "dexNum": "#0645", "hasArt": "Yes", "cards": []}, {"name": "Kyurem", "dexNum": "#0646", "hasArt": "Yes", "cards": []}, {"name": "Keldeo", "dexNum": "#0647", "hasArt": "Yes", "cards": [{"type": "Gallery", "set": "Crown Zenith", "img": null}]}, {"name": "Meloetta", "dexNum": "#0648", "hasArt": "Yes", "cards": [{"type": "Misc.", "set": "Legendary Treasures", "img": null}, {"type": "Illustration", "set": "Mega Promo", "img": null}]}, {"name": "Genesect", "dexNum": "#0649", "hasArt": "Yes", "cards": [{"type": "Alt Art", "set": "Fusion Strike", "img": null}]}, {"name": "Chespin", "dexNum": "#0650", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Chaos Rising", "img": null}]}, {"name": "Quilladin", "dexNum": "#0651", "hasArt": "No", "cards": []}, {"name": "Chesnaught", "dexNum": "#0652", "hasArt": "No", "cards": []}, {"name": "Fennekin", "dexNum": "#0653", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Chaos Rising", "img": null}]}, {"name": "Braixen", "dexNum": "#0654", "hasArt": "Yes", "cards": [{"type": "Gallery", "set": "Silver Tempest", "img": null}]}, {"name": "Delphox", "dexNum": "#0655", "hasArt": "No", "cards": []}, {"name": "Froakie", "dexNum": "#0656", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Chaos Rising", "img": null}]}, {"name": "Frogadier", "dexNum": "#0657", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Chaos Rising", "img": null}]}, {"name": "Greninja", "dexNum": "#0658", "hasArt": "Yes", "cards": [{"type": "Special Illustration Rare", "set": "Twilight Masquerade", "img": null}, {"type": "Special Illustration Rare", "set": "Chaos Rising", "img": null}]}, {"name": "Bunnelby", "dexNum": "#0659", "hasArt": "Yes", "cards": [{"type": "Ancient Trait", "set": "Primal Clash", "img": null}]}, {"name": "Diggersby", "dexNum": "#0660", "hasArt": "No", "cards": []}, {"name": "Fletchling", "dexNum": "#0661", "hasArt": "No", "cards": []}, {"name": "Fletchinder", "dexNum": "#0662", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Paldea Evolved", "img": null}]}, {"name": "Talonflame", "dexNum": "#0663", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Perfect Order", "img": null}]}, {"name": "Scatterbug", "dexNum": "#0664", "hasArt": "No", "cards": []}, {"name": "Spewpa", "dexNum": "#0665", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Perfect Order", "img": null}]}, {"name": "Vivillon", "dexNum": "#0666", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Surging Sparks", "img": null}]}, {"name": "Litleo", "dexNum": "#0667", "hasArt": "Yes", "cards": []}, {"name": "Pyroar", "dexNum": "#0668", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Paldea Evolved", "img": null}]}, {"name": "Flabébé", "dexNum": "#0669", "hasArt": "No", "cards": []}, {"name": "Floette", "dexNum": "#0670", "hasArt": "Yes", "cards": [{"type": "Special Illustration Rare", "set": "Chaos Rising", "img": null}]}, {"name": "Florges", "dexNum": "#0671", "hasArt": "No", "cards": []}, {"name": "Skiddo", "dexNum": "#0672", "hasArt": "No", "cards": []}, {"name": "Gogoat", "dexNum": "#0673", "hasArt": "No", "cards": []}, {"name": "Pancham", "dexNum": "#0674", "hasArt": "No", "cards": []}, {"name": "Pangoro", "dexNum": "#0675", "hasArt": "No", "cards": []}, {"name": "Furfrou", "dexNum": "#0676", "hasArt": "No", "cards": []}, {"name": "Espurr", "dexNum": "#0677", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Perfect Order", "img": null}]}, {"name": "Meowstic", "dexNum": "#0678", "hasArt": "No", "cards": []}, {"name": "Honedge", "dexNum": "#0679", "hasArt": "No", "cards": []}, {"name": "Doublade", "dexNum": "#0680", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Perfect Order", "img": null}]}, {"name": "Aegislash", "dexNum": "#0681", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Paradox Rift", "img": null}]}, {"name": "Spritzee", "dexNum": "#0682", "hasArt": "No", "cards": []}, {"name": "Aromatisse", "dexNum": "#0683", "hasArt": "No", "cards": []}, {"name": "Swirlix", "dexNum": "#0684", "hasArt": "No", "cards": []}, {"name": "Slurpuff", "dexNum": "#0685", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Ascended Heroes", "img": null}]}, {"name": "Inkay", "dexNum": "#0686", "hasArt": "No", "cards": []}, {"name": "Malamar", "dexNum": "#0687", "hasArt": "Yes", "cards": [{"type": "Gallery", "set": "Silver Tempest", "img": null}]}, {"name": "Binacle", "dexNum": "#0688", "hasArt": "No", "cards": []}, {"name": "Barbaracle", "dexNum": "#0689", "hasArt": "No", "cards": []}, {"name": "Skrelp", "dexNum": "#0690", "hasArt": "No", "cards": []}, {"name": "Dragalge", "dexNum": "#0691", "hasArt": "Yes", "cards": [{"type": "Special Illustration Rare", "set": "Chaos Rising", "img": null}]}, {"name": "Clauncher", "dexNum": "#0692", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Scarlet & Violet", "img": null}]}, {"name": "Clawitzer", "dexNum": "#0693", "hasArt": "Yes", "cards": []}, {"name": "Helioptile", "dexNum": "#0694", "hasArt": "Yes", "cards": []}, {"name": "Heliolisk", "dexNum": "#0695", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Twilight Masquerade", "img": null}, {"type": "Illustration", "set": "Ascended Heroes", "img": null}]}, {"name": "Tyrunt", "dexNum": "#0696", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Mega Promo", "img": null}]}, {"name": "Tyrantrum", "dexNum": "#0697", "hasArt": "No", "cards": []}, {"name": "Amaura", "dexNum": "#0698", "hasArt": "No", "cards": []}, {"name": "Aurorus", "dexNum": "#0699", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Perfect Order", "img": null}]}, {"name": "Sylveon", "dexNum": "#0700", "hasArt": "Yes", "cards": [{"type": "Alt Art", "set": "Evolving Skies", "img": null}]}, {"name": "Hawlucha", "dexNum": "#0701", "hasArt": "Yes", "cards": [{"type": "Special Illustration Rare", "set": "Ascended Heroes", "img": null}]}, {"name": "Dedenne", "dexNum": "#0702", "hasArt": "Yes", "cards": [{"type": "Gallery", "set": "Brilliant Stars", "img": null}, {"type": "Illustration", "set": "Perfect Order", "img": null}]}, {"name": "Carbink", "dexNum": "#0703", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Ascended Heroes", "img": null}]}, {"name": "Goomy", "dexNum": "#0704", "hasArt": "No", "cards": []}, {"name": "Sliggoo", "dexNum": "#0705", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Chaos Rising", "img": null}]}, {"name": "Goodra", "dexNum": "#0706", "hasArt": "Yes", "cards": [{"type": "Gallery", "set": "Crown Zenith", "img": null}]}, {"name": "Klefki", "dexNum": "#0707", "hasArt": "No", "cards": []}, {"name": "Phantump", "dexNum": "#0708", "hasArt": "No", "cards": []}, {"name": "Trevenant", "dexNum": "#0709", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Ascended Heroes", "img": null}]}, {"name": "Pumpkaboo", "dexNum": "#0710", "hasArt": "No", "cards": []}, {"name": "Gourgeist", "dexNum": "#0711", "hasArt": "No", "cards": []}, {"name": "Bergmite", "dexNum": "#0712", "hasArt": "No", "cards": []}, {"name": "Avalugg", "dexNum": "#0713", "hasArt": "No", "cards": []}, {"name": "Noibat", "dexNum": "#0714", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Journey Together", "img": null}]}, {"name": "Noivern", "dexNum": "#0715", "hasArt": "Yes", "cards": [{"type": "Alt Art", "set": "Evolving Skies", "img": null}]}, {"name": "Xerneas", "dexNum": "#0716", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Chaos Rising", "img": null}]}, {"name": "Yveltal", "dexNum": "#0717", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Paradox Rift", "img": null}]}, {"name": "Zygarde", "dexNum": "#0718", "hasArt": "Yes", "cards": [{"type": "Special Illustration Rare", "set": "Perfect Order", "img": null}]}, {"name": "Diancie", "dexNum": "#0719", "hasArt": "Yes", "cards": [{"type": "Gallery", "set": "Crown Zenith", "img": null}, {"type": "Illustration", "set": "SV Promo", "img": null}, {"type": "Special Illustration Rare", "set": "Ascended Heroes", "img": null}]}, {"name": "Hoopa", "dexNum": "#0720", "hasArt": "Yes", "cards": [{"type": "Alt Gallery Art", "set": "Crown Zenith", "img": null}]}, {"name": "Volcanion", "dexNum": "#0721", "hasArt": "Yes", "cards": [{"type": "Special Illustration Rare", "set": "Journey Together", "img": null}]}, {"name": "Rowlet", "dexNum": "#0722", "hasArt": "Yes", "cards": [{"type": "Misc.", "set": "SWSH Promo", "img": null}, {"type": "Illustration", "set": "Perfect Order", "img": null}, {"type": "Illustration", "set": "Mega Promo", "img": null}]}, {"name": "Dartrix", "dexNum": "#0723", "hasArt": "No", "cards": []}, {"name": "Decidueye", "dexNum": "#0724", "hasArt": "No", "cards": []}, {"name": "Litten", "dexNum": "#0725", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Temporal Forces", "img": null}, {"type": "Illustration", "set": "Mega Promo", "img": null}]}, {"name": "Torracat", "dexNum": "#0726", "hasArt": "No", "cards": []}, {"name": "Incineroar", "dexNum": "#0727", "hasArt": "No", "cards": []}, {"name": "Popplio", "dexNum": "#0728", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Mega Promo", "img": null}]}, {"name": "Brionne", "dexNum": "#0729", "hasArt": "No", "cards": []}, {"name": "Primarina", "dexNum": "#0730", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Pitch Black", "img": null}]}, {"name": "Pikipek", "dexNum": "#0731", "hasArt": "No", "cards": []}, {"name": "Trumbeak", "dexNum": "#0732", "hasArt": "No", "cards": []}, {"name": "Toucannon", "dexNum": "#0733", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Pitch Black", "img": null}]}, {"name": "Yungoos", "dexNum": "#0734", "hasArt": "No", "cards": []}, {"name": "Gumshoos", "dexNum": "#0735", "hasArt": "Yes", "cards": []}, {"name": "Grubbin", "dexNum": "#0736", "hasArt": "No", "cards": []}, {"name": "Charjabug", "dexNum": "#0737", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Temporal Forces", "img": null}]}, {"name": "Vikavolt", "dexNum": "#0738", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Ascended Heroes", "img": null}]}, {"name": "Crabrawler", "dexNum": "#0739", "hasArt": "No", "cards": []}, {"name": "Crabominable", "dexNum": "#0740", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Stellar Crown", "img": null}]}, {"name": "Oricorio", "dexNum": "#0741", "hasArt": "Yes", "cards": [{"type": "Gallery", "set": "Crown Zenith", "img": null}, {"type": "Illustration", "set": "Mega Promo", "img": null}]}, {"name": "Cutiefly", "dexNum": "#0742", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Temporal Forces", "img": null}]}, {"name": "Ribombee", "dexNum": "#0743", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Journey Together", "img": null}]}, {"name": "Rockruff", "dexNum": "#0744", "hasArt": "Yes", "cards": [{"type": "Gallery", "set": "Silver Tempest", "img": null}]}, {"name": "Lycanroc", "dexNum": "#0745", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Journey Together", "img": null}]}, {"name": "Wishiwashi", "dexNum": "#0746", "hasArt": "Yes", "cards": [{"type": "Gallery", "set": "Cosmic Eclipse", "img": null}]}, {"name": "Mareanie", "dexNum": "#0747", "hasArt": "No", "cards": []}, {"name": "Toxapex", "dexNum": "#0748", "hasArt": "No", "cards": []}, {"name": "Mudbray", "dexNum": "#0749", "hasArt": "No", "cards": []}, {"name": "Mudsdale", "dexNum": "#0750", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Temporal Forces", "img": null}]}, {"name": "Dewpider", "dexNum": "#0751", "hasArt": "No", "cards": []}, {"name": "Araquanid", "dexNum": "#0752", "hasArt": "No", "cards": []}, {"name": "Fomantis", "dexNum": "#0753", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Pitch Black", "img": null}]}, {"name": "Lurantis", "dexNum": "#0754", "hasArt": "No", "cards": []}, {"name": "Morelull", "dexNum": "#0755", "hasArt": "No", "cards": []}, {"name": "Shiinotic", "dexNum": "#0756", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Surging Sparks", "img": null}]}, {"name": "Salandit", "dexNum": "#0757", "hasArt": "No", "cards": []}, {"name": "Salazzle", "dexNum": "#0758", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Ascended Heroes", "img": null}]}, {"name": "Stufful", "dexNum": "#0759", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Mega Evolution", "img": null}]}, {"name": "Bewear", "dexNum": "#0760", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Shrouded Fable", "img": null}]}, {"name": "Bounsweet", "dexNum": "#0761", "hasArt": "No", "cards": []}, {"name": "Steenee", "dexNum": "#0762", "hasArt": "No", "cards": []}, {"name": "Tsareena", "dexNum": "#0763", "hasArt": "No", "cards": []}, {"name": "Comfey", "dexNum": "#0764", "hasArt": "Yes", "cards": [{"type": "Gallery", "set": "Crown Zenith", "img": null}]}, {"name": "Oranguru", "dexNum": "#0765", "hasArt": "Yes", "cards": [{"type": "Gallery", "set": "Brilliant Stars", "img": null}]}, {"name": "Passimian", "dexNum": "#0766", "hasArt": "Yes", "cards": [{"type": "Gallery", "set": "Silver Tempest", "img": null}]}, {"name": "Wimpod", "dexNum": "#0767", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Paradox Rift", "img": null}]}, {"name": "Golisopod", "dexNum": "#0768", "hasArt": "Yes", "cards": [{"type": "Special Illustration Rare", "set": "Paradox Rift", "img": null}]}, {"name": "Sandygast", "dexNum": "#0769", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Paldea Evolved", "img": null}]}, {"name": "Palossand", "dexNum": "#0770", "hasArt": "No", "cards": []}, {"name": "Pyukumuku", "dexNum": "#0771", "hasArt": "No", "cards": []}, {"name": "Type: Null", "dexNum": "#0772", "hasArt": "No", "cards": []}, {"name": "Silvally", "dexNum": "#0773", "hasArt": "Yes", "cards": [{"type": "Art", "set": "Cosmic Eclipse", "img": null}, {"type": "Illustration", "set": "Pitch Black", "img": null}]}, {"name": "Minior", "dexNum": "#0774", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Paradox Rift", "img": null}]}, {"name": "Komala", "dexNum": "#0775", "hasArt": "No", "cards": []}, {"name": "Turtonator", "dexNum": "#0776", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Stellar Crown", "img": null}]}, {"name": "Togedemaru", "dexNum": "#0777", "hasArt": "Yes", "cards": []}, {"name": "Mimikyu", "dexNum": "#0778", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "SV Promo", "img": null}, {"type": "Art", "set": "Cosmic Eclipse", "img": null}, {"type": "Illustration", "set": "Ascended Heroes", "img": null}]}, {"name": "Bruxish", "dexNum": "#0779", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Surging Sparks", "img": null}]}, {"name": "Drampa", "dexNum": "#0780", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Temporal Forces", "img": null}]}, {"name": "Dhelmise", "dexNum": "#0781", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Pitch Black", "img": null}]}, {"name": "Jangmo-o", "dexNum": "#0782", "hasArt": "No", "cards": []}, {"name": "Hakamo-o", "dexNum": "#0783", "hasArt": "No", "cards": []}, {"name": "Kommo-o", "dexNum": "#0784", "hasArt": "No", "cards": []}, {"name": "Tapu Koko", "dexNum": "#0785", "hasArt": "Yes", "cards": [{"type": "Special Illustration Rare", "set": "Paradox Rift", "img": null}]}, {"name": "Tapu Lele", "dexNum": "#0786", "hasArt": "No", "cards": []}, {"name": "Tapu Bulu", "dexNum": "#0787", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Shrouded Fable", "img": null}]}, {"name": "Tapu Fini", "dexNum": "#0788", "hasArt": "No", "cards": []}, {"name": "Cosmog", "dexNum": "#0789", "hasArt": "No", "cards": []}, {"name": "Cosmoem", "dexNum": "#0790", "hasArt": "No", "cards": []}, {"name": "Solgaleo", "dexNum": "#0791", "hasArt": "Yes", "cards": []}, {"name": "Lunala", "dexNum": "#0792", "hasArt": "Yes", "cards": []}, {"name": "Nihilego", "dexNum": "#0793", "hasArt": "No", "cards": []}, {"name": "Buzzwole", "dexNum": "#0794", "hasArt": "Yes", "cards": []}, {"name": "Pheromosa", "dexNum": "#0795", "hasArt": "Yes", "cards": []}, {"name": "Xurkitree", "dexNum": "#0796", "hasArt": "No", "cards": []}, {"name": "Celesteela", "dexNum": "#0797", "hasArt": "No", "cards": []}, {"name": "Kartana", "dexNum": "#0798", "hasArt": "No", "cards": []}, {"name": "Guzzlord", "dexNum": "#0799", "hasArt": "Yes", "cards": []}, {"name": "Necrozma", "dexNum": "#0800", "hasArt": "No", "cards": []}, {"name": "Magearna", "dexNum": "#0801", "hasArt": "Yes", "cards": [{"type": "Misc.", "set": "XY Promo", "img": null}]}, {"name": "Marshadow", "dexNum": "#0802", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Mega Evolution", "img": null}]}, {"name": "Poipole", "dexNum": "#0803", "hasArt": "No", "cards": []}, {"name": "Naganadel", "dexNum": "#0804", "hasArt": "Yes", "cards": []}, {"name": "Stakataka", "dexNum": "#0805", "hasArt": "No", "cards": []}, {"name": "Blacephalon", "dexNum": "#0806", "hasArt": "No", "cards": []}, {"name": "Zeraora", "dexNum": "#0807", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Stellar Crown", "img": null}, {"type": "Special Illustration Rare", "set": "Pitch Black", "img": null}]}, {"name": "Meltan", "dexNum": "#0808", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Temporal Forces", "img": null}]}, {"name": "Melmetal", "dexNum": "#0809", "hasArt": "Yes", "cards": []}, {"name": "Grookey", "dexNum": "#0810", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Mega Promo", "img": null}]}, {"name": "Thwackey", "dexNum": "#0811", "hasArt": "No", "cards": []}, {"name": "Rillaboom", "dexNum": "#0812", "hasArt": "No", "cards": []}, {"name": "Scorbunny", "dexNum": "#0813", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Ascended Heroes", "img": null}, {"type": "Illustration", "set": "Mega Promo", "img": null}]}, {"name": "Raboot", "dexNum": "#0814", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Stellar Crown", "img": null}]}, {"name": "Cinderace", "dexNum": "#0815", "hasArt": "No", "cards": []}, {"name": "Sobble", "dexNum": "#0816", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Mega Promo", "img": null}]}, {"name": "Drizzile", "dexNum": "#0817", "hasArt": "No", "cards": []}, {"name": "Inteleon", "dexNum": "#0818", "hasArt": "Yes", "cards": [{"type": "Alt Art", "set": "Fusion Strike", "img": null}]}, {"name": "Skwovet", "dexNum": "#0819", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Scarlet & Violet", "img": null}]}, {"name": "Greedent", "dexNum": "#0820", "hasArt": "Yes", "cards": [{"type": "Alt Art", "set": "Fusion Strike", "img": null}]}, {"name": "Rookidee", "dexNum": "#0821", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Paldea Evolved", "img": null}]}, {"name": "Corvisquire", "dexNum": "#0822", "hasArt": "No", "cards": []}, {"name": "Corviknight", "dexNum": "#0823", "hasArt": "Yes", "cards": [{"type": "Alt Gallery Art", "set": "Silver Tempest", "img": null}]}, {"name": "Blipbug", "dexNum": "#0824", "hasArt": "No", "cards": []}, {"name": "Dottler", "dexNum": "#0825", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Paradox Rift", "img": null}]}, {"name": "Orbeetle", "dexNum": "#0826", "hasArt": "Yes", "cards": [{"type": "Alt Gallery Art", "set": "Lost Origin", "img": null}, {"type": "Illustration", "set": "Destined Rivals", "img": null}]}, {"name": "Nickit", "dexNum": "#0827", "hasArt": "No", "cards": []}, {"name": "Thievul", "dexNum": "#0828", "hasArt": "Yes", "cards": [{"type": "Gallery", "set": "Crown Zenith", "img": null}]}, {"name": "Gossifleur", "dexNum": "#0829", "hasArt": "No", "cards": []}, {"name": "Eldegoss", "dexNum": "#0830", "hasArt": "No", "cards": []}, {"name": "Wooloo", "dexNum": "#0831", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Journey Together", "img": null}]}, {"name": "Dubwool", "dexNum": "#0832", "hasArt": "No", "cards": []}, {"name": "Chewtle", "dexNum": "#0833", "hasArt": "No", "cards": []}, {"name": "Drednaw", "dexNum": "#0834", "hasArt": "No", "cards": []}, {"name": "Yamper", "dexNum": "#0835", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Phantasmal Flames", "img": null}]}, {"name": "Boltund", "dexNum": "#0836", "hasArt": "Yes", "cards": [{"type": "Alt Gallery Art", "set": "Brilliant Stars", "img": null}]}, {"name": "Rolycoly", "dexNum": "#0837", "hasArt": "No", "cards": []}, {"name": "Carkol", "dexNum": "#0838", "hasArt": "No", "cards": []}, {"name": "Coalossal", "dexNum": "#0839", "hasArt": "No", "cards": []}, {"name": "Applin", "dexNum": "#0840", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Twilight Masquerade", "img": null}]}, {"name": "Flapple", "dexNum": "#0841", "hasArt": "Yes", "cards": [{"type": "Gallery", "set": "", "img": null}, {"type": "Illustration", "set": "Surging Sparks", "img": null}]}, {"name": "Appletun", "dexNum": "#0842", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Surging Sparks", "img": null}]}, {"name": "Silicobra", "dexNum": "#0843", "hasArt": "No", "cards": []}, {"name": "Sandaconda", "dexNum": "#0844", "hasArt": "Yes", "cards": [{"type": "Alt Art", "set": "Fusion Strike", "img": null}]}, {"name": "Cramorant", "dexNum": "#0845", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Twilight Masquerade", "img": null}]}, {"name": "Arrokuda", "dexNum": "#0846", "hasArt": "No", "cards": []}, {"name": "Barraskewda", "dexNum": "#0847", "hasArt": "No", "cards": []}, {"name": "Toxel", "dexNum": "#0848", "hasArt": "No", "cards": []}, {"name": "Toxtricity", "dexNum": "#0849", "hasArt": "Yes", "cards": [{"type": "Gallery", "set": "Crown Zenith", "img": null}, {"type": "Illustration", "set": "Phantasmal Flames", "img": null}]}, {"name": "Sizzlipede", "dexNum": "#0850", "hasArt": "No", "cards": []}, {"name": "Centiskorch", "dexNum": "#0851", "hasArt": "Yes", "cards": [{"type": "Alt Gallery Art", "set": "Lost Origin", "img": null}]}, {"name": "Clobbopus", "dexNum": "#0852", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Surging Sparks", "img": null}]}, {"name": "Grapploct", "dexNum": "#0853", "hasArt": "No", "cards": []}, {"name": "Sinistea", "dexNum": "#0854", "hasArt": "No", "cards": []}, {"name": "Polteageist", "dexNum": "#0855", "hasArt": "Yes", "cards": []}, {"name": "Hatenna", "dexNum": "#0856", "hasArt": "No", "cards": []}, {"name": "Hattrem", "dexNum": "#0857", "hasArt": "No", "cards": []}, {"name": "Hatterene", "dexNum": "#0858", "hasArt": "Yes", "cards": [{"type": "Alt Gallery Art", "set": "Crown Zenith", "img": null}]}, {"name": "Impidimp", "dexNum": "#0859", "hasArt": "No", "cards": []}, {"name": "Morgrem", "dexNum": "#0860", "hasArt": "No", "cards": []}, {"name": "Grimmsnarl", "dexNum": "#0861", "hasArt": "No", "cards": [{"type": "Special Illustration Rare", "set": "Ascended Heroes", "img": null}]}, {"name": "Obstagoon", "dexNum": "#0862", "hasArt": "Yes", "cards": [{"type": "Gallery", "set": "Astral Radiance", "img": null}, {"type": "Illustration", "set": "Ascended Heroes", "img": null}]}, {"name": "Perrserker", "dexNum": "#0863", "hasArt": "Yes", "cards": [{"type": "Alt Art", "set": "Lost Origin", "img": null}]}, {"name": "Cursola", "dexNum": "#0864", "hasArt": "No", "cards": []}, {"name": "Sirfetch'd", "dexNum": "#0865", "hasArt": "No", "cards": []}, {"name": "Mr. Rime", "dexNum": "#0866", "hasArt": "No", "cards": []}, {"name": "Runerigus", "dexNum": "#0867", "hasArt": "No", "cards": []}, {"name": "Milcery", "dexNum": "#0868", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Stellar Crown", "img": null}]}, {"name": "Alcremie", "dexNum": "#0869", "hasArt": "Yes", "cards": [{"type": "Gallery", "set": "Brilliant Stars", "img": null}]}, {"name": "Falinks", "dexNum": "#0870", "hasArt": "Yes", "cards": [{"type": "Gallery", "set": "Astral Radiance", "img": null}]}, {"name": "Pincurchin", "dexNum": "#0871", "hasArt": "No", "cards": []}, {"name": "Snom", "dexNum": "#0872", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Temporal Forces", "img": null}]}, {"name": "Frosmoth", "dexNum": "#0873", "hasArt": "Yes", "cards": [{"type": "Gallery", "set": "Astral Radiance", "img": null}]}, {"name": "Stonjourner", "dexNum": "#0874", "hasArt": "No", "cards": []}, {"name": "Eiscue", "dexNum": "#0875", "hasArt": "Yes", "cards": [{"type": "Special Illustration Rare", "set": "Paldea Evolved", "img": null}]}, {"name": "Indeedee", "dexNum": "#0876", "hasArt": "No", "cards": []}, {"name": "Morpeko", "dexNum": "#0877", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Paradox Rift", "img": null}, {"type": "Special Illustration Rare", "set": "Pitch Black", "img": null}]}, {"name": "Cufant", "dexNum": "#0878", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Shrouded Fable", "img": null}]}, {"name": "Copperajah", "dexNum": "#0879", "hasArt": "No", "cards": []}, {"name": "Dracozolt", "dexNum": "#0880", "hasArt": "No", "cards": []}, {"name": "Arctozolt", "dexNum": "#0881", "hasArt": "No", "cards": []}, {"name": "Dracovish", "dexNum": "#0882", "hasArt": "No", "cards": []}, {"name": "Arctovish", "dexNum": "#0883", "hasArt": "No", "cards": []}, {"name": "Duraludon", "dexNum": "#0884", "hasArt": "Yes", "cards": [{"type": "Alt Art", "set": "Evolving Skies", "img": null}]}, {"name": "Dreepy", "dexNum": "#0885", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Ascended Heroes", "img": null}]}, {"name": "Drakloak", "dexNum": "#0886", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Ascended Heroes", "img": null}]}, {"name": "Dragapult", "dexNum": "#0887", "hasArt": "No", "cards": []}, {"name": "Zacian", "dexNum": "#0888", "hasArt": "Yes", "cards": [{"type": "Alt Gallery Art", "set": "Crown Zenith", "img": null}, {"type": "Illustration", "set": "Phantasmal Flames", "img": null}]}, {"name": "Zamazenta", "dexNum": "#0889", "hasArt": "Yes", "cards": [{"type": "Alt Gallery Art", "set": "Crown Zenith", "img": null}, {"type": "Illustration", "set": "Destined Rivals", "img": null}]}, {"name": "Eternatus", "dexNum": "#0890", "hasArt": "Yes", "cards": [{"type": "Alt Gallery Art", "set": "Lost Origin", "img": null}]}, {"name": "Kubfu", "dexNum": "#0891", "hasArt": "No", "cards": []}, {"name": "Urshifu", "dexNum": "#0892", "hasArt": "Yes", "cards": [{"type": "Alt Art", "set": "Battle Styles", "img": null}]}, {"name": "Zarude", "dexNum": "#0893", "hasArt": "No", "cards": [{"type": "Illustration", "set": "Pitch Black", "img": null}]}, {"name": "Regieleki", "dexNum": "#0894", "hasArt": "No", "cards": []}, {"name": "Regidrago", "dexNum": "#0895", "hasArt": "Yes", "cards": [{"type": "Alt Art", "set": "Silver Tempest", "img": null}]}, {"name": "Glastrier", "dexNum": "#0896", "hasArt": "No", "cards": []}, {"name": "Spectrier", "dexNum": "#0897", "hasArt": "No", "cards": []}, {"name": "Calyrex", "dexNum": "#0898", "hasArt": "Yes", "cards": [{"type": "Alt Art", "set": "Chilling Reign", "img": null}]}, {"name": "Wyrdeer", "dexNum": "#0899", "hasArt": "Yes", "cards": [{"type": "Gallery", "set": "Astral Radiance", "img": null}]}, {"name": "Kleavor", "dexNum": "#0900", "hasArt": "Yes", "cards": [{"type": "Gallery", "set": "Astral Radiance", "img": null}]}, {"name": "Ursaluna", "dexNum": "#0901", "hasArt": "Yes", "cards": [{"type": "Special Illustration Rare", "set": "Twilight Masquerade", "img": null}]}, {"name": "Basculegion", "dexNum": "#0902", "hasArt": "No", "cards": []}, {"name": "Sneasler", "dexNum": "#0903", "hasArt": "Yes", "cards": [{"type": "Alt Art", "set": "Astral Radiance", "img": null}]}, {"name": "Overqwil", "dexNum": "#0904", "hasArt": "No", "cards": []}, {"name": "Enamorus", "dexNum": "#0905", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Twilight Masquerade", "img": null}]}, {"name": "Sprigatito", "dexNum": "#0906", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Paldea Evolved", "img": null}]}, {"name": "Floragato", "dexNum": "#0907", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Paldea Evolved", "img": null}]}, {"name": "Meowscarada", "dexNum": "#0908", "hasArt": "Yes", "cards": [{"type": "Special Illustration Rare", "set": "Paldea Evolved", "img": null}]}, {"name": "Fuecoco", "dexNum": "#0909", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Paldea Evolved", "img": null}]}, {"name": "Crocalor", "dexNum": "#0910", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Paldea Evolved", "img": null}]}, {"name": "Skeledirge", "dexNum": "#0911", "hasArt": "Yes", "cards": [{"type": "Special Illustration Rare", "set": "Paldea Evolved", "img": null}]}, {"name": "Quaxly", "dexNum": "#0912", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Paldea Evolved", "img": null}]}, {"name": "Quaxwell", "dexNum": "#0913", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Paldea Evolved", "img": null}]}, {"name": "Quaquaval", "dexNum": "#0914", "hasArt": "Yes", "cards": [{"type": "Special Illustration Rare", "set": "Paldea Evolved", "img": null}]}, {"name": "Lechonk", "dexNum": "#0915", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Obsidian Flames", "img": null}]}, {"name": "Oinkologne", "dexNum": "#0916", "hasArt": "No", "cards": []}, {"name": "Tarountula", "dexNum": "#0917", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Scarlet & Violet", "img": null}]}, {"name": "Spidops", "dexNum": "#0918", "hasArt": "Yes", "cards": [{"type": "Special Illustration Rare", "set": "Scarlet & Violet", "img": null}, {"type": "Illustration", "set": "Destined Rivals", "img": null}]}, {"name": "Nymble", "dexNum": "#0919", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Phantasmal Flames", "img": null}]}, {"name": "Lokix", "dexNum": "#0920", "hasArt": "No", "cards": []}, {"name": "Pawmi", "dexNum": "#0921", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Paldean Fates", "img": null}]}, {"name": "Pawmo", "dexNum": "#0922", "hasArt": "No", "cards": []}, {"name": "Pawmot", "dexNum": "#0923", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Scarlet & Violet", "img": null}]}, {"name": "Tandemaus", "dexNum": "#0924", "hasArt": "No", "cards": []}, {"name": "Maushold", "dexNum": "#0925", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Paldea Evolved", "img": null}]}, {"name": "Fidough", "dexNum": "#0926", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Scarlet & Violet", "img": null}]}, {"name": "Dachsbun", "dexNum": "#0927", "hasArt": "Yes", "cards": [{"type": "Special Illustration Rare", "set": "Stellar Crown", "img": null}]}, {"name": "Smoliv", "dexNum": "#0928", "hasArt": "No", "cards": []}, {"name": "Dolliv", "dexNum": "#0929", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Scarlet & Violet", "img": null}]}, {"name": "Arboliva", "dexNum": "#0930", "hasArt": "No", "cards": []}, {"name": "Squawkabilly", "dexNum": "#0931", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Paldea Evolved", "img": null}]}, {"name": "Nacli", "dexNum": "#0932", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Paldea Evolved", "img": null}]}, {"name": "Naclstack", "dexNum": "#0933", "hasArt": "No", "cards": []}, {"name": "Garganacl", "dexNum": "#0934", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Paradox Rift", "img": null}, {"type": "Illustration", "set": "Mega Evolution", "img": null}]}, {"name": "Charcadet", "dexNum": "#0935", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Mega Promo", "img": null}]}, {"name": "Armarouge", "dexNum": "#0936", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Scarlet & Violet", "img": null}, {"type": "Illustration", "set": "Pitch Black", "img": null}]}, {"name": "Ceruledge", "dexNum": "#0937", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Surging Sparks", "img": null}]}, {"name": "Tadbulb", "dexNum": "#0938", "hasArt": "No", "cards": []}, {"name": "Bellibolt", "dexNum": "#0939", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Obsidian Flames", "img": null}, {"type": "Special Illustration Rare", "set": "Ascended Heroes", "img": null}]}, {"name": "Wattrel", "dexNum": "#0940", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Twilight Masquerade", "img": null}]}, {"name": "Kilowattrel", "dexNum": "#0941", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Journey Together", "img": null}, {"type": "Illustration", "set": "Phantasmal Flames", "img": null}, {"type": "Illustration", "set": "Ascended Heroes", "img": null}]}, {"name": "Maschiff", "dexNum": "#0942", "hasArt": "No", "cards": []}, {"name": "Mabosstiff", "dexNum": "#0943", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Scarlet & Violet", "img": null}]}, {"name": "Shroodle", "dexNum": "#0944", "hasArt": "Yes", "cards": []}, {"name": "Grafaiai", "dexNum": "#0945", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Paldea Evolved", "img": null}]}, {"name": "Bramblin", "dexNum": "#0946", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Paldea Evolved", "img": null}]}, {"name": "Brambleghast", "dexNum": "#0947", "hasArt": "No", "cards": []}, {"name": "Toedscool", "dexNum": "#0948", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Scarlet & Violet", "img": null}]}, {"name": "Toedscruel", "dexNum": "#0949", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Paradox Rift", "img": null}]}, {"name": "Klawf", "dexNum": "#0950", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Scarlet & Violet", "img": null}]}, {"name": "Capsakid", "dexNum": "#0951", "hasArt": "No", "cards": []}, {"name": "Scovillain", "dexNum": "#0952", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Scarlet & Violet", "img": null}]}, {"name": "Rellor", "dexNum": "#0953", "hasArt": "No", "cards": []}, {"name": "Rabsca", "dexNum": "#0954", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Paldea Evolved", "img": null}]}, {"name": "Flittle", "dexNum": "#0955", "hasArt": "No", "cards": []}, {"name": "Espathra", "dexNum": "#0956", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Paradox Rift", "img": null}]}, {"name": "Tinkatink", "dexNum": "#0957", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Paldea Evolved", "img": null}]}, {"name": "Tinkatuff", "dexNum": "#0958", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Paldea Evolved", "img": null}]}, {"name": "Tinkaton", "dexNum": "#0959", "hasArt": "Yes", "cards": [{"type": "Special Illustration Rare", "set": "Paldea Evolved", "img": null}]}, {"name": "Wiglett", "dexNum": "#0960", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Scarlet & Violet", "img": null}]}, {"name": "Wugtrio", "dexNum": "#0961", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Paldean Fates", "img": null}]}, {"name": "Bombirdier", "dexNum": "#0962", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Scarlet & Violet", "img": null}]}, {"name": "Finizen", "dexNum": "#0963", "hasArt": "No", "cards": []}, {"name": "Palafin", "dexNum": "#0964", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Obsidian Flames", "img": null}]}, {"name": "Varoom", "dexNum": "#0965", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Obsidian Flames", "img": null}]}, {"name": "Revavroom", "dexNum": "#0966", "hasArt": "Yes", "cards": [{"type": "Special Illustration Rare", "set": "Obsidian Flames", "img": null}]}, {"name": "Cyclizar", "dexNum": "#0967", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Paradox Rift", "img": null}]}, {"name": "Orthworm", "dexNum": "#0968", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Paldea Evolved", "img": null}]}, {"name": "Glimmet", "dexNum": "#0969", "hasArt": "No", "cards": []}, {"name": "Glimmora", "dexNum": "#0970", "hasArt": "No", "cards": []}, {"name": "Greavard", "dexNum": "#0971", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Scarlet & Violet", "img": null}]}, {"name": "Houndstone", "dexNum": "#0972", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Mega Evolution", "img": null}]}, {"name": "Flamigo", "dexNum": "#0973", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Paldea Evolved", "img": null}]}, {"name": "Cetoddle", "dexNum": "#0974", "hasArt": "No", "cards": []}, {"name": "Cetitan", "dexNum": "#0975", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Surging Sparks", "img": null}]}, {"name": "Veluza", "dexNum": "#0976", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Paradox Rift", "img": null}]}, {"name": "Dondozo", "dexNum": "#0977", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Scarlet & Violet", "img": null}]}, {"name": "Tatsugiri", "dexNum": "#0978", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Twilight Masquerade", "img": null}]}, {"name": "Annihilape", "dexNum": "#0979", "hasArt": "No", "cards": []}, {"name": "Clodsire", "dexNum": "#0980", "hasArt": "No", "cards": []}, {"name": "Farigiraf", "dexNum": "#0981", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Paldea Evolved", "img": null}]}, {"name": "Dudunsparce", "dexNum": "#0982", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Paldea Evolved", "img": null}]}, {"name": "Kingambit", "dexNum": "#0983", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Scarlet & Violet", "img": null}, {"type": "Special Illustration Rare", "set": "SV Promo", "img": null}]}, {"name": "Great Tusk", "dexNum": "#0984", "hasArt": "Yes", "cards": [{"type": "Special Illustration Rare", "set": "Scarlet & Violet", "img": null}]}, {"name": "Scream Tail", "dexNum": "#0985", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "SV Promo", "img": null}]}, {"name": "Brute Bonnet", "dexNum": "#0986", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Paradox Rift", "img": null}]}, {"name": "Flutter Mane", "dexNum": "#0987", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "SV Promo", "img": null}]}, {"name": "Slither Wing", "dexNum": "#0988", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Paradox Rift", "img": null}]}, {"name": "Sandy Shocks", "dexNum": "#0989", "hasArt": "Yes", "cards": [{"type": "Special Illustration Rare", "set": "Paradox Rift", "img": null}]}, {"name": "Iron Treads", "dexNum": "#0990", "hasArt": "Yes", "cards": [{"type": "Special Illustration Rare", "set": "Scarlet & Violet", "img": null}]}, {"name": "Iron Bundle", "dexNum": "#0991", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "SV Promo", "img": null}]}, {"name": "Iron Hands", "dexNum": "#0992", "hasArt": "Yes", "cards": [{"type": "Special Illustration Rare", "set": "Paradox Rift", "img": null}]}, {"name": "Iron Jugulis", "dexNum": "#0993", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Paradox Rift", "img": null}]}, {"name": "Iron Moth", "dexNum": "#0994", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Paradox Rift", "img": null}]}, {"name": "Iron Thorns", "dexNum": "#0995", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "SV Promo", "img": null}]}, {"name": "Frigibax", "dexNum": "#0996", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Paldea Evolved", "img": null}]}, {"name": "Arctibax", "dexNum": "#0997", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Paldea Evolved", "img": null}]}, {"name": "Baxcalibur", "dexNum": "#0998", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Paldea Evolved", "img": null}]}, {"name": "Gimmighoul", "dexNum": "#0999", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Paradox Rift", "img": null}]}, {"name": "Gholdengo", "dexNum": "#1000", "hasArt": "Yes", "cards": [{"type": "Special Illustration Rare", "set": "Paradox Rift", "img": null}]}, {"name": "Wo-Chien", "dexNum": "#1001", "hasArt": "Yes", "cards": [{"type": "Special Illustration Rare", "set": "Paldea Evolved", "img": null}]}, {"name": "Chien-Pao", "dexNum": "#1002", "hasArt": "Yes", "cards": [{"type": "Special Illustration Rare", "set": "Paldea Evolved", "img": null}]}, {"name": "Ting-Lu", "dexNum": "#1003", "hasArt": "Yes", "cards": [{"type": "Special Illustration Rare", "set": "Paldea Evolved", "img": null}]}, {"name": "Chi-Yu", "dexNum": "#1004", "hasArt": "Yes", "cards": [{"type": "Special Illustration Rare", "set": "Paldea Evolved", "img": null}]}, {"name": "Roaring Moon", "dexNum": "#1005", "hasArt": "Yes", "cards": [{"type": "Special Illustration Rare", "set": "Paradox Rift", "img": null}]}, {"name": "Iron Valiant", "dexNum": "#1006", "hasArt": "Yes", "cards": [{"type": "Special Illustration Rare", "set": "Paradox Rift", "img": null}]}, {"name": "Koraidon", "dexNum": "#1007", "hasArt": "Yes", "cards": [{"type": "Special Illustration Rare", "set": "Scarlet & Violet", "img": null}, {"type": "Illustration", "set": "SV Promo", "img": null}]}, {"name": "Miraidon", "dexNum": "#1008", "hasArt": "Yes", "cards": [{"type": "Special Illustration Rare", "set": "Scarlet & Violet", "img": null}, {"type": "Illustration", "set": "SV Promo", "img": null}]}, {"name": "Walking Wake", "dexNum": "#1009", "hasArt": "Yes", "cards": [{"type": "Special Illustration Rare", "set": "Temporal Forces", "img": null}]}, {"name": "Iron Leaves", "dexNum": "#1010", "hasArt": "Yes", "cards": [{"type": "Special Illustration Rare", "set": "Temporal Forces", "img": null}]}, {"name": "Dipplin", "dexNum": "#1011", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Twilight Masquerade", "img": null}]}, {"name": "Poltchageist", "dexNum": "#1012", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Twilight Masquerade", "img": null}]}, {"name": "Sinistcha", "dexNum": "#1013", "hasArt": "Yes", "cards": [{"type": "Special Illustration Rare", "set": "Twilight Masquerade", "img": null}]}, {"name": "Okidogi", "dexNum": "#1014", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Shrouded Fable", "img": null}]}, {"name": "Munkidori", "dexNum": "#1015", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Shrouded Fable", "img": null}]}, {"name": "Fezandipiti", "dexNum": "#1016", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Shrouded Fable", "img": null}, {"type": "Special Illustration Rare", "set": "Ascended Heroes", "img": null}]}, {"name": "Ogerpon", "dexNum": "#1017", "hasArt": "Yes", "cards": [{"type": "Special Illustration Rare", "set": "Twilight Masquerade", "img": null}, {"type": "Special Illustration Rare", "set": "Prismatic Evolutions", "img": null}]}, {"name": "Archaludon", "dexNum": "#1018", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "Stellar Crown", "img": null}, {"type": "Special Illustration Rare", "set": "Surging Sparks", "img": null}]}, {"name": "Hydrapple", "dexNum": "#1019", "hasArt": "Yes", "cards": [{"type": "Special Illustration Rare", "set": "Stellar Crown", "img": null}, {"type": "Illustration", "set": "Destined Rivals", "img": null}]}, {"name": "Gouging Fire", "dexNum": "#1020", "hasArt": "Yes", "cards": [{"type": "Special Illustration Rare", "set": "Temporal Forces", "img": null}]}, {"name": "Raging Bolt", "dexNum": "#1021", "hasArt": "Yes", "cards": [{"type": "Special Illustration Rare", "set": "Temporal Forces", "img": null}]}, {"name": "Iron Boulder", "dexNum": "#1022", "hasArt": "Yes", "cards": [{"type": "Special Illustration Rare", "set": "Temporal Forces", "img": null}]}, {"name": "Iron Crown", "dexNum": "#1023", "hasArt": "Yes", "cards": [{"type": "Special Illustration Rare", "set": "Temporal Forces", "img": null}]}, {"name": "Terapagos", "dexNum": "#1024", "hasArt": "Yes", "cards": [{"type": "Special Illustration Rare", "set": "Stellar Crown", "img": null}]}, {"name": "Pecharunt", "dexNum": "#1025", "hasArt": "Yes", "cards": [{"type": "Illustration", "set": "SV Promo", "img": null}]}];
+
+// ═══════════════════════════════════════════════════════
+// USER STORAGE  (localStorage per-browser)
+// key: "poke_users"   → { username: { passwordHash, tags:{id:{name,color}}, owned:{dexNum:bool}, selections:{dexNum:{cardType,cardSet,cardImg}}, tagAssign:{dexNum:[tagId]} } }
+// key: "poke_session" → { username }
+// ═══════════════════════════════════════════════════════
+const STORAGE_USERS = 'poke_users_v2';
+const STORAGE_SESSION = 'poke_session_v2';
+
+function getUsers(){ try{ return JSON.parse(localStorage.getItem(STORAGE_USERS)||'{}'); }catch{ return {}; } }
+function saveUsers(u){ localStorage.setItem(STORAGE_USERS,JSON.stringify(u)); }
+function getSession(){ try{ return JSON.parse(localStorage.getItem(STORAGE_SESSION)||'null'); }catch{ return null; } }
+function saveSession(s){ localStorage.setItem(STORAGE_SESSION,JSON.stringify(s)); }
+
+// simple hash (not crypto-grade — good enough for local app)
+function hashPw(pw){ let h=0; for(let c of pw) h=(Math.imul(31,h)+c.charCodeAt(0))|0; return h.toString(36); }
+
+let currentUser = null; // full user object copy
+
+function loadCurrentUser(){
+  const sess = getSession(); if(!sess) return false;
+  const users = getUsers();
+  if(!users[sess.username]) return false;
+  currentUser = JSON.parse(JSON.stringify(users[sess.username]));
+  currentUser.username = sess.username;
+  return true;
+}
+
+function saveCurrentUser(){
+  if(!currentUser) return;
+  const users = getUsers();
+  const { username, ...data } = currentUser;
+  users[username] = data;
+  saveUsers(users);
+}
+
+// User-specific data helpers
+function isOwned(dexNum){ return currentUser && !!currentUser.owned?.[dexNum]; }
+function setOwned(dexNum, val){
+  if(!currentUser) return;
+  currentUser.owned = currentUser.owned||{};
+  if(val) currentUser.owned[dexNum]=true; else delete currentUser.owned[dexNum];
+  saveCurrentUser();
+}
+function getSelection(dexNum){ return currentUser?.selections?.[dexNum]||null; }
+function setSelection(dexNum, cardType, cardSet, cardImg){
+  if(!currentUser) return;
+  currentUser.selections = currentUser.selections||{};
+  currentUser.selections[dexNum]={cardType,cardSet,cardImg:cardImg||null};
+  saveCurrentUser();
+}
+function getUserTags(){ return currentUser?.tags||{}; }
+function getPokeTags(dexNum){ return currentUser?.tagAssign?.[dexNum]||[]; }
+function setPokeTags(dexNum, tagIds){
+  if(!currentUser) return;
+  currentUser.tagAssign = currentUser.tagAssign||{};
+  currentUser.tagAssign[dexNum] = tagIds;
+  saveCurrentUser();
+}
+
+// ═══════════════════════════════════════════════════════
+// AUTH
+// ═══════════════════════════════════════════════════════
+function switchAuth(mode){
+  document.getElementById('auth-form-login').style.display = mode==='login'?'':'none';
+  document.getElementById('auth-form-register').style.display = mode==='register'?'':'none';
+  document.getElementById('auth-sub').textContent = mode==='login'?'Sign in to track your collection':'Create your account';
+}
+
+function doLogin(){
+  const u = document.getElementById('login-user').value.trim();
+  const p = document.getElementById('login-pass').value;
+  const err = document.getElementById('login-err');
+  if(!u||!p){ err.textContent='Please fill in all fields.'; return; }
+  const users = getUsers();
+  if(!users[u]||users[u].passwordHash!==hashPw(p)){ err.textContent='Invalid username or password.'; return; }
+  saveSession({username:u});
+  loadCurrentUser();
+  afterLogin();
+}
+
+function doRegister(){
+  const u = document.getElementById('reg-user').value.trim();
+  const p = document.getElementById('reg-pass').value;
+  const p2 = document.getElementById('reg-pass2').value;
+  const err = document.getElementById('reg-err');
+  if(!u||!p||!p2){ err.textContent='Please fill in all fields.'; return; }
+  if(p!==p2){ err.textContent='Passwords do not match.'; return; }
+  if(u.length<2){ err.textContent='Username must be at least 2 characters.'; return; }
+  if(p.length<4){ err.textContent='Password must be at least 4 characters.'; return; }
+  const users = getUsers();
+  if(users[u]){ err.textContent='Username already taken.'; return; }
+  users[u]={ passwordHash:hashPw(p), tags:{}, owned:{}, selections:{}, tagAssign:{} };
+  saveUsers(users);
+  saveSession({username:u});
+  loadCurrentUser();
+  afterLogin();
+}
+
+function afterLogin(){
+  document.getElementById('nav-pills').style.display='flex';
+  document.getElementById('topbar-right').innerHTML=`
+    <button class="btn btn-sm" onclick="openExport()">⬇ Export</button>
+    <button class="user-chip" onclick="doLogout()">
+      <div class="avatar">${currentUser.username[0].toUpperCase()}</div>
+      <span>${currentUser.username}</span>
+      <span style="color:var(--tx3);font-size:10px">logout</span>
+    </button>`;
+  // showPage FIRST so all DOM elements exist before we try to render into them
+  showPage('collection');
+  populateFilters();
+  filtered=[...coreData];
+  renderStats();
+  renderGrid();
+  renderPag();
+  const rc=document.getElementById('rc');
+  if(rc) rc.textContent=filtered.length+' Pokémon';
+}
+
+function doLogout(){
+  saveSession(null); currentUser=null;
+  document.getElementById('nav-pills').style.display='none';
+  document.getElementById('topbar-right').innerHTML='';
+  adminUnlocked=false;
+  const al=document.getElementById('admin-lock');
+  const ac=document.getElementById('admin-console');
+  if(al) al.style.display='flex';
+  if(ac) ac.style.display='none';
+  showPage('auth');
+}
+
+// ═══════════════════════════════════════════════════════
+// NAVIGATION
+// ═══════════════════════════════════════════════════════
+function showPage(pg){
+  document.querySelectorAll('.page').forEach(el=>el.classList.remove('active'));
+  document.querySelectorAll('.nav-pill').forEach(el=>el.classList.remove('active'));
+  document.getElementById('page-'+pg).classList.add('active');
+  const pill=document.querySelector(`.nav-pill[data-page="${pg}"]`);
+  if(pill) pill.classList.add('active');
+  if(pg==='admin') renderEditList();
+}
+
+// ═══════════════════════════════════════════════════════
+// FILTERS & STATS
+// ═══════════════════════════════════════════════════════
+function populateFilters(){
+  const sets=new Set(), rars=new Set();
+  coreData.forEach(p=>{
+    (p.cards||[]).forEach(c=>{ if(c.set) sets.add(c.set); if(c.type) rars.add(c.type); });
+  });
+  const fs=document.getElementById('f-set'), fr=document.getElementById('f-rar');
+  if(!fs||!fr) return;
+  fs.innerHTML='<option value="">All sets</option>';
+  fr.innerHTML='<option value="">All rarities</option>';
+  [...sets].sort().forEach(s=>{ const o=document.createElement('option');o.value=s;o.textContent=s;fs.appendChild(o); });
+  [...rars].sort().forEach(r=>{ const o=document.createElement('option');o.value=r;o.textContent=r;fr.appendChild(o); });
+}
+
+function renderStats(){
+  if(!currentUser) return;
+  const sr=document.getElementById('stats-row');
+  const pf=document.getElementById('prog-fill');
+  if(!sr||!pf) return;
+  const total=coreData.length;
+  const owned=coreData.filter(p=>isOwned(p.dexNum)).length;
+  const art=coreData.filter(p=>p.hasArt==='Yes').length;
+  const pct=total?Math.round(owned/total*100):0;
+  sr.innerHTML=`
+    <div class="stat-pill"><div class="val">${total}</div><div class="lbl">Total</div></div>
+    <div class="stat-pill"><div class="val" style="color:var(--green)">${owned}</div><div class="lbl">Owned</div></div>
+    <div class="stat-pill"><div class="val" style="color:var(--tx2)">${total-owned}</div><div class="lbl">Unowned</div></div>
+    <div class="stat-pill"><div class="val" style="color:var(--blue)">${art}</div><div class="lbl">Has Art</div></div>
+    <div class="stat-pill"><div class="val" style="color:var(--amber)">${pct}%</div><div class="lbl">Progress</div></div>`;
+  pf.style.width=pct+'%';
+}
+
+let filtered=[], curPage=1;
+const PER=40;
+
+function onSearch(inp){
+  const bar=document.getElementById('search-bar');
+  if(bar) bar.classList.toggle('has-val',inp.value.length>0);
+  filterAndRender();
+}
+function clearSearch(){
+  const s=document.getElementById('search');
+  const bar=document.getElementById('search-bar');
+  if(s) s.value='';
+  if(bar) bar.classList.remove('has-val');
+  filterAndRender();
+}
+
+function getFiltered(){
+  const q=(document.getElementById('search')||{value:''}).value.toLowerCase().trim();
+  const st=(document.getElementById('f-status')||{value:''}).value;
+  const art=(document.getElementById('f-art')||{value:''}).value;
+  const set=(document.getElementById('f-set')||{value:''}).value;
+  const rar=(document.getElementById('f-rar')||{value:''}).value;
+  return coreData.filter(p=>{
+    if(q&&!p.name.toLowerCase().includes(q)&&!p.dexNum.includes(q)) return false;
+    if(st){ const own=isOwned(p.dexNum); if(st==='Owned'&&!own) return false; if(st==='Unowned'&&own) return false; }
+    if(art&&p.hasArt!==art) return false;
+    if(set&&!(p.cards||[]).some(c=>c.set===set)) return false;
+    if(rar&&!(p.cards||[]).some(c=>c.type===rar)) return false;
+    return true;
+  });
+}
+
+function filterAndRender(){
+  curPage=1; filtered=getFiltered();
+  const rc=document.getElementById('rc');
+  if(rc) rc.textContent=filtered.length+' Pokémon';
+  renderGrid(); renderPag();
+}
+
+// ═══════════════════════════════════════════════════════
+// GRID
+// ═══════════════════════════════════════════════════════
+function spriteUrl(p){
+  const id=parseInt(p.dexNum.replace(/[^0-9]/g,''));
+  return (id>=1&&id<=1025)?`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`:null;
+}
+
+function renderGrid(){
+  const start=(curPage-1)*PER, items=filtered.slice(start,start+PER);
+  const grid=document.getElementById('grid');
+  if(!grid) return;
+  if(!items.length){ grid.innerHTML='<div style="grid-column:1/-1;text-align:center;padding:60px;color:var(--tx3)">No Pokémon found</div>'; return; }
+  const tags=getUserTags();
+  grid.innerHTML=items.map(p=>{
+    const owned=isOwned(p.dexNum);
+    const sel=getSelection(p.dexNum);
+    const sp=spriteUrl(p); const cnt=(p.cards||[]).length;
+    const pokeTags=getPokeTags(p.dexNum).map(tid=>tags[tid]).filter(Boolean);
+    return `<div class="pk-card${owned?' owned':''}" onclick="openDetail('${p.dexNum}')">
+      <div class="pk-sprite">
+        ${sp?`<img src="${sp}" alt="${p.name}" onerror="this.style.opacity=0">`:'<div class="fallback">?</div>'}
+        <div class="owned-glow"></div>
+      </div>
+      <div class="pk-body">
+        <div class="pk-dex">${p.dexNum}</div>
+        <div class="pk-name">${p.name}</div>
+        <div class="pk-tags-row">
+          <span class="tag ${owned?'t-owned':'t-unowned'}">${owned?'✓ Owned':'Unowned'}</span>
+          ${sel?`<span class="tag t-rarity">${sel.cardType}</span>`:''}
+          ${cnt?`<span class="tag t-count">${cnt}</span>`:''}
+          ${pokeTags.map(t=>`<span class="tag t-custom" style="background:${t.color}22;color:${t.color};border-color:${t.color}44">${t.name}</span>`).join('')}
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function renderPag(){
+  const total=Math.ceil(filtered.length/PER), p=curPage;
+  const pag=document.getElementById('pag');
+  if(!pag) return;
+  if(total<=1){pag.innerHTML='';return;}
+  let h=`<button class="pg${p===1?' dim':''}" onclick="goPage(${p-1})">‹</button>`;
+  const s=Math.max(1,p-2),e=Math.min(total,p+2);
+  if(s>1) h+=`<button class="pg" onclick="goPage(1)">1</button>${s>2?'<span style="color:var(--tx3);padding:0 3px">…</span>':''}`;
+  for(let i=s;i<=e;i++) h+=`<button class="pg${i===p?' active':''}" onclick="goPage(${i})">${i}</button>`;
+  if(e<total) h+=`${e<total-1?'<span style="color:var(--tx3);padding:0 3px">…</span>':''}<button class="pg" onclick="goPage(${total})">${total}</button>`;
+  h+=`<button class="pg${p===total?' dim':''}" onclick="goPage(${p+1})">›</button>`;
+  h+=`<span style="font-size:11px;color:var(--tx3);margin-left:6px">${(p-1)*PER+1}–${Math.min(p*PER,filtered.length)} of ${filtered.length}</span>`;
+  pag.innerHTML=h;
+}
+
+function goPage(p){ const t=Math.ceil(filtered.length/PER); if(p<1||p>t)return; curPage=p; renderGrid(); renderPag(); }
+
+// ═══════════════════════════════════════════════════════
+// DETAIL MODAL
+// ═══════════════════════════════════════════════════════
+function openDetail(dexNum){
+  const p=coreData.find(x=>x.dexNum===dexNum); if(!p)return;
+  renderDetail(p);
+  document.getElementById('det-ov').classList.add('open');
+}
+
+function renderDetail(p){
+  const owned=isOwned(p.dexNum), sel=getSelection(p.dexNum);
+  const sp=spriteUrl(p), cards=p.cards||[];
+  const tags=getUserTags(), pokeTags=getPokeTags(p.dexNum);
+
+  const detModal=document.getElementById('det-modal');
+  if(!detModal) return;
+  detModal.innerHTML=`
+    <div class="mh">
+      <div class="mh-info"><div class="mh-title">${p.name}</div><div class="mh-sub">${p.dexNum} ${p.hasArt==='Yes'?'· Has alt art':''}</div></div>
+      <button class="mc" onclick="closeOv('det-ov')">✕</button>
+    </div>
+    <div class="mb-scroll">
+      <div class="det-top">
+        <div class="det-sprite">${sp?`<img src="${sp}" alt="${p.name}" onerror="this.style.opacity=0">`:'<span style="font-size:36px;color:var(--tx3)">?</span>'}</div>
+        <div class="det-info">
+          <div>
+            <div class="label" style="margin-bottom:6px">Ownership</div>
+            <div class="stog">
+              <button class="${owned?'ao':''}" onclick="toggleOwned('${p.dexNum}',true)">${owned?'✓ Owned':'Mark owned'}</button>
+              <button class="${!owned?'au':''}" onclick="toggleOwned('${p.dexNum}',false)">${!owned?'✗ Unowned':'Mark unowned'}</button>
+            </div>
+          </div>
+          ${sel?`<div>
+            <div class="label" style="margin-bottom:5px">Selected card</div>
+            <div class="sel-card-box"><div class="scb-type">${sel.cardType}</div>${sel.cardSet?`<div class="scb-set">${sel.cardSet}</div>`:''}</div>
+          </div>`:'<div style="font-size:13px;color:var(--tx3)">No card selected yet — tap an option below.</div>'}
+          <div>
+            <div class="label" style="margin-bottom:5px">My tags</div>
+            <div class="tag-input-row">
+              ${pokeTags.map(tid=>{ const t=tags[tid]; return t?`<span class="tag t-custom" style="background:${t.color}22;color:${t.color};border-color:${t.color}44">${t.name} <button onclick="removePokeTag('${p.dexNum}','${tid}')" style="background:none;border:none;color:inherit;opacity:.6;font-size:10px;padding:0 0 0 2px;margin-left:2px">✕</button></span>`:''; }).join('')}
+              <select id="tag-add-sel" style="padding:4px 8px;border-radius:20px;font-size:11px;width:auto" onchange="addPokeTag('${p.dexNum}',this)">
+                <option value="">+ tag</option>
+                ${Object.entries(tags).filter(([id])=>!pokeTags.includes(id)).map(([id,t])=>`<option value="${id}">${t.name}</option>`).join('')}
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+      <div class="label" style="margin-bottom:10px">Alt art options — tap to select as your Pokédex card</div>
+      ${cards.length?`<div class="opts-grid">${cards.map((c,i)=>{
+        const isSel=sel&&sel.cardType===c.type&&sel.cardSet===c.set;
+        const imgSrc=sel&&isSel&&sel.cardImg?sel.cardImg:(c.img||null);
+        return `<div class="opt${isSel?' sel':''}" onclick="selectCard('${p.dexNum}',${i})">
+          <div class="opt-img">
+            ${imgSrc?`<img src="${imgSrc}" alt="${c.type}">`:'<div class="opt-placeholder"><span>📷<br>No image</span></div>'}
+            <div class="opt-check">✓</div>
+            <button class="opt-cam" onclick="uploadCardImg(event,'${p.dexNum}',${i})" title="Upload image">📷</button>
+          </div>
+          <div class="opt-body">
+            <div class="opt-type">${c.type}</div>
+            <div class="opt-set">${c.set||'—'}</div>
+          </div>
+        </div>`;
+      }).join('')}</div>`:
+      '<div style="font-size:13px;color:var(--tx3)">No art card options. Add them via Admin → Edit.</div>'}
+    </div>`;
+}
+
+function toggleOwned(dexNum, val){
+  setOwned(dexNum,val); renderStats();
+  const p=coreData.find(x=>x.dexNum===dexNum); if(p) renderDetail(p); renderGrid();
+}
+
+function selectCard(dexNum, idx){
+  const p=coreData.find(x=>x.dexNum===dexNum); if(!p)return;
+  const c=(p.cards||[])[idx]; if(!c)return;
+  const existing=getSelection(dexNum);
+  setSelection(dexNum,c.type,c.set,existing?.cardImg||c.img||null);
+  renderDetail(p); renderGrid();
+}
+
+function uploadCardImg(e,dexNum,idx){
+  e.stopPropagation();
+  const inp=document.createElement('input'); inp.type='file'; inp.accept='image/*';
+  inp.onchange=ev=>{
+    const f=ev.target.files[0]; if(!f)return;
+    const r=new FileReader(); r.onload=re=>{
+      const p=coreData.find(x=>x.dexNum===dexNum); if(!p)return;
+      const c=(p.cards||[])[idx]; if(!c)return;
+      const sel=getSelection(dexNum);
+      if(sel&&sel.cardType===c.type&&sel.cardSet===c.set){
+        setSelection(dexNum,sel.cardType,sel.cardSet,re.target.result);
+      }
+      // also store on core card for convenience
+      c.img=re.target.result;
+      renderDetail(p);
+    }; r.readAsDataURL(f);
+  }; inp.click();
+}
+
+// ═══════════════════════════════════════════════════════
+// TAGS
+// ═══════════════════════════════════════════════════════
+function openTagManager(){
+  renderTagManager();
+  document.getElementById('tag-ov').classList.add('open');
+}
+
+function renderTagManager(){
+  const tags=getUserTags();
+  const entries=Object.entries(tags);
+  const tld=document.getElementById('tag-list-display');
+  if(!tld) return;
+  tld.innerHTML=entries.length?
+    `<div style="display:flex;flex-wrap:wrap;gap:8px">${entries.map(([id,t])=>`
+      <div style="display:flex;align-items:center;gap:6px;background:var(--s2);border:1px solid var(--b1);border-radius:20px;padding:5px 10px 5px 8px">
+        <span style="width:10px;height:10px;border-radius:50%;background:${t.color};display:inline-block"></span>
+        <span style="font-size:13px;font-weight:500">${t.name}</span>
+        <button onclick="deleteTag('${id}')" style="background:none;border:none;color:var(--tx3);font-size:12px;padding:0 0 0 3px">✕</button>
+      </div>`).join('')}</div>`:
+    '<div style="font-size:13px;color:var(--tx3)">No tags yet. Create your first one above.</div>';
+}
+
+function createTag(){
+  const name=document.getElementById('new-tag-name').value.trim();
+  const color=document.getElementById('new-tag-color').value;
+  if(!name)return;
+  const id='tag_'+Date.now();
+  currentUser.tags=currentUser.tags||{};
+  currentUser.tags[id]={name,color};
+  saveCurrentUser();
+  document.getElementById('new-tag-name').value='';
+  renderTagManager(); renderGrid();
+}
+
+function deleteTag(id){
+  if(!currentUser.tags)return;
+  delete currentUser.tags[id];
+  // remove from all pokemon
+  if(currentUser.tagAssign) Object.keys(currentUser.tagAssign).forEach(dex=>{
+    currentUser.tagAssign[dex]=(currentUser.tagAssign[dex]||[]).filter(t=>t!==id);
+  });
+  saveCurrentUser();
+  renderTagManager(); renderGrid();
+}
+
+function addPokeTag(dexNum, sel){
+  if(!sel.value)return;
+  const cur=getPokeTags(dexNum);
+  if(!cur.includes(sel.value)) setPokeTags(dexNum,[...cur,sel.value]);
+  const p=coreData.find(x=>x.dexNum===dexNum); if(p) renderDetail(p);
+  renderGrid(); sel.value='';
+}
+
+function removePokeTag(dexNum,tid){
+  setPokeTags(dexNum,getPokeTags(dexNum).filter(t=>t!==tid));
+  const p=coreData.find(x=>x.dexNum===dexNum); if(p) renderDetail(p);
+  renderGrid();
+}
+
+// ═══════════════════════════════════════════════════════
+// ADMIN AUTH
+// ═══════════════════════════════════════════════════════
+const ADMIN_PW='admin1234';
+let adminUnlocked=false;
+
+function tryAdminLogin(){
+  const pw=document.getElementById('adm-pw').value;
+  if(pw===ADMIN_PW){
+    adminUnlocked=true;
+    const al=document.getElementById('admin-lock');
+    const ac=document.getElementById('admin-console');
+    if(al) al.style.display='none';
+    if(ac) ac.style.display='block';
+    const pwEl=document.getElementById('adm-pw');
+    const errEl=document.getElementById('adm-err');
+    if(pwEl) pwEl.value='';
+    if(errEl) errEl.textContent='';
+    initAddForm(); renderEditList();
+  } else {
+    const errEl=document.getElementById('adm-err');
+    const pwEl=document.getElementById('adm-pw');
+    if(errEl) errEl.textContent='Incorrect password.';
+    if(pwEl) pwEl.value='';
+  }
+}
+
+function lockAdmin(){
+  adminUnlocked=false;
+  document.getElementById('admin-lock').style.display='flex';
+  document.getElementById('admin-console').style.display='none';
+  showPage('collection');
+}
+
+// ═══════════════════════════════════════════════════════
+// ADMIN — DYNAMIC CARD SLOTS
+// ═══════════════════════════════════════════════════════
+// slotState[mode] = [{type,set,img}, ...]
+const slotState={add:[],edit:[]};
+
+function initAddForm(){
+  slotState.add=[];
+  renderSlots('add');
+  showAddSlotBtn('add');
+}
+
+function renderSlots(mode){
+  const container=document.getElementById(`${mode}-slots`);
+  if(!container) return;
+  // Update slot count badge for edit mode
+  const countEl=document.getElementById('e-slot-count');
+  if(countEl&&mode==='edit') countEl.textContent=`(${slotState[mode].length}/20)`;
+  if(!slotState[mode].length){
+    container.innerHTML=`<div style="font-size:12px;color:var(--tx3);text-align:center;padding:16px;border:1px dashed var(--b1);border-radius:var(--rad)">No card options yet — click the button below to add one.</div>`;
+    showAddSlotBtn(mode); return;
+  }
+  container.innerHTML=slotState[mode].map((c,i)=>`
+    <div class="card-slot-row" id="slot-${mode}-${i}">
+      <div class="slot-header">
+        <span class="slot-num-badge">Option #${i+1}</span>
+        <button class="slot-remove-btn" onclick="removeSlot('${mode}',${i})" title="Remove this option">✕ Remove</button>
+      </div>
+      <div class="slot-fields">
+        <div class="fg">
+          <label class="label">Card type / rarity</label>
+          <input type="text" value="${esc(c.type)}" placeholder="e.g. Special Illustration Rare" oninput="slotState['${mode}'][${i}].type=this.value">
+        </div>
+        <div class="fg">
+          <label class="label">Set name</label>
+          <input type="text" value="${esc(c.set)}" placeholder="e.g. Obsidian Flames" oninput="slotState['${mode}'][${i}].set=this.value">
+        </div>
+      </div>
+      <div class="fg">
+        <label class="label">Card image ${c.img?'<span style="color:var(--green);font-size:10px">✓ Image added</span>':'<span style="color:var(--tx3);font-size:10px">optional</span>'}</label>
+        <div class="slot-img-area${c.img?' has-img':''}" onclick="slotUploadImg('${mode}',${i})" id="sia-${mode}-${i}">
+          <img src="${c.img||''}" alt="card image" id="simg-${mode}-${i}">
+          <div class="slot-img-placeholder">
+            <span style="font-size:22px">📷</span>
+            <span>Click to upload card image</span>
+          </div>
+          <div class="slot-img-overlay">
+            <button class="sio-change" onclick="event.stopPropagation();slotUploadImg('${mode}',${i})">Change</button>
+            <button class="sio-remove" onclick="event.stopPropagation();clearSlotImg('${mode}',${i})">Remove</button>
+          </div>
+        </div>
+      </div>
+    </div>`).join('');
+  showAddSlotBtn(mode);
+}
+
+function showAddSlotBtn(mode){
+  const btn=document.getElementById(`${mode}-add-slot`);
+  if(btn) btn.style.display=slotState[mode].length<20?'flex':'none';
+}
+
+
+function addSlot(mode){
+  if(slotState[mode].length>=20) return;
+  slotState[mode].push({type:'',set:'',img:null});
+  renderSlots(mode);
+}
+
+function removeSlot(mode,idx){
+  slotState[mode].splice(idx,1);
+  renderSlots(mode);
+}
+
+function clearSlotImg(mode,idx){
+  if(slotState[mode][idx]) slotState[mode][idx].img=null;
+  renderSlots(mode);
+}
+
+function slotUploadImg(mode,idx){
+  const inp=document.createElement('input'); inp.type='file'; inp.accept='image/*';
+  inp.onchange=ev=>{
+    const f=ev.target.files[0]; if(!f)return;
+    const r=new FileReader(); r.onload=re=>{ slotState[mode][idx].img=re.target.result; renderSlots(mode); }; r.readAsDataURL(f);
+  }; inp.click();
+}
+
+function readSlotsFromDOM(mode){
+  // pull values from live inputs before reading slotState
+  slotState[mode].forEach((c,i)=>{
+    const tEl=document.querySelector(`#slot-${mode}-${i} input:nth-of-type(1)`)||document.querySelector(`#slot-${mode}-${i} .fg:nth-child(1) input`);
+    const sEl=document.querySelector(`#slot-${mode}-${i} input:nth-of-type(2)`)||document.querySelector(`#slot-${mode}-${i} .fg:nth-child(2) input`);
+    if(tEl) c.type=tEl.value.trim();
+    if(sEl) c.set=sEl.value.trim();
+  });
+  return slotState[mode].filter(c=>c.type);
+}
+
+function esc(s){ return (s||'').replace(/"/g,'&quot;').replace(/</g,'&lt;'); }
+
+// ═══════════════════════════════════════════════════════
+// ADMIN — ADD
+// ═══════════════════════════════════════════════════════
+function applyAdd(){
+  const anEl=document.getElementById('a-name'), adEl=document.getElementById('a-dex');
+  const name=anEl?anEl.value.trim():''; const dexNum=adEl?adEl.value.trim():'';
+  const msg=document.getElementById('a-msg');
+  if(!name||!dexNum){ setMsg('a-msg','Name and Pokédex # required.','err'); return; }
+  const cards=readSlotsFromDOM('add');
+  // Check for duplicate
+  if(coreData.find(p=>p.dexNum===dexNum)){ setMsg('a-msg',`${dexNum} already exists.`,'err'); return; }
+  const hasArtEl=document.getElementById('a-hasart'); coreData.push({ name, dexNum, hasArt:hasArtEl?hasArtEl.value:'No', cards });
+  coreData.sort((a,b)=>a.dexNum.localeCompare(b.dexNum));
+  populateFilters(); filterAndRender(); renderStats(); renderEditList();
+  ['a-name','a-dex'].forEach(id=>{ const el=document.getElementById(id); if(el) el.value=''; });
+  initAddForm();
+  setMsg('a-msg',`✓ ${name} added!`,'ok');
+}
+
+// ═══════════════════════════════════════════════════════
+// ADMIN — EDIT LIST + EDIT
+// ═══════════════════════════════════════════════════════
+let editTarget=null;
+
+function renderEditList(){
+  const q=(document.getElementById('e-search')||{value:''}).value.toLowerCase();
+  const list=document.getElementById('e-list'); if(!list)return;
+  const items=coreData.filter(p=>!q||p.name.toLowerCase().includes(q)||p.dexNum.includes(q)).slice(0,100);
+  list.innerHTML=items.map(p=>`
+    <div class="poke-sel-item${editTarget&&editTarget.dexNum===p.dexNum?' active':''}" onclick="selectEdit('${p.dexNum}')">
+      <span class="psi-dex">${p.dexNum}</span>
+      <span class="psi-name">${p.name}</span>
+      <span class="psi-tag"><span class="tag ${isOwned(p.dexNum)?'t-owned':'t-unowned'}">${isOwned(p.dexNum)?'Owned':'—'}</span></span>
+    </div>`).join('');
+}
+
+function selectEdit(dexNum){
+  const p=coreData.find(x=>x.dexNum===dexNum); if(!p)return;
+  editTarget=p;
+  const en=document.getElementById('e-name'), ed=document.getElementById('e-dex'), eh=document.getElementById('e-hasart');
+  if(en) en.value=p.name;
+  if(ed) ed.value=p.dexNum;
+  if(eh) eh.value=p.hasArt||'No';
+  // Deep copy cards into slot state
+  slotState.edit=JSON.parse(JSON.stringify(p.cards||[]));
+  renderSlots('edit');
+  ['e-add-slot','e-form','e-bar'].forEach(id=>{ const el=document.getElementById(id); if(el) el.style.display=id==='e-bar'?'flex':id==='e-form'?'block':'flex'; });
+  const emsg=document.getElementById('e-msg'); if(emsg) emsg.textContent='';
+  renderEditList();
+}
+
+function applyEdit(){
+  if(!editTarget){ setMsg('e-msg','No Pokémon selected.','err'); return; }
+  const enEl=document.getElementById('e-name'), edEl=document.getElementById('e-dex');
+  const name=enEl?enEl.value.trim():''; const dexNum=edEl?edEl.value.trim():'';
+  if(!name||!dexNum){ setMsg('e-msg','Name and # required.','err'); return; }
+  const cards=readSlotsFromDOM('edit');
+  editTarget.name=name; editTarget.dexNum=dexNum;
+  const eha=document.getElementById('e-hasart'); editTarget.hasArt=eha?eha.value:'No';
+  editTarget.cards=cards;
+  coreData.sort((a,b)=>a.dexNum.localeCompare(b.dexNum));
+  populateFilters(); filterAndRender(); renderStats(); renderEditList();
+  setMsg('e-msg',`✓ ${name} saved!`,'ok');
+}
+
+function applyRemove(){
+  if(!editTarget)return;
+  if(!confirm(`Remove ${editTarget.name} from core data? This affects all users.`))return;
+  const name=editTarget.name;
+  coreData=coreData.filter(x=>x.dexNum!==editTarget.dexNum);
+  editTarget=null;
+  const panel=document.getElementById('e-panel');
+  const placeholder=document.getElementById('e-placeholder');
+  if(panel) panel.style.display='none';
+  if(placeholder) placeholder.style.display='flex';
+  populateFilters(); filterAndRender(); renderStats(); renderEditList();
+  setMsg('e-msg',`✓ ${name} removed.`,'ok');
+}
+
+function setMsg(id,txt,cls){
+  const el=document.getElementById(id); if(!el)return;
+  el.textContent=txt; el.className='apply-msg '+cls;
+  setTimeout(()=>{ el.textContent=''; el.className='apply-msg'; },4000);
+}
+
+// ═══════════════════════════════════════════════════════
+// EXPORT
+// ═══════════════════════════════════════════════════════
+function openExport(){ document.getElementById('exp-ov').classList.add('open'); }
+
+function exportCoreData(){
+  const json=JSON.stringify(coreData,null,2);
+  const blob=new Blob([json],{type:'application/json'});
+  const a=document.createElement('a'); a.href=URL.createObjectURL(blob);
+  a.download='pokedex_data.json'; a.click(); URL.revokeObjectURL(a.href);
+  closeOv('exp-ov');
+}
+
+function exportSite(){
+  const dataStr=JSON.stringify(coreData);
+  const src=document.documentElement.outerHTML;
+  // Replace SEED
+  const marker='let coreData = ';
+  const start=src.indexOf(marker);
+  let end=start+marker.length, depth=0, inStr=false, esc2=false;
+  for(let i=end;i<src.length;i++){
+    if(esc2){esc2=false;continue;} if(src[i]==='\\'&&inStr){esc2=true;continue;}
+    if(src[i]==='"'&&!esc2){inStr=!inStr;continue;} if(inStr)continue;
+    if(src[i]==='[')depth++; else if(src[i]===']'){depth--;if(depth===0){end=i+1;break;}}
+  }
+  const updated=src.slice(0,start)+marker+dataStr+src.slice(end);
+  const blob=new Blob([updated],{type:'text/html'});
+  const a=document.createElement('a'); a.href=URL.createObjectURL(blob);
+  a.download='pokedex_collection.html'; a.click(); URL.revokeObjectURL(a.href);
+  closeOv('exp-ov');
+}
+
+// ═══════════════════════════════════════════════════════
+// OVERLAYS & INIT
+// ═══════════════════════════════════════════════════════
+function closeOv(id){ document.getElementById(id).classList.remove('open'); }
+document.addEventListener('keydown',e=>{ if(e.key==='Escape'){ closeOv('det-ov'); closeOv('tag-ov'); closeOv('exp-ov'); } });
+
+// Check for existing session on load
+if(loadCurrentUser()){ afterLogin(); }
+</script>
+</body>
+</html>
