@@ -2,7 +2,6 @@
   {
     "name": "Bulbasaur",
     "dexNum": "#0001",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -29,7 +28,6 @@
   {
     "name": "Ivysaur",
     "dexNum": "#0002",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -46,7 +44,6 @@
   {
     "name": "Venusaur",
     "dexNum": "#0003",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Alt Art",
@@ -68,7 +65,6 @@
   {
     "name": "Charmander",
     "dexNum": "#0004",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -90,7 +86,6 @@
   {
     "name": "Charmeleon",
     "dexNum": "#0005",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -102,7 +97,6 @@
   {
     "name": "Charizard",
     "dexNum": "#0006",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Special Illustration Rare",
@@ -124,7 +118,6 @@
   {
     "name": "Squirtle",
     "dexNum": "#0007",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -141,7 +134,6 @@
   {
     "name": "Wartortle",
     "dexNum": "#0008",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -153,7 +145,6 @@
   {
     "name": "Blastoise",
     "dexNum": "#0009",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Special Illustration Rare",
@@ -165,7 +156,6 @@
   {
     "name": "Caterpie",
     "dexNum": "#0010",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -177,31 +167,26 @@
   {
     "name": "Metapod",
     "dexNum": "#0011",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Butterfree",
     "dexNum": "#0012",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Weedle",
     "dexNum": "#0013",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Kakuna",
     "dexNum": "#0014",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Beedrill",
     "dexNum": "#0015",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Alt Art",
@@ -213,7 +198,6 @@
   {
     "name": "Pidgey",
     "dexNum": "#0016",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -225,7 +209,6 @@
   {
     "name": "Pidgeotto",
     "dexNum": "#0017",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -237,7 +220,6 @@
   {
     "name": "Pidgeot",
     "dexNum": "#0018",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Special Illustration Rare",
@@ -249,13 +231,11 @@
   {
     "name": "Rattata",
     "dexNum": "#0019",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Raticate",
     "dexNum": "#0020",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -267,7 +247,6 @@
   {
     "name": "Spearow",
     "dexNum": "#0021",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -279,7 +258,6 @@
   {
     "name": "Fearow",
     "dexNum": "#0022",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Ancient Trait",
@@ -291,13 +269,11 @@
   {
     "name": "Ekans",
     "dexNum": "#0023",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Arbok",
     "dexNum": "#0024",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -309,7 +285,6 @@
   {
     "name": "Pikachu",
     "dexNum": "#0025",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -341,7 +316,6 @@
   {
     "name": "Raichu",
     "dexNum": "#0026",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -353,31 +327,26 @@
   {
     "name": "Sandshrew",
     "dexNum": "#0027",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Sandslash",
     "dexNum": "#0028",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Nidoran♀",
     "dexNum": "#0029",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Nidorina",
     "dexNum": "#0030",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Nidoqueen",
     "dexNum": "#0031",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Ancient Trait",
@@ -389,19 +358,16 @@
   {
     "name": "Nidoran♂",
     "dexNum": "#0032",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Nidorino",
     "dexNum": "#0033",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Nidoking",
     "dexNum": "#0034",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -413,7 +379,6 @@
   {
     "name": "Clefairy",
     "dexNum": "#0035",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Special Illustration Rare",
@@ -435,7 +400,6 @@
   {
     "name": "Clefable",
     "dexNum": "#0036",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Special Illustration Rare",
@@ -447,7 +411,6 @@
   {
     "name": "Vulpix",
     "dexNum": "#0037",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -459,7 +422,6 @@
   {
     "name": "Ninetales",
     "dexNum": "#0038",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -471,13 +433,11 @@
   {
     "name": "Jigglypuff",
     "dexNum": "#0039",
-    "hasArt": "Yes",
     "cards": []
   },
   {
     "name": "Wigglytuff",
     "dexNum": "#0040",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -489,25 +449,21 @@
   {
     "name": "Zubat",
     "dexNum": "#0041",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Golbat",
     "dexNum": "#0042",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Oddish",
     "dexNum": "#0043",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Gloom",
     "dexNum": "#0044",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -519,7 +475,6 @@
   {
     "name": "Vileplume",
     "dexNum": "#0045",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Art",
@@ -531,7 +486,6 @@
   {
     "name": "Paras",
     "dexNum": "#0046",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Gallery",
@@ -543,7 +497,6 @@
   {
     "name": "Parasect",
     "dexNum": "#0047",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Gallery",
@@ -555,25 +508,21 @@
   {
     "name": "Venonat",
     "dexNum": "#0048",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Venomoth",
     "dexNum": "#0049",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Diglett",
     "dexNum": "#0050",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Dugtrio",
     "dexNum": "#0051",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -590,7 +539,6 @@
   {
     "name": "Meowth",
     "dexNum": "#0052",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -612,7 +560,6 @@
   {
     "name": "Persian",
     "dexNum": "#0053",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -624,7 +571,6 @@
   {
     "name": "Psyduck",
     "dexNum": "#0054",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Alt Art",
@@ -651,25 +597,21 @@
   {
     "name": "Golduck",
     "dexNum": "#0055",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Mankey",
     "dexNum": "#0056",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Primeape",
     "dexNum": "#0057",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Growlithe",
     "dexNum": "#0058",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -681,7 +623,6 @@
   {
     "name": "Arcanine",
     "dexNum": "#0059",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Gallery",
@@ -693,13 +634,11 @@
   {
     "name": "Poliwag",
     "dexNum": "#0060",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Poliwhirl",
     "dexNum": "#0061",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -711,25 +650,21 @@
   {
     "name": "Poliwrath",
     "dexNum": "#0062",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Abra",
     "dexNum": "#0063",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Kadabra",
     "dexNum": "#0064",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Alakazam",
     "dexNum": "#0065",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Special Illustration Rare",
@@ -751,13 +686,11 @@
   {
     "name": "Machop",
     "dexNum": "#0066",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Machoke",
     "dexNum": "#0067",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -769,7 +702,6 @@
   {
     "name": "Machamp",
     "dexNum": "#0068",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Alt Art",
@@ -786,25 +718,21 @@
   {
     "name": "Bellsprout",
     "dexNum": "#0069",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Weepinbell",
     "dexNum": "#0070",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Victreebel",
     "dexNum": "#0071",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Tentacool",
     "dexNum": "#0072",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Ancient Trait",
@@ -816,37 +744,31 @@
   {
     "name": "Tentacruel",
     "dexNum": "#0073",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Geodude",
     "dexNum": "#0074",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Graveler",
     "dexNum": "#0075",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Golem",
     "dexNum": "#0076",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Ponyta",
     "dexNum": "#0077",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Rapidash",
     "dexNum": "#0078",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Alt Art",
@@ -863,7 +785,6 @@
   {
     "name": "Slowpoke",
     "dexNum": "#0079",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -880,7 +801,6 @@
   {
     "name": "Slowbro",
     "dexNum": "#0080",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -892,7 +812,6 @@
   {
     "name": "Magnemite",
     "dexNum": "#0081",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Gallery",
@@ -904,7 +823,6 @@
   {
     "name": "Magneton",
     "dexNum": "#0082",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -916,31 +834,26 @@
   {
     "name": "Farfetch'd",
     "dexNum": "#0083",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Doduo",
     "dexNum": "#0084",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Dodrio",
     "dexNum": "#0085",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Seel",
     "dexNum": "#0086",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Dewgong",
     "dexNum": "#0087",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -952,13 +865,11 @@
   {
     "name": "Grimer",
     "dexNum": "#0088",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Muk",
     "dexNum": "#0089",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Alt Art",
@@ -970,19 +881,16 @@
   {
     "name": "Shellder",
     "dexNum": "#0090",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Cloyster",
     "dexNum": "#0091",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Gastly",
     "dexNum": "#0092",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -994,7 +902,6 @@
   {
     "name": "Haunter",
     "dexNum": "#0093",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -1006,7 +913,6 @@
   {
     "name": "Gengar",
     "dexNum": "#0094",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Alt Art",
@@ -1033,13 +939,11 @@
   {
     "name": "Onix",
     "dexNum": "#0095",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Drowzee",
     "dexNum": "#0096",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -1051,25 +955,21 @@
   {
     "name": "Hypno",
     "dexNum": "#0097",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Krabby",
     "dexNum": "#0098",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Kingler",
     "dexNum": "#0099",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Voltorb",
     "dexNum": "#0100",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Gallery",
@@ -1081,13 +981,11 @@
   {
     "name": "Electrode",
     "dexNum": "#0101",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Exeggcute",
     "dexNum": "#0102",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -1099,7 +997,6 @@
   {
     "name": "Exeggutor",
     "dexNum": "#0103",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -1116,31 +1013,26 @@
   {
     "name": "Cubone",
     "dexNum": "#0104",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Marowak",
     "dexNum": "#0105",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Hitmonlee",
     "dexNum": "#0106",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Hitmonchan",
     "dexNum": "#0107",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Lickitung",
     "dexNum": "#0108",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -1152,13 +1044,11 @@
   {
     "name": "Koffing",
     "dexNum": "#0109",
-    "hasArt": "Yes",
     "cards": []
   },
   {
     "name": "Weezing",
     "dexNum": "#0110",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -1170,19 +1060,16 @@
   {
     "name": "Rhyhorn",
     "dexNum": "#0111",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Rhydon",
     "dexNum": "#0112",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Chansey",
     "dexNum": "#0113",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -1194,7 +1081,6 @@
   {
     "name": "Tangela",
     "dexNum": "#0114",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -1211,7 +1097,6 @@
   {
     "name": "Kangaskhan",
     "dexNum": "#0115",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Special Illustration Rare",
@@ -1228,7 +1113,6 @@
   {
     "name": "Horsea",
     "dexNum": "#0116",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -1240,13 +1124,11 @@
   {
     "name": "Seadra",
     "dexNum": "#0117",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Goldeen",
     "dexNum": "#0118",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -1258,19 +1140,16 @@
   {
     "name": "Seaking",
     "dexNum": "#0119",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Staryu",
     "dexNum": "#0120",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Starmie",
     "dexNum": "#0121",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Gallery",
@@ -1287,7 +1166,6 @@
   {
     "name": "Mr. Mime",
     "dexNum": "#0122",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -1299,13 +1177,11 @@
   {
     "name": "Scyther",
     "dexNum": "#0123",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Jynx",
     "dexNum": "#0124",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Gallery",
@@ -1317,19 +1193,16 @@
   {
     "name": "Electabuzz",
     "dexNum": "#0125",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Magmar",
     "dexNum": "#0126",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Pinsir",
     "dexNum": "#0127",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -1341,7 +1214,6 @@
   {
     "name": "Tauros",
     "dexNum": "#0128",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -1358,7 +1230,6 @@
   {
     "name": "Magikarp",
     "dexNum": "#0129",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -1370,7 +1241,6 @@
   {
     "name": "Gyarados",
     "dexNum": "#0130",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Misc.",
@@ -1392,7 +1262,6 @@
   {
     "name": "Lapras",
     "dexNum": "#0131",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Gallery",
@@ -1409,7 +1278,6 @@
   {
     "name": "Ditto",
     "dexNum": "#0132",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Gallery",
@@ -1421,7 +1289,6 @@
   {
     "name": "Eevee",
     "dexNum": "#0133",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -1443,7 +1310,6 @@
   {
     "name": "Vaporeon",
     "dexNum": "#0134",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Alt Art",
@@ -1455,7 +1321,6 @@
   {
     "name": "Jolteon",
     "dexNum": "#0135",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Alt Art",
@@ -1467,7 +1332,6 @@
   {
     "name": "Flareon",
     "dexNum": "#0136",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Alt Art",
@@ -1484,13 +1348,11 @@
   {
     "name": "Porygon",
     "dexNum": "#0137",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Omanyte",
     "dexNum": "#0138",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -1502,25 +1364,21 @@
   {
     "name": "Omastar",
     "dexNum": "#0139",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Kabuto",
     "dexNum": "#0140",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Kabutops",
     "dexNum": "#0141",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Aerodactyl",
     "dexNum": "#0142",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Alt Art",
@@ -1532,7 +1390,6 @@
   {
     "name": "Snorlax",
     "dexNum": "#0143",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -1549,7 +1406,6 @@
   {
     "name": "Articuno",
     "dexNum": "#0144",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Alt Art",
@@ -1576,7 +1432,6 @@
   {
     "name": "Zapdos",
     "dexNum": "#0145",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Special Illustration Rare",
@@ -1603,7 +1458,6 @@
   {
     "name": "Moltres",
     "dexNum": "#0146",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Alt Art",
@@ -1625,13 +1479,11 @@
   {
     "name": "Dratini",
     "dexNum": "#0147",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Dragonair",
     "dexNum": "#0148",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -1643,7 +1495,6 @@
   {
     "name": "Dragonite",
     "dexNum": "#0149",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Alt Art",
@@ -1665,7 +1516,6 @@
   {
     "name": "Mewtwo",
     "dexNum": "#0150",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Special Illustration Rare",
@@ -1702,7 +1552,6 @@
   {
     "name": "Mew",
     "dexNum": "#0151",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Special Illustration Rare",
@@ -1739,7 +1588,6 @@
   {
     "name": "Chikorita",
     "dexNum": "#0152",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -1751,13 +1599,11 @@
   {
     "name": "Bayleef",
     "dexNum": "#0153",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Meganium",
     "dexNum": "#0154",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Special Illustration Rare",
@@ -1769,7 +1615,6 @@
   {
     "name": "Cyndaquil",
     "dexNum": "#0155",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -1781,13 +1626,11 @@
   {
     "name": "Quilava",
     "dexNum": "#0156",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Typhlosion",
     "dexNum": "#0157",
-    "hasArt": "No",
     "cards": [
       {
         "type": "Illustration",
@@ -1799,7 +1642,6 @@
   {
     "name": "Totodile",
     "dexNum": "#0158",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -1811,13 +1653,11 @@
   {
     "name": "Croconaw",
     "dexNum": "#0159",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Feraligatr",
     "dexNum": "#0160",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Special Illustration Rare",
@@ -1829,13 +1669,11 @@
   {
     "name": "Sentret",
     "dexNum": "#0161",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Furret",
     "dexNum": "#0162",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -1847,7 +1685,6 @@
   {
     "name": "Hoothoot",
     "dexNum": "#0163",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Gallery",
@@ -1859,7 +1696,6 @@
   {
     "name": "Noctowl",
     "dexNum": "#0164",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -1871,13 +1707,11 @@
   {
     "name": "Ledyba",
     "dexNum": "#0165",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Ledian",
     "dexNum": "#0166",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -1889,13 +1723,11 @@
   {
     "name": "Spinarak",
     "dexNum": "#0167",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Ariados",
     "dexNum": "#0168",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Gallery",
@@ -1907,7 +1739,6 @@
   {
     "name": "Crobat",
     "dexNum": "#0169",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Alt Gallery Art",
@@ -1924,25 +1755,21 @@
   {
     "name": "Chinchou",
     "dexNum": "#0170",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Lanturn",
     "dexNum": "#0171",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Pichu",
     "dexNum": "#0172",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Cleffa",
     "dexNum": "#0173",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -1954,25 +1781,21 @@
   {
     "name": "Igglybuff",
     "dexNum": "#0174",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Togepi",
     "dexNum": "#0175",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Togetic",
     "dexNum": "#0176",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Natu",
     "dexNum": "#0177",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Ancient Trait",
@@ -1984,13 +1807,11 @@
   {
     "name": "Xatu",
     "dexNum": "#0178",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Mareep",
     "dexNum": "#0179",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Gallery",
@@ -2002,7 +1823,6 @@
   {
     "name": "Flaaffy",
     "dexNum": "#0180",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Gallery",
@@ -2014,7 +1834,6 @@
   {
     "name": "Ampharos",
     "dexNum": "#0181",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -2026,13 +1845,11 @@
   {
     "name": "Bellossom",
     "dexNum": "#0182",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Marill",
     "dexNum": "#0183",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -2049,7 +1866,6 @@
   {
     "name": "Azumarill",
     "dexNum": "#0184",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Ancient Trait",
@@ -2061,7 +1877,6 @@
   {
     "name": "Sudowoodo",
     "dexNum": "#0185",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -2073,31 +1888,26 @@
   {
     "name": "Politoed",
     "dexNum": "#0186",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Hoppip",
     "dexNum": "#0187",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Skiploom",
     "dexNum": "#0188",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Jumpluff",
     "dexNum": "#0189",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Aipom",
     "dexNum": "#0190",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -2109,13 +1919,11 @@
   {
     "name": "Sunkern",
     "dexNum": "#0191",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Sunflora",
     "dexNum": "#0192",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -2127,7 +1935,6 @@
   {
     "name": "Yanma",
     "dexNum": "#0193",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -2139,7 +1946,6 @@
   {
     "name": "Wooper",
     "dexNum": "#0194",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -2156,13 +1962,11 @@
   {
     "name": "Quagsire",
     "dexNum": "#0195",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Espeon",
     "dexNum": "#0196",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Alt Art",
@@ -2179,7 +1983,6 @@
   {
     "name": "Umbreon",
     "dexNum": "#0197",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Alt Art",
@@ -2196,13 +1999,11 @@
   {
     "name": "Murkrow",
     "dexNum": "#0198",
-    "hasArt": "Yes",
     "cards": []
   },
   {
     "name": "Slowking",
     "dexNum": "#0199",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Alt Art",
@@ -2214,7 +2015,6 @@
   {
     "name": "Misdreavus",
     "dexNum": "#0200",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -2226,7 +2026,6 @@
   {
     "name": "Unown",
     "dexNum": "#0201",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Alt Art",
@@ -2238,7 +2037,6 @@
   {
     "name": "Wobbuffet",
     "dexNum": "#0202",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -2250,25 +2048,21 @@
   {
     "name": "Girafarig",
     "dexNum": "#0203",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Pineco",
     "dexNum": "#0204",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Forretress",
     "dexNum": "#0205",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Dunsparce",
     "dexNum": "#0206",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Gallery",
@@ -2280,13 +2074,11 @@
   {
     "name": "Gligar",
     "dexNum": "#0207",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Steelix",
     "dexNum": "#0208",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -2308,25 +2100,21 @@
   {
     "name": "Snubbull",
     "dexNum": "#0209",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Granbull",
     "dexNum": "#0210",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Qwilfish",
     "dexNum": "#0211",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Scizor",
     "dexNum": "#0212",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -2338,7 +2126,6 @@
   {
     "name": "Shuckle",
     "dexNum": "#0213",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -2350,7 +2137,6 @@
   {
     "name": "Heracross",
     "dexNum": "#0214",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -2362,31 +2148,26 @@
   {
     "name": "Sneasel",
     "dexNum": "#0215",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Teddiursa",
     "dexNum": "#0216",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Ursaring",
     "dexNum": "#0217",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Slugma",
     "dexNum": "#0218",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Magcargo",
     "dexNum": "#0219",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Ancient Trait",
@@ -2403,7 +2184,6 @@
   {
     "name": "Swinub",
     "dexNum": "#0220",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -2415,25 +2195,21 @@
   {
     "name": "Piloswine",
     "dexNum": "#0221",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Corsola",
     "dexNum": "#0222",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Remoraid",
     "dexNum": "#0223",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Octillery",
     "dexNum": "#0224",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Gallery",
@@ -2445,19 +2221,16 @@
   {
     "name": "Delibird",
     "dexNum": "#0225",
-    "hasArt": "Yes",
     "cards": []
   },
   {
     "name": "Mantine",
     "dexNum": "#0226",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Skarmory",
     "dexNum": "#0227",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -2469,7 +2242,6 @@
   {
     "name": "Houndour",
     "dexNum": "#0228",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -2481,7 +2253,6 @@
   {
     "name": "Houndoom",
     "dexNum": "#0229",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -2498,7 +2269,6 @@
   {
     "name": "Kingdra",
     "dexNum": "#0230",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -2525,7 +2295,6 @@
   {
     "name": "Phanpy",
     "dexNum": "#0231",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -2537,25 +2306,21 @@
   {
     "name": "Donphan",
     "dexNum": "#0232",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Porygon2",
     "dexNum": "#0233",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Stantler",
     "dexNum": "#0234",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Smeargle",
     "dexNum": "#0235",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Gallery",
@@ -2567,13 +2332,11 @@
   {
     "name": "Tyrogue",
     "dexNum": "#0236",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Hitmontop",
     "dexNum": "#0237",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -2585,19 +2348,16 @@
   {
     "name": "Smoochum",
     "dexNum": "#0238",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Elekid",
     "dexNum": "#0239",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Magby",
     "dexNum": "#0240",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -2609,7 +2369,6 @@
   {
     "name": "Miltank",
     "dexNum": "#0241",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Gallery",
@@ -2621,7 +2380,6 @@
   {
     "name": "Blissey",
     "dexNum": "#0242",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Alt Art",
@@ -2633,7 +2391,6 @@
   {
     "name": "Raikou",
     "dexNum": "#0243",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Alt Gallery Art",
@@ -2645,7 +2402,6 @@
   {
     "name": "Entei",
     "dexNum": "#0244",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Alt Gallery Art",
@@ -2662,7 +2418,6 @@
   {
     "name": "Suicune",
     "dexNum": "#0245",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Alt Gallery Art",
@@ -2674,7 +2429,6 @@
   {
     "name": "Larvitar",
     "dexNum": "#0246",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -2686,13 +2440,11 @@
   {
     "name": "Pupitar",
     "dexNum": "#0247",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Tyranitar",
     "dexNum": "#0248",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -2709,7 +2461,6 @@
   {
     "name": "Lugia",
     "dexNum": "#0249",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Alt Art",
@@ -2721,7 +2472,6 @@
   {
     "name": "Ho-Oh",
     "dexNum": "#0250",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Special Illustration Rare",
@@ -2733,7 +2483,6 @@
   {
     "name": "Celebi",
     "dexNum": "#0251",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Alt Art",
@@ -2755,19 +2504,16 @@
   {
     "name": "Treecko",
     "dexNum": "#0252",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Grovyle",
     "dexNum": "#0253",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Sceptile",
     "dexNum": "#0254",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Ancient Trait",
@@ -2779,7 +2525,6 @@
   {
     "name": "Torchic",
     "dexNum": "#0255",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Ancient Trait",
@@ -2791,13 +2536,11 @@
   {
     "name": "Combusken",
     "dexNum": "#0256",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Blaziken",
     "dexNum": "#0257",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Alt Art",
@@ -2819,7 +2562,6 @@
   {
     "name": "Mudkip",
     "dexNum": "#0258",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -2831,13 +2573,11 @@
   {
     "name": "Marshtomp",
     "dexNum": "#0259",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Swampert",
     "dexNum": "#0260",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Ancient Trait",
@@ -2849,7 +2589,6 @@
   {
     "name": "Poochyena",
     "dexNum": "#0261",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Gallery",
@@ -2861,7 +2600,6 @@
   {
     "name": "Mightyena",
     "dexNum": "#0262",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Gallery",
@@ -2878,31 +2616,21 @@
   {
     "name": "Zigzagoon",
     "dexNum": "#0263",
-    "hasArt": "No",
-    "cards": []
-  },
-  {
-    "name": "Linoone",
-    "dexNum": "#0263",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Wurmple",
     "dexNum": "#0265",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Silcoon",
     "dexNum": "#0266",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Beautifly",
     "dexNum": "#0267",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -2914,13 +2642,11 @@
   {
     "name": "Cascoon",
     "dexNum": "#0268",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Dustox",
     "dexNum": "#0269",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Ancient Trait",
@@ -2937,19 +2663,16 @@
   {
     "name": "Lotad",
     "dexNum": "#0270",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Lombre",
     "dexNum": "#0271",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Ludicolo",
     "dexNum": "#0272",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Ancient Trait",
@@ -2966,19 +2689,16 @@
   {
     "name": "Seedot",
     "dexNum": "#0273",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Nuzleaf",
     "dexNum": "#0274",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Shiftry",
     "dexNum": "#0275",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -2990,13 +2710,11 @@
   {
     "name": "Taillow",
     "dexNum": "#0276",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Swellow",
     "dexNum": "#0277",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Ancient Trait",
@@ -3008,19 +2726,16 @@
   {
     "name": "Wingull",
     "dexNum": "#0278",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Pelipper",
     "dexNum": "#0279",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Ralts",
     "dexNum": "#0280",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -3032,7 +2747,6 @@
   {
     "name": "Kirlia",
     "dexNum": "#0281",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -3044,7 +2758,6 @@
   {
     "name": "Gardevoir",
     "dexNum": "#0282",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Special Illustration Rare",
@@ -3066,31 +2779,26 @@
   {
     "name": "Surskit",
     "dexNum": "#0283",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Masquerain",
     "dexNum": "#0284",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Shroomish",
     "dexNum": "#0285",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Breloom",
     "dexNum": "#0286",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Slakoth",
     "dexNum": "#0287",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -3102,25 +2810,21 @@
   {
     "name": "Vigoroth",
     "dexNum": "#0288",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Slaking",
     "dexNum": "#0289",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Nincada",
     "dexNum": "#0290",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Ninjask",
     "dexNum": "#0291",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -3132,7 +2836,6 @@
   {
     "name": "Shedinja",
     "dexNum": "#0292",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -3144,13 +2847,11 @@
   {
     "name": "Whismur",
     "dexNum": "#0293",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Loudred",
     "dexNum": "#0294",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -3162,49 +2863,41 @@
   {
     "name": "Exploud",
     "dexNum": "#0295",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Makuhita",
     "dexNum": "#0296",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Hariyama",
     "dexNum": "#0297",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Azurill",
     "dexNum": "#0298",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Nosepass",
     "dexNum": "#0299",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Skitty",
     "dexNum": "#0300",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Delcatty",
     "dexNum": "#0301",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Sableye",
     "dexNum": "#0302",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Ancient Trait",
@@ -3216,7 +2909,6 @@
   {
     "name": "Mawile",
     "dexNum": "#0303",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Alt Gallery Art",
@@ -3233,13 +2925,11 @@
   {
     "name": "Aron",
     "dexNum": "#0304",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Lairon",
     "dexNum": "#0305",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -3251,13 +2941,11 @@
   {
     "name": "Aggron",
     "dexNum": "#0306",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Meditite",
     "dexNum": "#0307",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -3269,7 +2957,6 @@
   {
     "name": "Medicham",
     "dexNum": "#0308",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Alt Art",
@@ -3291,7 +2978,6 @@
   {
     "name": "Electrike",
     "dexNum": "#0309",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Ancient Trait",
@@ -3308,7 +2994,6 @@
   {
     "name": "Manectric",
     "dexNum": "#0310",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -3320,7 +3005,6 @@
   {
     "name": "Plusle",
     "dexNum": "#0311",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -3332,7 +3016,6 @@
   {
     "name": "Minun",
     "dexNum": "#0312",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -3344,25 +3027,21 @@
   {
     "name": "Volbeat",
     "dexNum": "#0313",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Illumise",
     "dexNum": "#0314",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Roselia",
     "dexNum": "#0315",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Gulpin",
     "dexNum": "#0316",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -3374,19 +3053,16 @@
   {
     "name": "Swalot",
     "dexNum": "#0317",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Carvanha",
     "dexNum": "#0318",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Sharpedo",
     "dexNum": "#0319",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Special Illustration Rare",
@@ -3398,13 +3074,11 @@
   {
     "name": "Wailmer",
     "dexNum": "#0320",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Wailord",
     "dexNum": "#0321",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -3416,7 +3090,6 @@
   {
     "name": "Numel",
     "dexNum": "#0322",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -3428,13 +3101,11 @@
   {
     "name": "Camerupt",
     "dexNum": "#0323",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Torkoal",
     "dexNum": "#0324",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -3451,31 +3122,26 @@
   {
     "name": "Spoink",
     "dexNum": "#0325",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Grumpig",
     "dexNum": "#0326",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Spinda",
     "dexNum": "#0327",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Trapinch",
     "dexNum": "#0328",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Vibrava",
     "dexNum": "#0329",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -3487,7 +3153,6 @@
   {
     "name": "Flygon",
     "dexNum": "#0330",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -3499,19 +3164,16 @@
   {
     "name": "Cacnea",
     "dexNum": "#0331",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Cacturne",
     "dexNum": "#0332",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Swablu",
     "dexNum": "#0333",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -3523,7 +3185,6 @@
   {
     "name": "Altaria",
     "dexNum": "#0334",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Special Illustration Rare",
@@ -3550,19 +3211,16 @@
   {
     "name": "Zangoose",
     "dexNum": "#0335",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Seviper",
     "dexNum": "#0336",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Lunatone",
     "dexNum": "#0337",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Gallery",
@@ -3574,7 +3232,6 @@
   {
     "name": "Solrock",
     "dexNum": "#0338",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Gallery",
@@ -3586,13 +3243,11 @@
   {
     "name": "Barboach",
     "dexNum": "#0339",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Whiscash",
     "dexNum": "#0340",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Ancient Trait",
@@ -3604,19 +3259,16 @@
   {
     "name": "Corphish",
     "dexNum": "#0341",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Crawdaunt",
     "dexNum": "#0342",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Baltoy",
     "dexNum": "#0343",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Ancient Trait",
@@ -3628,7 +3280,6 @@
   {
     "name": "Claydol",
     "dexNum": "#0344",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -3640,7 +3291,6 @@
   {
     "name": "Lileep",
     "dexNum": "#0345",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -3652,31 +3302,26 @@
   {
     "name": "Cradily",
     "dexNum": "#0346",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Anorith",
     "dexNum": "#0347",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Armaldo",
     "dexNum": "#0348",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Feebas",
     "dexNum": "#0349",
-    "hasArt": "Yes",
     "cards": []
   },
   {
     "name": "Milotic",
     "dexNum": "#0350",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Gallery",
@@ -3693,7 +3338,6 @@
   {
     "name": "Castform",
     "dexNum": "#0351",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -3705,7 +3349,6 @@
   {
     "name": "Kecleon",
     "dexNum": "#0352",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -3717,13 +3360,11 @@
   {
     "name": "Shuppet",
     "dexNum": "#0353",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Banette",
     "dexNum": "#0354",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Gallery",
@@ -3745,7 +3386,6 @@
   {
     "name": "Duskull",
     "dexNum": "#0355",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -3757,7 +3397,6 @@
   {
     "name": "Dusclops",
     "dexNum": "#0356",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -3769,7 +3408,6 @@
   {
     "name": "Tropius",
     "dexNum": "#0357",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -3781,7 +3419,6 @@
   {
     "name": "Chimecho",
     "dexNum": "#0358",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -3793,7 +3430,6 @@
   {
     "name": "Absol",
     "dexNum": "#0359",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Gallery",
@@ -3805,13 +3441,11 @@
   {
     "name": "Wynaut",
     "dexNum": "#0360",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Snorunt",
     "dexNum": "#0361",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -3828,13 +3462,11 @@
   {
     "name": "Glalie",
     "dexNum": "#0362",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Spheal",
     "dexNum": "#0363",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -3846,19 +3478,16 @@
   {
     "name": "Sealeo",
     "dexNum": "#0364",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Walrein",
     "dexNum": "#0365",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Clamperl",
     "dexNum": "#0366",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -3870,13 +3499,11 @@
   {
     "name": "Huntail",
     "dexNum": "#0367",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Gorebyss",
     "dexNum": "#0368",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Ancient Trait",
@@ -3888,7 +3515,6 @@
   {
     "name": "Relicanth",
     "dexNum": "#0369",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -3900,25 +3526,21 @@
   {
     "name": "Luvdisc",
     "dexNum": "#0370",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Bagon",
     "dexNum": "#0371",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Shelgon",
     "dexNum": "#0372",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Salamence",
     "dexNum": "#0373",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Ancient Trait",
@@ -3935,7 +3557,6 @@
   {
     "name": "Beldum",
     "dexNum": "#0374",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -3947,7 +3568,6 @@
   {
     "name": "Metang",
     "dexNum": "#0375",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -3959,7 +3579,6 @@
   {
     "name": "Metagross",
     "dexNum": "#0376",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -3981,7 +3600,6 @@
   {
     "name": "Regirock",
     "dexNum": "#0377",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Ancient Trait",
@@ -3993,19 +3611,16 @@
   {
     "name": "Regice",
     "dexNum": "#0378",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Registeel",
     "dexNum": "#0379",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Latias",
     "dexNum": "#0380",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -4017,7 +3632,6 @@
   {
     "name": "Latios",
     "dexNum": "#0381",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -4029,13 +3643,11 @@
   {
     "name": "Kyogre",
     "dexNum": "#0382",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Groudon",
     "dexNum": "#0383",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -4047,7 +3659,6 @@
   {
     "name": "Rayquaza",
     "dexNum": "#0384",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Alt Art",
@@ -4059,7 +3670,6 @@
   {
     "name": "Jirachi",
     "dexNum": "#0385",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Misc.",
@@ -4071,7 +3681,6 @@
   {
     "name": "Deoxys",
     "dexNum": "#0386",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Alt Gallery Art",
@@ -4083,7 +3692,6 @@
   {
     "name": "Turtwig",
     "dexNum": "#0387",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Gallery",
@@ -4100,7 +3708,6 @@
   {
     "name": "Grotle",
     "dexNum": "#0388",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -4112,13 +3719,11 @@
   {
     "name": "Torterra",
     "dexNum": "#0389",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Chimchar",
     "dexNum": "#0390",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -4130,13 +3735,11 @@
   {
     "name": "Monferno",
     "dexNum": "#0391",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Infernape",
     "dexNum": "#0392",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -4148,7 +3751,6 @@
   {
     "name": "Piplup",
     "dexNum": "#0393",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Art",
@@ -4170,13 +3772,11 @@
   {
     "name": "Prinplup",
     "dexNum": "#0394",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Empoleon",
     "dexNum": "#0395",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Alt Art",
@@ -4188,7 +3788,6 @@
   {
     "name": "Starly",
     "dexNum": "#0396",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -4200,13 +3799,11 @@
   {
     "name": "Staravia",
     "dexNum": "#0397",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Staraptor",
     "dexNum": "#0398",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -4218,7 +3815,6 @@
   {
     "name": "Bidoof",
     "dexNum": "#0399",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Gallery",
@@ -4230,7 +3826,6 @@
   {
     "name": "Bibarel",
     "dexNum": "#0400",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Gallery",
@@ -4242,13 +3837,11 @@
   {
     "name": "Kricketot",
     "dexNum": "#0401",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Kricketune",
     "dexNum": "#0402",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Gallery",
@@ -4260,25 +3853,21 @@
   {
     "name": "Shinx",
     "dexNum": "#0403",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Luxio",
     "dexNum": "#0404",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Luxray",
     "dexNum": "#0405",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Budew",
     "dexNum": "#0406",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -4290,7 +3879,6 @@
   {
     "name": "Roserade",
     "dexNum": "#0407",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Gallery",
@@ -4307,25 +3895,21 @@
   {
     "name": "Cranidos",
     "dexNum": "#0408",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Rampardos",
     "dexNum": "#0409",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Shieldon",
     "dexNum": "#0410",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Bastiodon",
     "dexNum": "#0411",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -4337,31 +3921,26 @@
   {
     "name": "Burmy",
     "dexNum": "#0412",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Wormadam",
     "dexNum": "#0413",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Mothim",
     "dexNum": "#0414",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Combee",
     "dexNum": "#0415",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Vespiquen",
     "dexNum": "#0416",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Ancient Trait",
@@ -4373,7 +3952,6 @@
   {
     "name": "Pachirisu",
     "dexNum": "#0417",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -4385,43 +3963,36 @@
   {
     "name": "Buizel",
     "dexNum": "#0418",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Floatzel",
     "dexNum": "#0419",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Cherubi",
     "dexNum": "#0420",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Cherrim",
     "dexNum": "#0421",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Shellos",
     "dexNum": "#0422",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Gastrodon",
     "dexNum": "#0423",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Ambipom",
     "dexNum": "#0424",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -4433,25 +4004,21 @@
   {
     "name": "Drifloon",
     "dexNum": "#0425",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Drifblim",
     "dexNum": "#0426",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Buneary",
     "dexNum": "#0427",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Lopunny",
     "dexNum": "#0428",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Special Illustration Rare",
@@ -4463,7 +4030,6 @@
   {
     "name": "Mismagius",
     "dexNum": "#0429",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -4475,7 +4041,6 @@
   {
     "name": "Honchkrow",
     "dexNum": "#0430",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Alt Art",
@@ -4487,31 +4052,26 @@
   {
     "name": "Glameow",
     "dexNum": "#0431",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Purugly",
     "dexNum": "#0432",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Chingling",
     "dexNum": "#0433",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Stunky",
     "dexNum": "#0434",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Skuntank",
     "dexNum": "#0435",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Alt Art",
@@ -4523,7 +4083,6 @@
   {
     "name": "Bronzor",
     "dexNum": "#0436",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -4535,7 +4094,6 @@
   {
     "name": "Bronzong",
     "dexNum": "#0437",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Gallery",
@@ -4547,25 +4105,21 @@
   {
     "name": "Bonsly",
     "dexNum": "#0438",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Mime Jr.",
     "dexNum": "#0439",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Happiny",
     "dexNum": "#0440",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Chatot",
     "dexNum": "#0441",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -4577,7 +4131,6 @@
   {
     "name": "Spiritomb",
     "dexNum": "#0442",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Gallery",
@@ -4599,19 +4152,16 @@
   {
     "name": "Gible",
     "dexNum": "#0443",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Gabite",
     "dexNum": "#0444",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Garchomp",
     "dexNum": "#0445",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Special Illustration Rare",
@@ -4623,13 +4173,11 @@
   {
     "name": "Munchlax",
     "dexNum": "#0446",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Riolu",
     "dexNum": "#0447",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -4646,7 +4194,6 @@
   {
     "name": "Lucario",
     "dexNum": "#0448",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Alt Art",
@@ -4663,25 +4210,21 @@
   {
     "name": "Hippopotas",
     "dexNum": "#0449",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Hippowdon",
     "dexNum": "#0450",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Skorupi",
     "dexNum": "#0451",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Drapion",
     "dexNum": "#0452",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Alt Gallery Art",
@@ -4698,31 +4241,26 @@
   {
     "name": "Croagunk",
     "dexNum": "#0453",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Toxicroak",
     "dexNum": "#0454",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Carnivine",
     "dexNum": "#0455",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Finneon",
     "dexNum": "#0456",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Lumineon",
     "dexNum": "#0457",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Alt Art",
@@ -4734,7 +4272,6 @@
   {
     "name": "Mantyke",
     "dexNum": "#0458",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -4746,7 +4283,6 @@
   {
     "name": "Snover",
     "dexNum": "#0459",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -4758,7 +4294,6 @@
   {
     "name": "Abomasnow",
     "dexNum": "#0460",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Gallery",
@@ -4770,7 +4305,6 @@
   {
     "name": "Weavile",
     "dexNum": "#0461",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -4782,7 +4316,6 @@
   {
     "name": "Magnezone",
     "dexNum": "#0462",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Gallery",
@@ -4794,13 +4327,11 @@
   {
     "name": "Lickilicky",
     "dexNum": "#0463",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Rhyperior",
     "dexNum": "#0464",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Ancient Trait",
@@ -4812,13 +4343,11 @@
   {
     "name": "Tangrowth",
     "dexNum": "#0465",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Electivire",
     "dexNum": "#0466",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Gallery",
@@ -4830,7 +4359,6 @@
   {
     "name": "Magmortar",
     "dexNum": "#0467",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Gallery",
@@ -4842,7 +4370,6 @@
   {
     "name": "Togekiss",
     "dexNum": "#0468",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Ancient Trait",
@@ -4859,13 +4386,11 @@
   {
     "name": "Yanmega",
     "dexNum": "#0469",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Leafeon",
     "dexNum": "#0470",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Alt Art",
@@ -4882,7 +4407,6 @@
   {
     "name": "Glaceon",
     "dexNum": "#0471",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Alt Art",
@@ -4894,19 +4418,16 @@
   {
     "name": "Gliscor",
     "dexNum": "#0472",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Mamoswine",
     "dexNum": "#0473",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Porygon-Z",
     "dexNum": "#0474",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -4918,7 +4439,6 @@
   {
     "name": "Gallade",
     "dexNum": "#0475",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Gallery",
@@ -4930,7 +4450,6 @@
   {
     "name": "Probopass",
     "dexNum": "#0476",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -4947,7 +4466,6 @@
   {
     "name": "Dusknoir",
     "dexNum": "#0477",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -4959,7 +4477,6 @@
   {
     "name": "Froslass",
     "dexNum": "#0478",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -4976,7 +4493,6 @@
   {
     "name": "Rotom",
     "dexNum": "#0479",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Alt Art",
@@ -4993,13 +4509,11 @@
   {
     "name": "Uxie",
     "dexNum": "#0480",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Mesprit",
     "dexNum": "#0481",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -5011,13 +4525,11 @@
   {
     "name": "Azelf",
     "dexNum": "#0482",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Dialga",
     "dexNum": "#0483",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Alt Art",
@@ -5029,7 +4541,6 @@
   {
     "name": "Palkia",
     "dexNum": "#0484",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Alt Art",
@@ -5041,13 +4552,11 @@
   {
     "name": "Heatran",
     "dexNum": "#0485",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Regigigas",
     "dexNum": "#0486",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Alt Gallery Art",
@@ -5059,7 +4568,6 @@
   {
     "name": "Giratina",
     "dexNum": "#0487",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Alt Art",
@@ -5076,7 +4584,6 @@
   {
     "name": "Cresselia",
     "dexNum": "#0488",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -5088,7 +4595,6 @@
   {
     "name": "Phione",
     "dexNum": "#0489",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -5100,7 +4606,6 @@
   {
     "name": "Manaphy",
     "dexNum": "#0490",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Gallery",
@@ -5112,7 +4617,6 @@
   {
     "name": "Darkrai",
     "dexNum": "#0491",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Alt Gallery Art",
@@ -5129,7 +4633,6 @@
   {
     "name": "Shaymin",
     "dexNum": "#0492",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -5146,7 +4649,6 @@
   {
     "name": "Arceus",
     "dexNum": "#0493",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Alt Art",
@@ -5158,7 +4660,6 @@
   {
     "name": "Victini",
     "dexNum": "#0494",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Misc.",
@@ -5170,7 +4671,6 @@
   {
     "name": "Snivy",
     "dexNum": "#0495",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -5182,7 +4682,6 @@
   {
     "name": "Servine",
     "dexNum": "#0496",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -5194,7 +4693,6 @@
   {
     "name": "Serperior",
     "dexNum": "#0497",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Alt Gallery Art",
@@ -5206,7 +4704,6 @@
   {
     "name": "Tepig",
     "dexNum": "#0498",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -5223,7 +4720,6 @@
   {
     "name": "Pignite",
     "dexNum": "#0499",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -5235,7 +4731,6 @@
   {
     "name": "Emboar",
     "dexNum": "#0500",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -5252,7 +4747,6 @@
   {
     "name": "Oshawott",
     "dexNum": "#0501",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -5264,13 +4758,11 @@
   {
     "name": "Dewott",
     "dexNum": "#0502",
-    "hasArt": "Yes",
     "cards": []
   },
   {
     "name": "Samurott",
     "dexNum": "#0503",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Alt Gallery Art",
@@ -5282,7 +4774,6 @@
   {
     "name": "Patrat",
     "dexNum": "#0504",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -5294,7 +4785,6 @@
   {
     "name": "Watchog",
     "dexNum": "#0505",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -5306,7 +4796,6 @@
   {
     "name": "Lillipup",
     "dexNum": "#0506",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -5318,7 +4807,6 @@
   {
     "name": "Herdier",
     "dexNum": "#0507",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -5330,7 +4818,6 @@
   {
     "name": "Stoutland",
     "dexNum": "#0508",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Character Rare",
@@ -5342,7 +4829,6 @@
   {
     "name": "Purrloin",
     "dexNum": "#0509",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -5354,13 +4840,11 @@
   {
     "name": "Liepard",
     "dexNum": "#0510",
-    "hasArt": "Yes",
     "cards": []
   },
   {
     "name": "Pansage",
     "dexNum": "#0511",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -5372,13 +4856,11 @@
   {
     "name": "Simisage",
     "dexNum": "#0512",
-    "hasArt": "Yes",
     "cards": []
   },
   {
     "name": "Pansear",
     "dexNum": "#0513",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -5390,7 +4872,6 @@
   {
     "name": "Simisear",
     "dexNum": "#0514",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Alt Gallery Art",
@@ -5402,7 +4883,6 @@
   {
     "name": "Panpour",
     "dexNum": "#0515",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -5414,7 +4894,6 @@
   {
     "name": "Simipour",
     "dexNum": "#0516",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -5426,13 +4905,11 @@
   {
     "name": "Munna",
     "dexNum": "#0517",
-    "hasArt": "Yes",
     "cards": []
   },
   {
     "name": "Musharna",
     "dexNum": "#0518",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -5444,7 +4921,6 @@
   {
     "name": "Pidove",
     "dexNum": "#0519",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -5456,7 +4932,6 @@
   {
     "name": "Tranquill",
     "dexNum": "#0520",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -5468,7 +4943,6 @@
   {
     "name": "Unfezant",
     "dexNum": "#0521",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Ancient Trait",
@@ -5485,7 +4959,6 @@
   {
     "name": "Blitzle",
     "dexNum": "#0522",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -5497,7 +4970,6 @@
   {
     "name": "Zebstrika",
     "dexNum": "#0523",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -5509,13 +4981,11 @@
   {
     "name": "Roggenrola",
     "dexNum": "#0524",
-    "hasArt": "Yes",
     "cards": []
   },
   {
     "name": "Boldore",
     "dexNum": "#0525",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -5527,13 +4997,11 @@
   {
     "name": "Gigalith",
     "dexNum": "#0526",
-    "hasArt": "Yes",
     "cards": []
   },
   {
     "name": "Woobat",
     "dexNum": "#0527",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -5545,7 +5013,6 @@
   {
     "name": "Swoobat",
     "dexNum": "#0528",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -5557,7 +5024,6 @@
   {
     "name": "Drilbur",
     "dexNum": "#0529",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -5569,7 +5035,6 @@
   {
     "name": "Excadrill",
     "dexNum": "#0530",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -5586,7 +5051,6 @@
   {
     "name": "Audino",
     "dexNum": "#0531",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -5598,7 +5062,6 @@
   {
     "name": "Timburr",
     "dexNum": "#0532",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -5610,7 +5073,6 @@
   {
     "name": "Gurdurr",
     "dexNum": "#0533",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -5622,7 +5084,6 @@
   {
     "name": "Conkeldurr",
     "dexNum": "#0534",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Alt Art",
@@ -5634,7 +5095,6 @@
   {
     "name": "Tympole",
     "dexNum": "#0535",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -5646,7 +5106,6 @@
   {
     "name": "Palpitoad",
     "dexNum": "#0536",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -5658,13 +5117,11 @@
   {
     "name": "Seismitoad",
     "dexNum": "#0537",
-    "hasArt": "Yes",
     "cards": []
   },
   {
     "name": "Throh",
     "dexNum": "#0538",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -5676,7 +5133,6 @@
   {
     "name": "Sawk",
     "dexNum": "#0539",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -5688,25 +5144,21 @@
   {
     "name": "Sewaddle",
     "dexNum": "#0540",
-    "hasArt": "Yes",
     "cards": []
   },
   {
     "name": "Swadloon",
     "dexNum": "#0541",
-    "hasArt": "Yes",
     "cards": []
   },
   {
     "name": "Leavanny",
     "dexNum": "#0542",
-    "hasArt": "Yes",
     "cards": []
   },
   {
     "name": "Venipede",
     "dexNum": "#0543",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -5718,19 +5170,16 @@
   {
     "name": "Whirlipede",
     "dexNum": "#0544",
-    "hasArt": "Yes",
     "cards": []
   },
   {
     "name": "Scolipede",
     "dexNum": "#0545",
-    "hasArt": "Yes",
     "cards": []
   },
   {
     "name": "Cottonee",
     "dexNum": "#0546",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -5742,19 +5191,16 @@
   {
     "name": "Whimsicott",
     "dexNum": "#0547",
-    "hasArt": "Yes",
     "cards": []
   },
   {
     "name": "Petilil",
     "dexNum": "#0548",
-    "hasArt": "Yes",
     "cards": []
   },
   {
     "name": "Lilligant",
     "dexNum": "#0549",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Alt Art",
@@ -5766,13 +5212,11 @@
   {
     "name": "Basculin",
     "dexNum": "#0550",
-    "hasArt": "Yes",
     "cards": []
   },
   {
     "name": "Sandile",
     "dexNum": "#0551",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -5784,19 +5228,16 @@
   {
     "name": "Krokorok",
     "dexNum": "#0552",
-    "hasArt": "Yes",
     "cards": []
   },
   {
     "name": "Krookodile",
     "dexNum": "#0553",
-    "hasArt": "Yes",
     "cards": []
   },
   {
     "name": "Darumaka",
     "dexNum": "#0554",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -5808,13 +5249,11 @@
   {
     "name": "Darmanitan",
     "dexNum": "#0555",
-    "hasArt": "Yes",
     "cards": []
   },
   {
     "name": "Maractus",
     "dexNum": "#0556",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -5826,7 +5265,6 @@
   {
     "name": "Dwebble",
     "dexNum": "#0557",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -5838,7 +5276,6 @@
   {
     "name": "Crustle",
     "dexNum": "#0558",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -5860,7 +5297,6 @@
   {
     "name": "Scraggy",
     "dexNum": "#0559",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -5872,7 +5308,6 @@
   {
     "name": "Scrafty",
     "dexNum": "#0560",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Special Illustration Rare",
@@ -5884,7 +5319,6 @@
   {
     "name": "Sigilyph",
     "dexNum": "#0561",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -5896,13 +5330,11 @@
   {
     "name": "Yamask",
     "dexNum": "#0562",
-    "hasArt": "Yes",
     "cards": []
   },
   {
     "name": "Cofagrigus",
     "dexNum": "#0563",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -5914,37 +5346,31 @@
   {
     "name": "Tirtouga",
     "dexNum": "#0564",
-    "hasArt": "Yes",
     "cards": []
   },
   {
     "name": "Carracosta",
     "dexNum": "#0565",
-    "hasArt": "Yes",
     "cards": []
   },
   {
     "name": "Archen",
     "dexNum": "#0566",
-    "hasArt": "Yes",
     "cards": []
   },
   {
     "name": "Archeops",
     "dexNum": "#0567",
-    "hasArt": "Yes",
     "cards": []
   },
   {
     "name": "Trubbish",
     "dexNum": "#0568",
-    "hasArt": "Yes",
     "cards": []
   },
   {
     "name": "Garbodor",
     "dexNum": "#0569",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -5956,7 +5382,6 @@
   {
     "name": "Zorua",
     "dexNum": "#0570",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -5968,7 +5393,6 @@
   {
     "name": "Zoroark",
     "dexNum": "#0571",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Alt Gallery Art",
@@ -5985,7 +5409,6 @@
   {
     "name": "Minccino",
     "dexNum": "#0572",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -6002,7 +5425,6 @@
   {
     "name": "Cinccino",
     "dexNum": "#0573",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -6019,7 +5441,6 @@
   {
     "name": "Gothita",
     "dexNum": "#0574",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -6031,7 +5452,6 @@
   {
     "name": "Gothorita",
     "dexNum": "#0575",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -6043,19 +5463,16 @@
   {
     "name": "Gothitelle",
     "dexNum": "#0576",
-    "hasArt": "Yes",
     "cards": []
   },
   {
     "name": "Solosis",
     "dexNum": "#0577",
-    "hasArt": "Yes",
     "cards": []
   },
   {
     "name": "Duosion",
     "dexNum": "#0578",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -6067,7 +5484,6 @@
   {
     "name": "Reuniclus",
     "dexNum": "#0579",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -6079,13 +5495,11 @@
   {
     "name": "Ducklett",
     "dexNum": "#0580",
-    "hasArt": "Yes",
     "cards": []
   },
   {
     "name": "Swanna",
     "dexNum": "#0581",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -6097,13 +5511,11 @@
   {
     "name": "Vanillite",
     "dexNum": "#0582",
-    "hasArt": "Yes",
     "cards": []
   },
   {
     "name": "Vanillish",
     "dexNum": "#0583",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -6115,13 +5527,11 @@
   {
     "name": "Vanilluxe",
     "dexNum": "#0584",
-    "hasArt": "Yes",
     "cards": []
   },
   {
     "name": "Deerling",
     "dexNum": "#0585",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -6133,7 +5543,6 @@
   {
     "name": "Sawsbuck",
     "dexNum": "#0586",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -6145,7 +5554,6 @@
   {
     "name": "Emolga",
     "dexNum": "#0587",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Misc.",
@@ -6157,7 +5565,6 @@
   {
     "name": "Karrablast",
     "dexNum": "#0588",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -6169,7 +5576,6 @@
   {
     "name": "Escavalier",
     "dexNum": "#0589",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -6181,37 +5587,31 @@
   {
     "name": "Foongus",
     "dexNum": "#0590",
-    "hasArt": "Yes",
     "cards": []
   },
   {
     "name": "Amoonguss",
     "dexNum": "#0591",
-    "hasArt": "Yes",
     "cards": []
   },
   {
     "name": "Frillish",
     "dexNum": "#0592",
-    "hasArt": "Yes",
     "cards": []
   },
   {
     "name": "Jellicent",
     "dexNum": "#0593",
-    "hasArt": "Yes",
     "cards": []
   },
   {
     "name": "Alomomola",
     "dexNum": "#0594",
-    "hasArt": "Yes",
     "cards": []
   },
   {
     "name": "Joltik",
     "dexNum": "#0595",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -6228,7 +5628,6 @@
   {
     "name": "Galvantula",
     "dexNum": "#0596",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Special Illustration Rare",
@@ -6240,13 +5639,11 @@
   {
     "name": "Ferroseed",
     "dexNum": "#0597",
-    "hasArt": "Yes",
     "cards": []
   },
   {
     "name": "Ferrothorn",
     "dexNum": "#0598",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -6263,25 +5660,21 @@
   {
     "name": "Klink",
     "dexNum": "#0599",
-    "hasArt": "Yes",
     "cards": []
   },
   {
     "name": "Klang",
     "dexNum": "#0600",
-    "hasArt": "Yes",
     "cards": []
   },
   {
     "name": "Klinklang",
     "dexNum": "#0601",
-    "hasArt": "Yes",
     "cards": []
   },
   {
     "name": "Tynamo",
     "dexNum": "#0602",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -6293,7 +5686,6 @@
   {
     "name": "Eelektrik",
     "dexNum": "#0603",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Ancient Trait",
@@ -6305,7 +5697,6 @@
   {
     "name": "Eelektross",
     "dexNum": "#0604",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -6322,7 +5713,6 @@
   {
     "name": "Elgyem",
     "dexNum": "#0605",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -6334,13 +5724,11 @@
   {
     "name": "Beheeyem",
     "dexNum": "#0606",
-    "hasArt": "Yes",
     "cards": []
   },
   {
     "name": "Litwick",
     "dexNum": "#0607",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -6352,7 +5740,6 @@
   {
     "name": "Lampent",
     "dexNum": "#0608",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -6364,7 +5751,6 @@
   {
     "name": "Chandelure",
     "dexNum": "#0609",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Gallery",
@@ -6381,7 +5767,6 @@
   {
     "name": "Axew",
     "dexNum": "#0610",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -6393,7 +5778,6 @@
   {
     "name": "Fraxure",
     "dexNum": "#0611",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -6405,13 +5789,11 @@
   {
     "name": "Haxorus",
     "dexNum": "#0612",
-    "hasArt": "Yes",
     "cards": []
   },
   {
     "name": "Cubchoo",
     "dexNum": "#0613",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -6423,19 +5805,16 @@
   {
     "name": "Beartic",
     "dexNum": "#0614",
-    "hasArt": "Yes",
     "cards": []
   },
   {
     "name": "Cryogonal",
     "dexNum": "#0615",
-    "hasArt": "Yes",
     "cards": []
   },
   {
     "name": "Shelmet",
     "dexNum": "#0616",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -6447,13 +5826,11 @@
   {
     "name": "Accelgor",
     "dexNum": "#0617",
-    "hasArt": "Yes",
     "cards": []
   },
   {
     "name": "Stunfisk",
     "dexNum": "#0618",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -6465,13 +5842,11 @@
   {
     "name": "Mienfoo",
     "dexNum": "#0619",
-    "hasArt": "Yes",
     "cards": []
   },
   {
     "name": "Mienshao",
     "dexNum": "#0620",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -6483,7 +5858,6 @@
   {
     "name": "Druddigon",
     "dexNum": "#0621",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Gallery",
@@ -6500,13 +5874,11 @@
   {
     "name": "Golett",
     "dexNum": "#0622",
-    "hasArt": "Yes",
     "cards": []
   },
   {
     "name": "Golurk",
     "dexNum": "#0623",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Alt Art",
@@ -6518,19 +5890,16 @@
   {
     "name": "Pawniard",
     "dexNum": "#0624",
-    "hasArt": "Yes",
     "cards": []
   },
   {
     "name": "Bisharp",
     "dexNum": "#0625",
-    "hasArt": "Yes",
     "cards": []
   },
   {
     "name": "Bouffalant",
     "dexNum": "#0626",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -6542,7 +5911,6 @@
   {
     "name": "Rufflet",
     "dexNum": "#0627",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -6554,7 +5922,6 @@
   {
     "name": "Braviary",
     "dexNum": "#0628",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -6566,19 +5933,16 @@
   {
     "name": "Vullaby",
     "dexNum": "#0629",
-    "hasArt": "Yes",
     "cards": []
   },
   {
     "name": "Mandibuzz",
     "dexNum": "#0630",
-    "hasArt": "Yes",
     "cards": []
   },
   {
     "name": "Heatmor",
     "dexNum": "#0631",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -6590,7 +5954,6 @@
   {
     "name": "Durant",
     "dexNum": "#0632",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Special Illustration Rare",
@@ -6602,19 +5965,16 @@
   {
     "name": "Deino",
     "dexNum": "#0633",
-    "hasArt": "Yes",
     "cards": []
   },
   {
     "name": "Zweilous",
     "dexNum": "#0634",
-    "hasArt": "Yes",
     "cards": []
   },
   {
     "name": "Hydreigon",
     "dexNum": "#0635",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Special Illustration Rare",
@@ -6626,7 +5986,6 @@
   {
     "name": "Larvesta",
     "dexNum": "#0636",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -6638,7 +5997,6 @@
   {
     "name": "Volcarona",
     "dexNum": "#0637",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Ancient Trait",
@@ -6650,13 +6008,11 @@
   {
     "name": "Cobalion",
     "dexNum": "#0638",
-    "hasArt": "Yes",
     "cards": []
   },
   {
     "name": "Terrakion",
     "dexNum": "#0639",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -6668,13 +6024,11 @@
   {
     "name": "Virizion",
     "dexNum": "#0640",
-    "hasArt": "Yes",
     "cards": []
   },
   {
     "name": "Tornadus",
     "dexNum": "#0641",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Alt Art",
@@ -6686,13 +6040,11 @@
   {
     "name": "Thundurus",
     "dexNum": "#0642",
-    "hasArt": "Yes",
     "cards": []
   },
   {
     "name": "Reshiram",
     "dexNum": "#0643",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -6719,7 +6071,6 @@
   {
     "name": "Zekrom",
     "dexNum": "#0644",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Gallery",
@@ -6746,19 +6097,16 @@
   {
     "name": "Landorus",
     "dexNum": "#0645",
-    "hasArt": "Yes",
     "cards": []
   },
   {
     "name": "Kyurem",
     "dexNum": "#0646",
-    "hasArt": "Yes",
     "cards": []
   },
   {
     "name": "Keldeo",
     "dexNum": "#0647",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Gallery",
@@ -6770,7 +6118,6 @@
   {
     "name": "Meloetta",
     "dexNum": "#0648",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Misc.",
@@ -6787,7 +6134,6 @@
   {
     "name": "Genesect",
     "dexNum": "#0649",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Alt Art",
@@ -6799,7 +6145,6 @@
   {
     "name": "Chespin",
     "dexNum": "#0650",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -6811,19 +6156,16 @@
   {
     "name": "Quilladin",
     "dexNum": "#0651",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Chesnaught",
     "dexNum": "#0652",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Fennekin",
     "dexNum": "#0653",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -6835,7 +6177,6 @@
   {
     "name": "Braixen",
     "dexNum": "#0654",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Gallery",
@@ -6847,13 +6188,11 @@
   {
     "name": "Delphox",
     "dexNum": "#0655",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Froakie",
     "dexNum": "#0656",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -6865,7 +6204,6 @@
   {
     "name": "Frogadier",
     "dexNum": "#0657",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -6877,7 +6215,6 @@
   {
     "name": "Greninja",
     "dexNum": "#0658",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Special Illustration Rare",
@@ -6894,7 +6231,6 @@
   {
     "name": "Bunnelby",
     "dexNum": "#0659",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Ancient Trait",
@@ -6906,19 +6242,16 @@
   {
     "name": "Diggersby",
     "dexNum": "#0660",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Fletchling",
     "dexNum": "#0661",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Fletchinder",
     "dexNum": "#0662",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -6930,7 +6263,6 @@
   {
     "name": "Talonflame",
     "dexNum": "#0663",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -6942,13 +6274,11 @@
   {
     "name": "Scatterbug",
     "dexNum": "#0664",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Spewpa",
     "dexNum": "#0665",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -6960,7 +6290,6 @@
   {
     "name": "Vivillon",
     "dexNum": "#0666",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -6972,13 +6301,11 @@
   {
     "name": "Litleo",
     "dexNum": "#0667",
-    "hasArt": "Yes",
     "cards": []
   },
   {
     "name": "Pyroar",
     "dexNum": "#0668",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -6990,13 +6317,11 @@
   {
     "name": "Flabébé",
     "dexNum": "#0669",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Floette",
     "dexNum": "#0670",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Special Illustration Rare",
@@ -7008,43 +6333,36 @@
   {
     "name": "Florges",
     "dexNum": "#0671",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Skiddo",
     "dexNum": "#0672",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Gogoat",
     "dexNum": "#0673",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Pancham",
     "dexNum": "#0674",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Pangoro",
     "dexNum": "#0675",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Furfrou",
     "dexNum": "#0676",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Espurr",
     "dexNum": "#0677",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -7056,19 +6374,16 @@
   {
     "name": "Meowstic",
     "dexNum": "#0678",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Honedge",
     "dexNum": "#0679",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Doublade",
     "dexNum": "#0680",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -7080,7 +6395,6 @@
   {
     "name": "Aegislash",
     "dexNum": "#0681",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -7092,25 +6406,21 @@
   {
     "name": "Spritzee",
     "dexNum": "#0682",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Aromatisse",
     "dexNum": "#0683",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Swirlix",
     "dexNum": "#0684",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Slurpuff",
     "dexNum": "#0685",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -7122,13 +6432,11 @@
   {
     "name": "Inkay",
     "dexNum": "#0686",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Malamar",
     "dexNum": "#0687",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Gallery",
@@ -7140,25 +6448,21 @@
   {
     "name": "Binacle",
     "dexNum": "#0688",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Barbaracle",
     "dexNum": "#0689",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Skrelp",
     "dexNum": "#0690",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Dragalge",
     "dexNum": "#0691",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Special Illustration Rare",
@@ -7170,7 +6474,6 @@
   {
     "name": "Clauncher",
     "dexNum": "#0692",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -7182,19 +6485,16 @@
   {
     "name": "Clawitzer",
     "dexNum": "#0693",
-    "hasArt": "Yes",
     "cards": []
   },
   {
     "name": "Helioptile",
     "dexNum": "#0694",
-    "hasArt": "Yes",
     "cards": []
   },
   {
     "name": "Heliolisk",
     "dexNum": "#0695",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -7211,7 +6511,6 @@
   {
     "name": "Tyrunt",
     "dexNum": "#0696",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -7223,19 +6522,16 @@
   {
     "name": "Tyrantrum",
     "dexNum": "#0697",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Amaura",
     "dexNum": "#0698",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Aurorus",
     "dexNum": "#0699",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -7247,7 +6543,6 @@
   {
     "name": "Sylveon",
     "dexNum": "#0700",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Alt Art",
@@ -7259,7 +6554,6 @@
   {
     "name": "Hawlucha",
     "dexNum": "#0701",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Special Illustration Rare",
@@ -7271,7 +6565,6 @@
   {
     "name": "Dedenne",
     "dexNum": "#0702",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Gallery",
@@ -7288,7 +6581,6 @@
   {
     "name": "Carbink",
     "dexNum": "#0703",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -7300,13 +6592,11 @@
   {
     "name": "Goomy",
     "dexNum": "#0704",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Sliggoo",
     "dexNum": "#0705",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -7318,7 +6608,6 @@
   {
     "name": "Goodra",
     "dexNum": "#0706",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Gallery",
@@ -7330,19 +6619,16 @@
   {
     "name": "Klefki",
     "dexNum": "#0707",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Phantump",
     "dexNum": "#0708",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Trevenant",
     "dexNum": "#0709",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -7354,31 +6640,26 @@
   {
     "name": "Pumpkaboo",
     "dexNum": "#0710",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Gourgeist",
     "dexNum": "#0711",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Bergmite",
     "dexNum": "#0712",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Avalugg",
     "dexNum": "#0713",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Noibat",
     "dexNum": "#0714",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -7390,7 +6671,6 @@
   {
     "name": "Noivern",
     "dexNum": "#0715",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Alt Art",
@@ -7402,7 +6682,6 @@
   {
     "name": "Xerneas",
     "dexNum": "#0716",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -7414,7 +6693,6 @@
   {
     "name": "Yveltal",
     "dexNum": "#0717",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -7426,7 +6704,6 @@
   {
     "name": "Zygarde",
     "dexNum": "#0718",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Special Illustration Rare",
@@ -7438,7 +6715,6 @@
   {
     "name": "Diancie",
     "dexNum": "#0719",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Gallery",
@@ -7460,7 +6736,6 @@
   {
     "name": "Hoopa",
     "dexNum": "#0720",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Alt Gallery Art",
@@ -7472,7 +6747,6 @@
   {
     "name": "Volcanion",
     "dexNum": "#0721",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Special Illustration Rare",
@@ -7484,7 +6758,6 @@
   {
     "name": "Rowlet",
     "dexNum": "#0722",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Misc.",
@@ -7506,19 +6779,16 @@
   {
     "name": "Dartrix",
     "dexNum": "#0723",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Decidueye",
     "dexNum": "#0724",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Litten",
     "dexNum": "#0725",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -7535,19 +6805,16 @@
   {
     "name": "Torracat",
     "dexNum": "#0726",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Incineroar",
     "dexNum": "#0727",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Popplio",
     "dexNum": "#0728",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -7559,13 +6826,11 @@
   {
     "name": "Brionne",
     "dexNum": "#0729",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Primarina",
     "dexNum": "#0730",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -7577,19 +6842,16 @@
   {
     "name": "Pikipek",
     "dexNum": "#0731",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Trumbeak",
     "dexNum": "#0732",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Toucannon",
     "dexNum": "#0733",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -7601,25 +6863,21 @@
   {
     "name": "Yungoos",
     "dexNum": "#0734",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Gumshoos",
     "dexNum": "#0735",
-    "hasArt": "Yes",
     "cards": []
   },
   {
     "name": "Grubbin",
     "dexNum": "#0736",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Charjabug",
     "dexNum": "#0737",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -7631,7 +6889,6 @@
   {
     "name": "Vikavolt",
     "dexNum": "#0738",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -7643,13 +6900,11 @@
   {
     "name": "Crabrawler",
     "dexNum": "#0739",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Crabominable",
     "dexNum": "#0740",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -7661,7 +6916,6 @@
   {
     "name": "Oricorio",
     "dexNum": "#0741",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Gallery",
@@ -7678,7 +6932,6 @@
   {
     "name": "Cutiefly",
     "dexNum": "#0742",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -7690,7 +6943,6 @@
   {
     "name": "Ribombee",
     "dexNum": "#0743",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -7702,7 +6954,6 @@
   {
     "name": "Rockruff",
     "dexNum": "#0744",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Gallery",
@@ -7714,7 +6965,6 @@
   {
     "name": "Lycanroc",
     "dexNum": "#0745",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -7726,7 +6976,6 @@
   {
     "name": "Wishiwashi",
     "dexNum": "#0746",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Gallery",
@@ -7738,25 +6987,21 @@
   {
     "name": "Mareanie",
     "dexNum": "#0747",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Toxapex",
     "dexNum": "#0748",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Mudbray",
     "dexNum": "#0749",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Mudsdale",
     "dexNum": "#0750",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -7768,19 +7013,16 @@
   {
     "name": "Dewpider",
     "dexNum": "#0751",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Araquanid",
     "dexNum": "#0752",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Fomantis",
     "dexNum": "#0753",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -7792,19 +7034,16 @@
   {
     "name": "Lurantis",
     "dexNum": "#0754",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Morelull",
     "dexNum": "#0755",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Shiinotic",
     "dexNum": "#0756",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -7816,13 +7055,11 @@
   {
     "name": "Salandit",
     "dexNum": "#0757",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Salazzle",
     "dexNum": "#0758",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -7834,7 +7071,6 @@
   {
     "name": "Stufful",
     "dexNum": "#0759",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -7846,7 +7082,6 @@
   {
     "name": "Bewear",
     "dexNum": "#0760",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -7858,25 +7093,21 @@
   {
     "name": "Bounsweet",
     "dexNum": "#0761",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Steenee",
     "dexNum": "#0762",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Tsareena",
     "dexNum": "#0763",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Comfey",
     "dexNum": "#0764",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Gallery",
@@ -7888,7 +7119,6 @@
   {
     "name": "Oranguru",
     "dexNum": "#0765",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Gallery",
@@ -7900,7 +7130,6 @@
   {
     "name": "Passimian",
     "dexNum": "#0766",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Gallery",
@@ -7912,7 +7141,6 @@
   {
     "name": "Wimpod",
     "dexNum": "#0767",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -7924,7 +7152,6 @@
   {
     "name": "Golisopod",
     "dexNum": "#0768",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Special Illustration Rare",
@@ -7936,7 +7163,6 @@
   {
     "name": "Sandygast",
     "dexNum": "#0769",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -7948,25 +7174,21 @@
   {
     "name": "Palossand",
     "dexNum": "#0770",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Pyukumuku",
     "dexNum": "#0771",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Type: Null",
     "dexNum": "#0772",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Silvally",
     "dexNum": "#0773",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Art",
@@ -7983,7 +7205,6 @@
   {
     "name": "Minior",
     "dexNum": "#0774",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -7995,13 +7216,11 @@
   {
     "name": "Komala",
     "dexNum": "#0775",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Turtonator",
     "dexNum": "#0776",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -8013,13 +7232,11 @@
   {
     "name": "Togedemaru",
     "dexNum": "#0777",
-    "hasArt": "Yes",
     "cards": []
   },
   {
     "name": "Mimikyu",
     "dexNum": "#0778",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -8041,7 +7258,6 @@
   {
     "name": "Bruxish",
     "dexNum": "#0779",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -8053,7 +7269,6 @@
   {
     "name": "Drampa",
     "dexNum": "#0780",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -8065,7 +7280,6 @@
   {
     "name": "Dhelmise",
     "dexNum": "#0781",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -8077,25 +7291,21 @@
   {
     "name": "Jangmo-o",
     "dexNum": "#0782",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Hakamo-o",
     "dexNum": "#0783",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Kommo-o",
     "dexNum": "#0784",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Tapu Koko",
     "dexNum": "#0785",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Special Illustration Rare",
@@ -8107,13 +7317,11 @@
   {
     "name": "Tapu Lele",
     "dexNum": "#0786",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Tapu Bulu",
     "dexNum": "#0787",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -8125,85 +7333,71 @@
   {
     "name": "Tapu Fini",
     "dexNum": "#0788",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Cosmog",
     "dexNum": "#0789",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Cosmoem",
     "dexNum": "#0790",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Solgaleo",
     "dexNum": "#0791",
-    "hasArt": "Yes",
     "cards": []
   },
   {
     "name": "Lunala",
     "dexNum": "#0792",
-    "hasArt": "Yes",
     "cards": []
   },
   {
     "name": "Nihilego",
     "dexNum": "#0793",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Buzzwole",
     "dexNum": "#0794",
-    "hasArt": "Yes",
     "cards": []
   },
   {
     "name": "Pheromosa",
     "dexNum": "#0795",
-    "hasArt": "Yes",
     "cards": []
   },
   {
     "name": "Xurkitree",
     "dexNum": "#0796",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Celesteela",
     "dexNum": "#0797",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Kartana",
     "dexNum": "#0798",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Guzzlord",
     "dexNum": "#0799",
-    "hasArt": "Yes",
     "cards": []
   },
   {
     "name": "Necrozma",
     "dexNum": "#0800",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Magearna",
     "dexNum": "#0801",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Misc.",
@@ -8215,7 +7409,6 @@
   {
     "name": "Marshadow",
     "dexNum": "#0802",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -8227,31 +7420,26 @@
   {
     "name": "Poipole",
     "dexNum": "#0803",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Naganadel",
     "dexNum": "#0804",
-    "hasArt": "Yes",
     "cards": []
   },
   {
     "name": "Stakataka",
     "dexNum": "#0805",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Blacephalon",
     "dexNum": "#0806",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Zeraora",
     "dexNum": "#0807",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -8268,7 +7456,6 @@
   {
     "name": "Meltan",
     "dexNum": "#0808",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -8280,13 +7467,11 @@
   {
     "name": "Melmetal",
     "dexNum": "#0809",
-    "hasArt": "Yes",
     "cards": []
   },
   {
     "name": "Grookey",
     "dexNum": "#0810",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -8298,19 +7483,16 @@
   {
     "name": "Thwackey",
     "dexNum": "#0811",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Rillaboom",
     "dexNum": "#0812",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Scorbunny",
     "dexNum": "#0813",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -8327,7 +7509,6 @@
   {
     "name": "Raboot",
     "dexNum": "#0814",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -8339,13 +7520,11 @@
   {
     "name": "Cinderace",
     "dexNum": "#0815",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Sobble",
     "dexNum": "#0816",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -8357,13 +7536,11 @@
   {
     "name": "Drizzile",
     "dexNum": "#0817",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Inteleon",
     "dexNum": "#0818",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Alt Art",
@@ -8375,7 +7552,6 @@
   {
     "name": "Skwovet",
     "dexNum": "#0819",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -8387,7 +7563,6 @@
   {
     "name": "Greedent",
     "dexNum": "#0820",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Alt Art",
@@ -8399,7 +7574,6 @@
   {
     "name": "Rookidee",
     "dexNum": "#0821",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -8411,13 +7585,11 @@
   {
     "name": "Corvisquire",
     "dexNum": "#0822",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Corviknight",
     "dexNum": "#0823",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Alt Gallery Art",
@@ -8429,13 +7601,11 @@
   {
     "name": "Blipbug",
     "dexNum": "#0824",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Dottler",
     "dexNum": "#0825",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -8447,7 +7617,6 @@
   {
     "name": "Orbeetle",
     "dexNum": "#0826",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Alt Gallery Art",
@@ -8464,13 +7633,11 @@
   {
     "name": "Nickit",
     "dexNum": "#0827",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Thievul",
     "dexNum": "#0828",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Gallery",
@@ -8482,19 +7649,16 @@
   {
     "name": "Gossifleur",
     "dexNum": "#0829",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Eldegoss",
     "dexNum": "#0830",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Wooloo",
     "dexNum": "#0831",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -8506,25 +7670,21 @@
   {
     "name": "Dubwool",
     "dexNum": "#0832",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Chewtle",
     "dexNum": "#0833",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Drednaw",
     "dexNum": "#0834",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Yamper",
     "dexNum": "#0835",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -8536,7 +7696,6 @@
   {
     "name": "Boltund",
     "dexNum": "#0836",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Alt Gallery Art",
@@ -8548,25 +7707,21 @@
   {
     "name": "Rolycoly",
     "dexNum": "#0837",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Carkol",
     "dexNum": "#0838",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Coalossal",
     "dexNum": "#0839",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Applin",
     "dexNum": "#0840",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -8578,7 +7733,6 @@
   {
     "name": "Flapple",
     "dexNum": "#0841",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Gallery",
@@ -8595,7 +7749,6 @@
   {
     "name": "Appletun",
     "dexNum": "#0842",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -8607,13 +7760,11 @@
   {
     "name": "Silicobra",
     "dexNum": "#0843",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Sandaconda",
     "dexNum": "#0844",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Alt Art",
@@ -8625,7 +7776,6 @@
   {
     "name": "Cramorant",
     "dexNum": "#0845",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -8637,25 +7787,21 @@
   {
     "name": "Arrokuda",
     "dexNum": "#0846",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Barraskewda",
     "dexNum": "#0847",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Toxel",
     "dexNum": "#0848",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Toxtricity",
     "dexNum": "#0849",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Gallery",
@@ -8672,13 +7818,11 @@
   {
     "name": "Sizzlipede",
     "dexNum": "#0850",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Centiskorch",
     "dexNum": "#0851",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Alt Gallery Art",
@@ -8690,7 +7834,6 @@
   {
     "name": "Clobbopus",
     "dexNum": "#0852",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -8702,37 +7845,31 @@
   {
     "name": "Grapploct",
     "dexNum": "#0853",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Sinistea",
     "dexNum": "#0854",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Polteageist",
     "dexNum": "#0855",
-    "hasArt": "Yes",
     "cards": []
   },
   {
     "name": "Hatenna",
     "dexNum": "#0856",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Hattrem",
     "dexNum": "#0857",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Hatterene",
     "dexNum": "#0858",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Alt Gallery Art",
@@ -8744,19 +7881,16 @@
   {
     "name": "Impidimp",
     "dexNum": "#0859",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Morgrem",
     "dexNum": "#0860",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Grimmsnarl",
     "dexNum": "#0861",
-    "hasArt": "No",
     "cards": [
       {
         "type": "Special Illustration Rare",
@@ -8768,7 +7902,6 @@
   {
     "name": "Obstagoon",
     "dexNum": "#0862",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Gallery",
@@ -8785,7 +7918,6 @@
   {
     "name": "Perrserker",
     "dexNum": "#0863",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Alt Art",
@@ -8797,31 +7929,26 @@
   {
     "name": "Cursola",
     "dexNum": "#0864",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Sirfetch'd",
     "dexNum": "#0865",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Mr. Rime",
     "dexNum": "#0866",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Runerigus",
     "dexNum": "#0867",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Milcery",
     "dexNum": "#0868",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -8833,7 +7960,6 @@
   {
     "name": "Alcremie",
     "dexNum": "#0869",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Gallery",
@@ -8845,7 +7971,6 @@
   {
     "name": "Falinks",
     "dexNum": "#0870",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Gallery",
@@ -8857,13 +7982,11 @@
   {
     "name": "Pincurchin",
     "dexNum": "#0871",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Snom",
     "dexNum": "#0872",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -8875,7 +7998,6 @@
   {
     "name": "Frosmoth",
     "dexNum": "#0873",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Gallery",
@@ -8887,13 +8009,11 @@
   {
     "name": "Stonjourner",
     "dexNum": "#0874",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Eiscue",
     "dexNum": "#0875",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Special Illustration Rare",
@@ -8905,13 +8025,11 @@
   {
     "name": "Indeedee",
     "dexNum": "#0876",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Morpeko",
     "dexNum": "#0877",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -8928,7 +8046,6 @@
   {
     "name": "Cufant",
     "dexNum": "#0878",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -8940,37 +8057,31 @@
   {
     "name": "Copperajah",
     "dexNum": "#0879",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Dracozolt",
     "dexNum": "#0880",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Arctozolt",
     "dexNum": "#0881",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Dracovish",
     "dexNum": "#0882",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Arctovish",
     "dexNum": "#0883",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Duraludon",
     "dexNum": "#0884",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Alt Art",
@@ -8982,7 +8093,6 @@
   {
     "name": "Dreepy",
     "dexNum": "#0885",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -8994,7 +8104,6 @@
   {
     "name": "Drakloak",
     "dexNum": "#0886",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -9006,13 +8115,11 @@
   {
     "name": "Dragapult",
     "dexNum": "#0887",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Zacian",
     "dexNum": "#0888",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Alt Gallery Art",
@@ -9029,7 +8136,6 @@
   {
     "name": "Zamazenta",
     "dexNum": "#0889",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Alt Gallery Art",
@@ -9046,7 +8152,6 @@
   {
     "name": "Eternatus",
     "dexNum": "#0890",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Alt Gallery Art",
@@ -9058,13 +8163,11 @@
   {
     "name": "Kubfu",
     "dexNum": "#0891",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Urshifu",
     "dexNum": "#0892",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Alt Art",
@@ -9076,7 +8179,6 @@
   {
     "name": "Zarude",
     "dexNum": "#0893",
-    "hasArt": "No",
     "cards": [
       {
         "type": "Illustration",
@@ -9088,13 +8190,11 @@
   {
     "name": "Regieleki",
     "dexNum": "#0894",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Regidrago",
     "dexNum": "#0895",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Alt Art",
@@ -9106,19 +8206,16 @@
   {
     "name": "Glastrier",
     "dexNum": "#0896",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Spectrier",
     "dexNum": "#0897",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Calyrex",
     "dexNum": "#0898",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Alt Art",
@@ -9130,7 +8227,6 @@
   {
     "name": "Wyrdeer",
     "dexNum": "#0899",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Gallery",
@@ -9142,7 +8238,6 @@
   {
     "name": "Kleavor",
     "dexNum": "#0900",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Gallery",
@@ -9154,7 +8249,6 @@
   {
     "name": "Ursaluna",
     "dexNum": "#0901",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Special Illustration Rare",
@@ -9166,13 +8260,11 @@
   {
     "name": "Basculegion",
     "dexNum": "#0902",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Sneasler",
     "dexNum": "#0903",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Alt Art",
@@ -9184,13 +8276,11 @@
   {
     "name": "Overqwil",
     "dexNum": "#0904",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Enamorus",
     "dexNum": "#0905",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -9202,7 +8292,6 @@
   {
     "name": "Sprigatito",
     "dexNum": "#0906",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -9214,7 +8303,6 @@
   {
     "name": "Floragato",
     "dexNum": "#0907",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -9226,7 +8314,6 @@
   {
     "name": "Meowscarada",
     "dexNum": "#0908",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Special Illustration Rare",
@@ -9238,7 +8325,6 @@
   {
     "name": "Fuecoco",
     "dexNum": "#0909",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -9250,7 +8336,6 @@
   {
     "name": "Crocalor",
     "dexNum": "#0910",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -9262,7 +8347,6 @@
   {
     "name": "Skeledirge",
     "dexNum": "#0911",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Special Illustration Rare",
@@ -9274,7 +8358,6 @@
   {
     "name": "Quaxly",
     "dexNum": "#0912",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -9286,7 +8369,6 @@
   {
     "name": "Quaxwell",
     "dexNum": "#0913",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -9298,7 +8380,6 @@
   {
     "name": "Quaquaval",
     "dexNum": "#0914",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Special Illustration Rare",
@@ -9310,7 +8391,6 @@
   {
     "name": "Lechonk",
     "dexNum": "#0915",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -9322,13 +8402,11 @@
   {
     "name": "Oinkologne",
     "dexNum": "#0916",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Tarountula",
     "dexNum": "#0917",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -9340,7 +8418,6 @@
   {
     "name": "Spidops",
     "dexNum": "#0918",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Special Illustration Rare",
@@ -9357,7 +8434,6 @@
   {
     "name": "Nymble",
     "dexNum": "#0919",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -9369,13 +8445,11 @@
   {
     "name": "Lokix",
     "dexNum": "#0920",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Pawmi",
     "dexNum": "#0921",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -9387,13 +8461,11 @@
   {
     "name": "Pawmo",
     "dexNum": "#0922",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Pawmot",
     "dexNum": "#0923",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -9405,13 +8477,11 @@
   {
     "name": "Tandemaus",
     "dexNum": "#0924",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Maushold",
     "dexNum": "#0925",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -9423,7 +8493,6 @@
   {
     "name": "Fidough",
     "dexNum": "#0926",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -9435,7 +8504,6 @@
   {
     "name": "Dachsbun",
     "dexNum": "#0927",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Special Illustration Rare",
@@ -9447,13 +8515,11 @@
   {
     "name": "Smoliv",
     "dexNum": "#0928",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Dolliv",
     "dexNum": "#0929",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -9465,13 +8531,11 @@
   {
     "name": "Arboliva",
     "dexNum": "#0930",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Squawkabilly",
     "dexNum": "#0931",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -9483,7 +8547,6 @@
   {
     "name": "Nacli",
     "dexNum": "#0932",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -9495,13 +8558,11 @@
   {
     "name": "Naclstack",
     "dexNum": "#0933",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Garganacl",
     "dexNum": "#0934",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -9518,7 +8579,6 @@
   {
     "name": "Charcadet",
     "dexNum": "#0935",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -9530,7 +8590,6 @@
   {
     "name": "Armarouge",
     "dexNum": "#0936",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -9547,7 +8606,6 @@
   {
     "name": "Ceruledge",
     "dexNum": "#0937",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -9559,13 +8617,11 @@
   {
     "name": "Tadbulb",
     "dexNum": "#0938",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Bellibolt",
     "dexNum": "#0939",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -9582,7 +8638,6 @@
   {
     "name": "Wattrel",
     "dexNum": "#0940",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -9594,7 +8649,6 @@
   {
     "name": "Kilowattrel",
     "dexNum": "#0941",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -9616,13 +8670,11 @@
   {
     "name": "Maschiff",
     "dexNum": "#0942",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Mabosstiff",
     "dexNum": "#0943",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -9634,13 +8686,11 @@
   {
     "name": "Shroodle",
     "dexNum": "#0944",
-    "hasArt": "Yes",
     "cards": []
   },
   {
     "name": "Grafaiai",
     "dexNum": "#0945",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -9652,7 +8702,6 @@
   {
     "name": "Bramblin",
     "dexNum": "#0946",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -9664,13 +8713,11 @@
   {
     "name": "Brambleghast",
     "dexNum": "#0947",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Toedscool",
     "dexNum": "#0948",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -9682,7 +8729,6 @@
   {
     "name": "Toedscruel",
     "dexNum": "#0949",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -9694,7 +8740,6 @@
   {
     "name": "Klawf",
     "dexNum": "#0950",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -9706,13 +8751,11 @@
   {
     "name": "Capsakid",
     "dexNum": "#0951",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Scovillain",
     "dexNum": "#0952",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -9724,13 +8767,11 @@
   {
     "name": "Rellor",
     "dexNum": "#0953",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Rabsca",
     "dexNum": "#0954",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -9742,13 +8783,11 @@
   {
     "name": "Flittle",
     "dexNum": "#0955",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Espathra",
     "dexNum": "#0956",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -9760,7 +8799,6 @@
   {
     "name": "Tinkatink",
     "dexNum": "#0957",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -9772,7 +8810,6 @@
   {
     "name": "Tinkatuff",
     "dexNum": "#0958",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -9784,7 +8821,6 @@
   {
     "name": "Tinkaton",
     "dexNum": "#0959",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Special Illustration Rare",
@@ -9796,7 +8832,6 @@
   {
     "name": "Wiglett",
     "dexNum": "#0960",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -9808,7 +8843,6 @@
   {
     "name": "Wugtrio",
     "dexNum": "#0961",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -9820,7 +8854,6 @@
   {
     "name": "Bombirdier",
     "dexNum": "#0962",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -9832,13 +8865,11 @@
   {
     "name": "Finizen",
     "dexNum": "#0963",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Palafin",
     "dexNum": "#0964",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -9850,7 +8881,6 @@
   {
     "name": "Varoom",
     "dexNum": "#0965",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -9862,7 +8892,6 @@
   {
     "name": "Revavroom",
     "dexNum": "#0966",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Special Illustration Rare",
@@ -9874,7 +8903,6 @@
   {
     "name": "Cyclizar",
     "dexNum": "#0967",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -9886,7 +8914,6 @@
   {
     "name": "Orthworm",
     "dexNum": "#0968",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -9898,19 +8925,16 @@
   {
     "name": "Glimmet",
     "dexNum": "#0969",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Glimmora",
     "dexNum": "#0970",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Greavard",
     "dexNum": "#0971",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -9922,7 +8946,6 @@
   {
     "name": "Houndstone",
     "dexNum": "#0972",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -9934,7 +8957,6 @@
   {
     "name": "Flamigo",
     "dexNum": "#0973",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -9946,13 +8968,11 @@
   {
     "name": "Cetoddle",
     "dexNum": "#0974",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Cetitan",
     "dexNum": "#0975",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -9964,7 +8984,6 @@
   {
     "name": "Veluza",
     "dexNum": "#0976",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -9976,7 +8995,6 @@
   {
     "name": "Dondozo",
     "dexNum": "#0977",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -9988,7 +9006,6 @@
   {
     "name": "Tatsugiri",
     "dexNum": "#0978",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -10000,19 +9017,16 @@
   {
     "name": "Annihilape",
     "dexNum": "#0979",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Clodsire",
     "dexNum": "#0980",
-    "hasArt": "No",
     "cards": []
   },
   {
     "name": "Farigiraf",
     "dexNum": "#0981",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -10024,7 +9038,6 @@
   {
     "name": "Dudunsparce",
     "dexNum": "#0982",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -10036,7 +9049,6 @@
   {
     "name": "Kingambit",
     "dexNum": "#0983",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -10053,7 +9065,6 @@
   {
     "name": "Great Tusk",
     "dexNum": "#0984",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Special Illustration Rare",
@@ -10065,7 +9076,6 @@
   {
     "name": "Scream Tail",
     "dexNum": "#0985",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -10077,7 +9087,6 @@
   {
     "name": "Brute Bonnet",
     "dexNum": "#0986",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -10089,7 +9098,6 @@
   {
     "name": "Flutter Mane",
     "dexNum": "#0987",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -10101,7 +9109,6 @@
   {
     "name": "Slither Wing",
     "dexNum": "#0988",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -10113,7 +9120,6 @@
   {
     "name": "Sandy Shocks",
     "dexNum": "#0989",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Special Illustration Rare",
@@ -10125,7 +9131,6 @@
   {
     "name": "Iron Treads",
     "dexNum": "#0990",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Special Illustration Rare",
@@ -10137,7 +9142,6 @@
   {
     "name": "Iron Bundle",
     "dexNum": "#0991",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -10149,7 +9153,6 @@
   {
     "name": "Iron Hands",
     "dexNum": "#0992",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Special Illustration Rare",
@@ -10161,7 +9164,6 @@
   {
     "name": "Iron Jugulis",
     "dexNum": "#0993",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -10173,7 +9175,6 @@
   {
     "name": "Iron Moth",
     "dexNum": "#0994",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -10185,7 +9186,6 @@
   {
     "name": "Iron Thorns",
     "dexNum": "#0995",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -10197,7 +9197,6 @@
   {
     "name": "Frigibax",
     "dexNum": "#0996",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -10209,7 +9208,6 @@
   {
     "name": "Arctibax",
     "dexNum": "#0997",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -10221,7 +9219,6 @@
   {
     "name": "Baxcalibur",
     "dexNum": "#0998",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -10233,7 +9230,6 @@
   {
     "name": "Gimmighoul",
     "dexNum": "#0999",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -10245,7 +9241,6 @@
   {
     "name": "Gholdengo",
     "dexNum": "#1000",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Special Illustration Rare",
@@ -10257,7 +9252,6 @@
   {
     "name": "Wo-Chien",
     "dexNum": "#1001",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Special Illustration Rare",
@@ -10269,7 +9263,6 @@
   {
     "name": "Chien-Pao",
     "dexNum": "#1002",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Special Illustration Rare",
@@ -10281,7 +9274,6 @@
   {
     "name": "Ting-Lu",
     "dexNum": "#1003",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Special Illustration Rare",
@@ -10293,7 +9285,6 @@
   {
     "name": "Chi-Yu",
     "dexNum": "#1004",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Special Illustration Rare",
@@ -10305,7 +9296,6 @@
   {
     "name": "Roaring Moon",
     "dexNum": "#1005",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Special Illustration Rare",
@@ -10317,7 +9307,6 @@
   {
     "name": "Iron Valiant",
     "dexNum": "#1006",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Special Illustration Rare",
@@ -10329,7 +9318,6 @@
   {
     "name": "Koraidon",
     "dexNum": "#1007",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Special Illustration Rare",
@@ -10346,7 +9334,6 @@
   {
     "name": "Miraidon",
     "dexNum": "#1008",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Special Illustration Rare",
@@ -10363,7 +9350,6 @@
   {
     "name": "Walking Wake",
     "dexNum": "#1009",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Special Illustration Rare",
@@ -10375,7 +9361,6 @@
   {
     "name": "Iron Leaves",
     "dexNum": "#1010",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Special Illustration Rare",
@@ -10387,7 +9372,6 @@
   {
     "name": "Dipplin",
     "dexNum": "#1011",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -10399,7 +9383,6 @@
   {
     "name": "Poltchageist",
     "dexNum": "#1012",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -10411,7 +9394,6 @@
   {
     "name": "Sinistcha",
     "dexNum": "#1013",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Special Illustration Rare",
@@ -10423,7 +9405,6 @@
   {
     "name": "Okidogi",
     "dexNum": "#1014",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -10435,7 +9416,6 @@
   {
     "name": "Munkidori",
     "dexNum": "#1015",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -10447,7 +9427,6 @@
   {
     "name": "Fezandipiti",
     "dexNum": "#1016",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -10464,7 +9443,6 @@
   {
     "name": "Ogerpon",
     "dexNum": "#1017",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Special Illustration Rare",
@@ -10481,7 +9459,6 @@
   {
     "name": "Archaludon",
     "dexNum": "#1018",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
@@ -10498,7 +9475,6 @@
   {
     "name": "Hydrapple",
     "dexNum": "#1019",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Special Illustration Rare",
@@ -10515,7 +9491,6 @@
   {
     "name": "Gouging Fire",
     "dexNum": "#1020",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Special Illustration Rare",
@@ -10527,7 +9502,6 @@
   {
     "name": "Raging Bolt",
     "dexNum": "#1021",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Special Illustration Rare",
@@ -10539,7 +9513,6 @@
   {
     "name": "Iron Boulder",
     "dexNum": "#1022",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Special Illustration Rare",
@@ -10551,7 +9524,6 @@
   {
     "name": "Iron Crown",
     "dexNum": "#1023",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Special Illustration Rare",
@@ -10563,7 +9535,6 @@
   {
     "name": "Terapagos",
     "dexNum": "#1024",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Special Illustration Rare",
@@ -10575,7 +9546,6 @@
   {
     "name": "Pecharunt",
     "dexNum": "#1025",
-    "hasArt": "Yes",
     "cards": [
       {
         "type": "Illustration",
